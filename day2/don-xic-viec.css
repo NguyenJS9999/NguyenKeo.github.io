@@ -1,0 +1,62 @@
+/* Bài tập buổi 2 - thực hành CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: rgba(239, 239, 239, 0.2);
+    padding: 20px 200px 0px 200px;
+}
+
+p {
+    font-family: 'Timen New Roman', Times, serif ;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+#quoc-hieu-quoc-huy {
+    font-size: 32px;
+}
+
+
+.ki-ten {
+    width: auto;
+    height: auto;
+    text-align: right;
+    margin-top: 28px;
+}
+.ki-ten-right {
+    width: 25%;
+    height: 200px;
+    margin-right: 49px;
+    float: right;
+}
+
+#ha-noi-ngay {
+    text-align: center;
+
+}
+
+#nguoi-lam-don {
+    text-align: center;
+ 
+}
+
+#chu-ki {
+   float: center;
+}

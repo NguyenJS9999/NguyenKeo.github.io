@@ -1,0 +1,13 @@
+/* Đây là chú thích trọng CSS */
+.truyen-kieu {
+    font-size: 24px;
+    color: white;
+    font-family: 'Timen New Roman', Times, serif ;
+    line-height: 1.5; /*khoảng cách giữa các dòng*/
+    margin-left: 30px;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học CSS</title>
+    <style>
+        /* internal css */
+        p {
+            font-weight: 600; /* font-weight hiển thị độ đấm nhạt của chữ */
+            color: brown;
+            font-size: 18px;
+        }
+        #future {
+            font-size: 20px;
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .uppercase {
+            text-transform: uppercase;;
+        }
+    </style>
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- inline css -->
+    <h1><span style="color: red; background-color: aquamarine">Kiên nhân</span> là yếu tố quan trọng của thành công</h1>
+
+    <p class="underline uppercase" id="future" >Tương lai khóc hay cười phụ thuộc vào độ lười của quá khứ</p>
+
+    <p id="failure" class="underline">Thất bại là mẹ thành công</p>
+
+    <p class="truyen-kieu">
+        Đồng lòng hai ả Tố Nga
+        <br />
+        Thúy Kiểu là chị, em là Thúy Vân
+    </p>
+</body>
+</html>
