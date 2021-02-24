@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>CSS layout</title>
+    <!-- cdn Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <style>
+        .color-icon {
+            color: red;
+            font-size: 24px;
+        }
+
+        .font {
+            font-family: 'Oi', cursive;
+        }
+
+        .size {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left {
+            width: 60%;
+        }
+        .right {
+            width: 40%;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .general {
+            float: left;
+        }
+
+        #flex {
+            clear: both;
+        }
+
+        .parents {
+            /* background-color: blueviolet; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Font icon -->
+    <h2>Font icons</h2>
+    <p>Đây là biểu tượng trái tim <i class="fas fa-heart color-icon"></i></p>
+    <!-- 
+        b1: Truy cập vào cdn.js để tìm link css theo thư viện mong muốn, phổ biển là font-awesome
+        b2: nhúng link css vừa lấy từ trang cdn.js
+        b3: truy cập vào trang của thư viện icon đó, để tìm icon. VD: fontawesome.com
+        b4: nhúng link css 
+        b5:
+        
+     -->
+
+    <!-- Font family -->
+    <h2>Font family</h2>
+    <p class="font"> Kiên nhẫn là yếu tố quan trọng của thành công.</p>
+
+    <!-- Float -->
+
+    <div class="size red general">Div1</div>
+    <div class="size green general">Div2</div>
+    <div class="size blue general" style="float: right;">Div3</div>
+
+    <!--  Flex -->
+    <h2 id="flex">Flex</h2>
+
+    <div class="parents">
+        <div class="size red">Iteam 1</div>
+        <div class="size green">Iteam 2</div>
+        <div class="size blue">Iteam 3</div>
+    </div>
+
+    <div>
+        <div class="left red">Height 400px</div>
+
+        <div class="right">
+            <div class=" green">Height 200px</div>
+            <div class=" blue">Height 200px</div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

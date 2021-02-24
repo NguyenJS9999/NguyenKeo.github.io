@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Bai tap</title>
+    <!-- cdn Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <style>
+        
+        .container{
+            width: 100%;
+            height: 400px;
+            background-color: oldlace;
+            display: flex;
+            flex-direction: row;
+        }
+ 
+        .red {
+            background-color: red;
+            height: 400px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .green {
+            background-color: green;
+            height: 200px;
+            width: 100%;
+
+        }
+
+        .blue {
+            background-color: blue;
+            height: 200px;
+            width: 100%;
+
+        }
+
+        #left {
+            width: 60%;
+            height: 100%;
+
+        }
+        #right {
+            width: 40%;
+            height: 100%;
+        }
+
+        .child {
+            width: 40%;
+            height: 100%;
+        }
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="left red">Height 400px</div>
+
+      <div id="right">
+            <div class="child green">Height 200px</div>
+            <div class="child blue">Height 200px</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+pwd: xem vị trí hiện tại đang đứng ở thư mục nào
+
+ls: liệt kê file và thư mục
+
+ls -la: liệt kê cả file và thư mục ẩn
+
+cd [tên thư mục]: di chuyển vào thư mục
+
+cd c:
+
+cd .. : lùi về thư mục trước
+
+cd : lùi về thư mục gốc
+
+git init: tạo git repo
+
+Trong một thư mục chứa git, không được phép có một thư mục chứa git khác
+(Nghĩa là git không được lồng nhau)
+
+git status
+git add .
+git commit -m "message"
+git push origin master -> đẩy code từ máy lên github
+
+git pull origin master -> lấy code thay đổi từ trên github về máy
+
+// đăng nhập github lần đầu trên máy (windows)
+git config --global user.email "your@exemple.com"
+git config --global user.name "Your name"
+
+VD:
+git config --global user.email "taothuyquynh.ks@gmail.com"
+git config --global user.name "taoquynh"
+
+clone thư mục từ github
+git clone https://github.com/taoquynh/taoquynh.githubb.io
