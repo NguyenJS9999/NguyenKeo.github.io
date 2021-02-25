@@ -1,78 +1,132 @@
+<!-- Bài tập thực hành buổi 4 24/02/2020 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bai tap</title>
-    <!-- cdn Css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
     <style>
-        
-        .container{
+        .container {
             width: 100%;
             height: 400px;
             background-color: oldlace;
             display: flex;
             flex-direction: row;
         }
- 
+
         .red {
             background-color: red;
-            height: 400px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            
         }
 
         .green {
             background-color: green;
-            height: 200px;
-            width: 100%;
-
         }
 
         .blue {
             background-color: blue;
-            height: 200px;
-            width: 100%;
-
         }
 
         #left {
             width: 60%;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
 
         }
+
         #right {
             width: 40%;
             height: 100%;
         }
 
         .child {
-            width: 40%;
-            height: 100%;
+            width: 100%;
+            height: 50%;
+            color: #FFF;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
-</style>
 
+        #child-height400px {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+        }
+
+        #child-space15px {
+            width: 100%;
+            height: 400px;
+            color: #FFF;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+            margin: 0px 7.5px;
+        }
+
+        .can-giua {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
+    <p>Bài tập thực hành 1</p> <br />
     <div class="container">
-
-        <div id="left red">Height 400px</div>
-
-      <div id="right">
+        <div id="left" class="red">Height 400px</div>
+        <div id="right">
             <div class="child green">Height 200px</div>
             <div class="child blue">Height 200px</div>
         </div>
+    </div> <br />
 
-    </div>
+    <i class="can-giua">Chiều rộng khối màu đỏ lớn hơn 2 khối còn lại</i>
+    <p>Bài tập thực hành 2</p> <br />
+
+    <div class="container">
+        <div id="left" class="red" style="margin-right:15px;">Height 400px</div>
+        <div id="right">
+            <div class="child green">Height 200px</div>
+            <div class="child blue">Height 200px</div>
+        </div>
+    </div> <br />
+
+    <i class="can-giua">Khoảng cách màu trắng là 15px</i>
+    <p>Bài tập thực hành 3</p> <br />
+
+    <div class="container">
+        <div id="child-height400px" class=" red">Height 400px</div>
+        <div id="child-height400px" class=" green">Height 400px</div>
+        <div id="child-height400px" class=" blue">Height 400px</div>
+
+    </div> <br />
+
+    <i class="can-giua">3 cột bằng nhau</i>
+    <p>Bài tập thực hành 4</p> <br />
+
+    <div class="container" style="justify-content: space-evenly;">
+        <div id="child-space15px" class=" red">Height 400px</div>
+        <div id="child-space15px" class=" green">Height 400px</div>
+        <div id="child-space15px" class=" blue">Height 400px</div>
+
+    </div> <br />
+
+    <i class="can-giua">3 cột bằng nhau và khoảng cách giữa các khối là 15px</i> <br />
+
 </body>
 
 </html>
