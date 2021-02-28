@@ -1,5 +1,77 @@
-* {
+/* content-3 Các lộ trình chính */
+.content-3 {
+    width: 100%;
+    height: auto;
+    background-color: #E4F2FD;
+    padding-bottom: 100px;
+}
+
+.route-content-heading {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #E4F2FD;
+}
+.route-content-heading h2 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding-top: 5rem;
+}
+
+.list-route-item {
+    width: 1250px;
+    height: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.router-item {
+    width: 92%;
+    height: auto;  
+    margin: 0px 15px;
+    margin-top: 70px;
+    border-radius: 6px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+.router-item:hover{
+    box-shadow: 0 4px 4px rgb(0 0 0 / 50%);
+}
+.router-image {
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    border-radius: 6px;
+}
+.router-image img {
+    border-radius: 6px;
+}
+.route-description {
+    padding: 1.4rem;
+    float: left;
+}
+
+.route-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20.8px;
+    text-align: left;
+}
+
+.route-detail {
+    font-weight: 300;
+    font-size: 16px;
+    overflow: hidden;
+    margin: 0px 0px 10px;
+    text-align: left;
+}
+.route-session {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    color: #757575;
 }

@@ -1,0 +1,24 @@
+/* content-5 */
+.content-5 {
+    width: 100%;
+    height: auto;
+    background-color: #E4F2FD;
+    /* border: 1px solid red; */
+    padding: 50px 15px;
+}
+
+.video-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px 0 0;
+}
+.video-container iframe {
+    width: 1220px;
+    position: relative;
+    height: 700px;
+    border: none;
+    border-radius: 8px 8px 0px 0px;
+}
