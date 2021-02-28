@@ -23,4 +23,7 @@
 
 .blue {
     background-color: blue;
+
+    list-style-type: lower-alpha;
+  
 }

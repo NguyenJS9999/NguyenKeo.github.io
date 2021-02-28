@@ -1,0 +1,23 @@
+Bài 1:
+Clone giao diện trang chủ Techmaster: https://techmaster.vn 
+
+Gợi ý: 
+
+- Nhúng video sử dụng thẻ iframe. Bản chất khi sử dụng thẻ iframe là có thể nhúng một tài liệu khác vào tài liệu HTML hiện tại
+
+- Một số hình ảnh không tìm thấy lựa chọn phù hợp có thể inspect để copy svg từ trang gốc
+
+Yêu cầu:
+
+- Clone trông càng giống càng tốt
+
+- Nên sử dụng các thẻ div để bọc các nội dung theo nhóm lại với nhau
+
+- Có thể tách thành nhiều file CSS, nhưng chỉ tạo 1 file HTML cho 1 trang. 
+
+- Layout không được xuất hiện thanh cuộn ngang.
+
+Bài 2:
+Clone menu trang lazada: https://www.lazada.vn/#
+
+Tối thiểu mỗi cấp tạo 4 item.
