@@ -33,7 +33,7 @@ img {
 /* list-posts */
 .list-posts {
     height: 94.5%;
-    margin: 20px 0px;
+    margin: 15px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

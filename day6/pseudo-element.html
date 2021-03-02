@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element</title>
+    <style>
+        #doan-van::first-letter {
+            color: red;
+            font-size: 24px;
+        }
+
+        #doan-van::first-line {
+            font-style: italic;
+        }
+
+        #doan-van::selection {
+            background-color: yellow;
+            color: white;
+        }
+        #doan-van::before {
+            content: "ooo";
+        }
+        #doan-van::after {
+            content: "url:"
+            /* thêm dường dẫn ảnh vào */
+        }
+    </style>
+</head>
+
+<body>
+    <p id="doan-van">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis quis quam vitae placerat. Suspendisse at
+        aliquam lacus. Ut massa orci, varius ac elementum et, porta eget justo. Suspendisse luctus at dui ac dapibus.
+        Cras nec facilisis nulla, ac tincidunt lacus. Aenean at tempus massa. Donec eu dignissim massa.
+    </p>
+</body>
+
+</html>

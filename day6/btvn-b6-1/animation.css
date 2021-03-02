@@ -1,0 +1,149 @@
+body {
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    box-sizing: border-box;
+    border: 0.5px dotted red;
+
+}
+
+.container-center {
+    /* width: 100%; */
+    height: auto;
+    border: 0.5px dotted red;
+    /* display: flex; */
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin: 40px;
+    background-color: rgba(255, 255, 255, 0.707);
+    padding: 40px;
+
+}
+/* 1 */
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(228, 111, 111);
+    margin: 10px;
+    position: relative;
+
+}
+
+.hover-biger {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(228, 111, 111);
+    transition: all 0.3s;
+    margin: 10px;
+    box-sizing: border-box;
+    
+}
+
+.hover-biger:hover {
+    /* width: 130px; */
+    /* height: 130px; */
+    border: 4px solid rgb(255, 255, 255);
+    transform: scale(1.7); 
+    z-index: 1;
+}
+/* 2 */
+.container-heath {
+    /* width: 20%; */
+    height: auto;
+    margin: auto;
+}
+
+.heath-90hz {
+    width: auto;
+    height: auto;
+    /* position: relative; */
+    border-radius: 25px;
+}
+/* :hover */
+.heath-90hz:hover  {
+    /* animation: heath-biger 0.5s linear alternate 16; */
+    /* animation: heath-biger 0.5s ease-out 2s alternate infinite; */
+    animation-name: heath-biger;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0, 0.8, 0, 0.8);
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    /* animation-fill-mode: ; */
+    /* animation-play-state: ; */
+
+
+}
+@keyframes heath-biger {
+    from {
+        transform: scale(1); 
+      
+    }
+    to {
+        transform: scale(1.5)
+    }
+}
+/* 2 */
+
+/* 3 */
+.container-text {
+  width: 100%;
+  height: auto;
+  border: 0.5px dotted red;
+  font-weight: 600;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.text {
+    font-size: 50px;
+    font-family: Arial;
+}
+.text-uppercase {
+    font-style: uppercase;
+}
+/* DANCHING */
+.teaching-dance {
+    background-color: #5A3294;
+    color: white;
+}
+/* LEARNING */
+.text-learning {
+    background-color: #228A4D;
+    color: white;
+    display: none;
+
+}
+/* CODING */
+.text-coding {
+    background-color: #C26523;
+    color: white;
+    /* display: ruby; */
+    
+}
+/* Animation DANCHING LEARNING CODING*/
+
+.text-learning :hover {
+    background-color: #27228a;
+    color: white;
+    /* position: fixed;
+    top: 0px;
+    left: 0px; */
+}
+/* CODING */
+.text-coding:hover {
+    background-color: #C26523;
+    color: white;
+    /* position: fixed;
+    top: 0px;
+    left: 0px; */
+
+}
+/* 3 */
+
+
