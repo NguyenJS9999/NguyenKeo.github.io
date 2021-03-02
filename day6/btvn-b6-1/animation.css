@@ -62,14 +62,14 @@ body {
     border-radius: 25px;
 }
 /* :hover */
-.heath-90hz:hover  {
+.heath-90hz  {
     /* animation: heath-biger 0.5s linear alternate 16; */
     /* animation: heath-biger 0.5s ease-out 2s alternate infinite; */
     animation-name: heath-biger;
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0, 0.8, 0, 0.8);
     animation-delay: 1s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 8;
     animation-direction: reverse;
     /* animation-fill-mode: ; */
     /* animation-play-state: ; */
