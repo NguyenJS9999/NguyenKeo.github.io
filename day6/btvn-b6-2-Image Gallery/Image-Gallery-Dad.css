@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation {
+    width: 100%;
+    height: 60px;
+    background-color: #34465C;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container-information{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.logo {
+    width: 150px;
+    height: 33.58px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 2%;
+    padding: 0.3em 0em;
+    text-decoration: none;
+}
+.logo a {
+    text-decoration: none;
+}
+/* content - informations */
+.informations {
+    width: 80em; /* Responsive */
+    height: 100%;
+    display:  flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 1px solid rgb(56, 150, 18); */
+    margin-top: 2em;
+}
+
+.information {
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid red; */
+    margin: 1em;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.router-image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.router-image img {
+    width: 100%;
+    height: 260px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.route-title {
+    /* width: 80%; */
+    padding: 1.4rem;
+    float: left;
+    font-size: 20px;
+    font-weight: 800;
+    /* border: 1px solid red; */
+    text-align: center;
+    font-style:  uppercase;
+ 
+}
