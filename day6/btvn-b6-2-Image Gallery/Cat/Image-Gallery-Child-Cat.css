@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.homepage-Goback {
+    position: absolute;
+    top: 30px;
+    left: 130px;
+    font-size: 50px;
+    color: brown;
+    transition: all 0.2s;
+}
+.homepage-Goback:hover {
+    color: rgba(44, 125, 240, 0.6);
+    transform: scale(1.2)
+}
+.homepage-Goback img {
+    width: 80px;
+}
+/* content - informations */
+.header {
+    margin: 20px auto 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container-information{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+.title-item {
+    font-family: "Annie Use Your Telescope", cursive;
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+/* title head */
+.informations {
+    width: 80em; 
+    /* height: 100%; */
+    display:  flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    /* border: 1px solid rgb(56, 150, 18); */
+    margin-top: 2em;
+}
+
+.information {
+    /* width: 385px; */
+    /* height: 100%; */
+    /* border: 1px solid red; */
+    margin: 1em;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* overflow: hidden; */
+    /* object-fit: cover; */
+}
+
+/* Information-text */
+.information-text {
+    width: 60%;
+    height: auto;
+}
+
+/* Image */
+.router-image {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    border-radius: 6px;
+    /* overflow: hidden; */
+    transition: all 1s;
+}
+.router-image:hover {
+    transform: scale(1.05);
+}
+
+/* Detail */
+.information-Title {
+    width: auto;
+    height: 100%;
+    /* border: 1px solid rgb(56, 150, 18); */
+    margin-top: auto;
+    margin-left: 18px;
+
+    transition: all 0.5s;
+}
+.information-Title:hover  {
+    transform: scale(1.02);
+    color: rgba(97, 91, 91, 0.9);
+}
+.information-Detail {
+    /* width: 56%; */
+    height: 100%;
+    justify-content: start end;
+    align-items: center;
+    /* border: 1px solid rgb(56, 150, 18); */
+    margin-top: 1em;
+    margin-left: 18px;
+    margin-right: 18px;
+    transition: all 0.5s;
+    font-size: 25px;
+    opacity: 0.8;
+    text-align: justify;
+}
+.information-Detail:hover {
+    opacity: 0.5;
+    transform: scale(1.05)
+}

@@ -14,6 +14,26 @@
     justify-content: space-between;
     padding: 10px;
 }
+.header {
+    margin: 20px auto 30px;
+    text-align: center;
+}
+.title {
+    font-family: "Annie Use Your Telescope", cursive;
+    font-size: 70px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+.slogan {
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    color: #979797;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
 
 .container-information{
     width: 100%;
@@ -37,7 +57,7 @@
 }
 /* content - informations */
 .informations {
-    width: 80em; /* Responsive */
+    width: auto; /* Responsive */
     height: 100%;
     display:  flex;
     flex-direction: row;
@@ -45,11 +65,11 @@
     align-items: center;
     margin: auto;
     /* border: 1px solid rgb(56, 150, 18); */
-    margin-top: 2em;
+    margin-top: -1em;
 }
 
 .informations2 {
-    width: 80em; /* Responsive */
+    width: auto; /* Responsive */
     height: 100%;
     display:flex;
     flex-direction: row;
@@ -57,57 +77,67 @@
     align-items: center;
     margin: auto;
     /* border: 1px solid rgb(56, 150, 18); */
-    margin-top: 2em;
+    margin-top: -1em;
+
 }
 
 .information {
-    width: 385px;
-    height: 100%;
+    width: 330px;
+    height: auto;
     /* border: 1px solid red; */
-    margin: 1em;
-    border-radius: 4px;
-    box-shadow:  2px 2px rgb(0 0 0 / 25%);
+    margin: 20px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    text-align: center;
+
 }
-.information:hover {
-    box-shadow:  3px 3px rgb(0 0 0 / 50%);
-}
+
 .router-image {
     width: auto;
     height: auto;
     object-fit: cover;
     position: relative;
-    border-radius: 6px;
+    border-radius: 2px;
     overflow: hidden;
+    z-index: 1;
 }
 .router-image img {
-    width: 100%;
+    /* border: 1px solid red; */
+    width: 98%;
     height: 260px;
-    border-radius: 6px;
-    transition: all 1s;
-
+    object-fit: cover;
+    z-index: 0;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 -1px 3px rgb(0 0 0 / 20%);
+    transition: all 0.7s ease-in-out;
+    
+}
+.router-image img:hover {
+    transform: scale(1.1)
 }
 
-.router-image :hover {
-    transform: scale(1.2)
-}
 .route-title {
-    /* width: 80%; */
     padding: 1.4rem;
     float: left;
     font-size: 20px;
     font-weight: 800;
     /* border: 1px solid red; */
     text-align: center;
-    font-style:  uppercase;
     transition: all 1s;
+    z-index: 5;
+    letter-spacing: 2px;
+    
+    position: absolute;
+    top: 38%;
+    /* left: 16%; */
+    background-color: rgba(242, 232, 232, 0.6)
 }
 .route-title:hover {
     transform: scale(1.2);
-    color: rgba(226, 51, 212, 0.5);
+    color: rgba(226, 51, 212, 0.2);
+    background-color: rgba(242, 232, 232, 0.1);
 }
 
 .back-home {
