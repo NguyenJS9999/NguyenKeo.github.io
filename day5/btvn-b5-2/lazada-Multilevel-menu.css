@@ -2,44 +2,190 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     list-style: none;
     text-decoration: none;
+    font-size: 12px;
 }
-.Multi-level-menu-banner {
+body {
+    font-family: "Roboto", sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    text-transform: capitalize;
+}
+/* ------------------------------------------------ */
+/* Column Left - Menu 1 */
+.container-multi-menu {
     width: 100%;
     height: auto;
-    background-color: #e9d3da;
-   
+    background: rgb(173, 215, 253);
+    width: 1519px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 50px;
 }
-
+/* Menu 1 */
 .Multi-level-menu {
-    width: 20%;
+    width: 200px;
     height: 344px;
     border: 1px solid red;
-    margin-left: 20%;
-    
+    margin-left: 170px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    position: absolute;
+    box-shadow: 0 0 2px 0 rgb(0.5 0.5 0.5 / 25%);
+    background-color: #fff;
+
 }
-/* ul */
+/* Cho item ẩn đi, chỉ xuất hiện khi hover qua */
+/* .hidden-item-1,
+.hidden-item-2 {
+  color: white;
+  text-align: right;
+} */
+
+/* ul List Menu */
 .menu-list {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(170, 0, 255);
+    /* position: relative; */
     color: #828482;
+    padding: 8px 0 12px;
+    list-style: none;
+    /* transition: all 0.8s; */
 }
-.menu-list a {
+.menu-list li{
+    width: 100%;
+    border: 1px solid rgb(0, 255, 51);
+    /* display: flex; */
+    flex-direction: column;
+    position: relative;   /* sub-menu-1 tự vào */
+    display: list-item;
+}
+/* .menu-list i {
+    width: 10%;
+    height: 60px;
+    line-height: 60px;
+} */
+/* .menu-list a {
     position: relative;
     color: #828482;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+} */
+/* Đổi trạng thái khi hover qua */
+/* .menu-list li:hover{
+    background-color: #ECEFF1;
 }
-.sub-menu {
-    position: absolute;
-    padding-top: 20px;
-    display: none;
-}
-.sub-menu li {
-    color: #fff;
-    background-color: gray;
-    padding: 5px 10px 5px 10px;
-    font-style: italic;
-}
-.menu-list li:visited .sub-menu {
+.menu-list li:hover > a {
+    color: #F36D4E;
+  }
+.menu-list li:hover .hidden-item-1 {
+    color: #F36D4E;
+} */
+/* ------------------------------------------------ */
+/* Menu drop to sub-menu 1*/ 
+.menu-list li:hover .sub-menu-1 {
     display: block;
+}
+/* sub-menu-1 */
+.sub-menu-1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: rgb(228, 217, 217);
+    top: 0px;
+    left: 100%;
+    display: none;
+    z-index: 1;
+}
+.sub-menu-1 li {
+    color: #828482;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    /* font-style: italic; */
+}
+
+
+/* sub-menu-2 */
+/* Menu drop to sub-menu 2*/ 
+.sub-menu-1 li:hover .sub-menu-2 {
+    display: block;
+}
+.sub-menu-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: rgb(228, 217, 217);
+    top: 0px;
+    left: 100%;
+    display: none;
+    z-index: 2;
+}
+.sub-menu-1 li {
+    color: #828482;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    /* font-style: italic; */
+}
+
+/* sub-menu-3 */
+/* Menu drop to sub-menu 3*/ 
+.sub-menu-2 li:hover .sub-menu-3 {
+    display: block;
+}   
+.sub-menu-3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: rgb(228, 217, 217);
+    top: 0px;
+    left: 100%;
+    display: none;
+    z-index: 3;
+}
+.sub-menu-2 li {
+    color: #828482;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    /* font-style: italic; */
+}
+
+/* sub-menu-4 */
+/* Menu drop to sub-menu 4*/ 
+.sub-menu-3 li:hover .sub-menu-4 {
+    display: block;
+}   
+.sub-menu-4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: rgb(217, 217, 228);
+    top: 0px;
+    left: 100%;
+    display: none;
+    z-index: 4;
+}
+.sub-menu-3 li {
+    color: #828482;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    /* font-style: italic; */
 }
