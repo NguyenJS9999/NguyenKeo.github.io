@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto,sans-serif;
+}
+body {
+    background-color: #F1F0F1;
+}
+header {
+    width: 100%;
+    height: auto;
+    background-color: #ed1c24; 
+}
+.container {
+    width: 1280px;
+    margin: auto;
+    padding: 0 !important;
+}
+.navigator {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+/* logo */
+.logo {
+    width: 150px;
+}
+.logo img {
+    width: 80%;
+    height: 50px;
+    margin: 5px;
+    margin-top: 9px;
+    border-radius: 4px;
+}
+/* menu */
+.search {
+    margin-right: 20px;
+    width: 100%;
+}
+.search-input {
+    width: 80%;
+    height: 40px;
+    border: 1px dotted white;
+    margin-left: 9.5%;
+    background-color: #fff;
+    border-radius: 4px;;
+}
+/* avatar */
+.avatar {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.arrow-up {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    bottom: 100px;
+    color: rgb(0, 132, 255);
+    font-size: 50px;
+    /* background-color: rgb(0, 132, 255); */
+    border-radius: 25px;
+}
+/* Navigation-Bar */
+.Navigation-Bar {
+    width: 100%;
+    height: 28px;
+    background-color: #F1F0F1;
+    border: 1px solid #BBBABB;
+}
+.banner {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10px;;
+}
+.banner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/IZePo88tRm68S4wh6z5KbI4QbzZcyNGt5Q1ckerB48FaqUAe_VzXYYtPf1gUmNwNjuabfPa2_NrHUPvmMZUvg0LxqRSMxec=w1180);
+    margin: auto;
+    /* position: relative; */
+    overflow: hidden;
+    background-repeat: round;
+}
+/* content all */
+.title-items {
+    font-weight: 500!important;
+    color: #f44336!important;
+    caret-color: #f44336!important;
+    font-size: 29px;
+    margin: 0 0 0 10px;
+}
+.container-content {
+    width: 100%;
+    height: 480px;
+    /* để tạm height */
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    margin: 10px 0;
+}
+.items {
+    margin-left: auto;
+    margin-right: auto;
+    /* position: relative; */
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+    /* border: 1px dotted red; */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+}
+.item {
+    width: 99%;
+    height: 380px;
+    /* để tạm height */
+    padding: 20px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    transition: all 0.4s;
+    /* border: 1px dotted red; */
+}
+::selection {
+    background-color:rgb(230, 193, 195);
+}
+.item:hover {
+    box-shadow: 0 0 5px 0 hsl(0deg 100% 61% / 60%);
+    transform: scale(1.05)
+}
+.itemselection {
+    background: rgb(211, 132, 132);
+}
+.image-item {
+    width: 98%;
+    height: 55%;
+    overflow: hidden;
+}
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: all 0.2s;
+    animation: image-warning 0.5s infinite;
+}
+.image-item img:hover {
+    width: 101%;
+    opacity: 0.5;
+}
+@keyframes image-warning {
+    25%  {transform: scale(1.05, 1.05);}
+    50%  {transform: rotate(-1deg);}
+    75%  {transform: scale(1.05, 1.05);}
+    100% {transform: rotate(1deg);}
+}
+.product-name {
+    width: 100%;
+    /* height: auto; */
+    color: #333333;
+    height: 44px;
+    margin: 10px 0px 0px 30px;
+    word-break: break-word;
+    font-size: 14px;
+}
+.product-name:hover {
+   font-weight: 600;
+   color:rgb(237, 28, 36);
+}
+.price-label {
+    width: 100%;
+    height: auto;
+    /* border: 1px dotted red; */
+    margin: 10px 0 0 30px;
+    word-break: break-word;
+}
+.promotion-price {
+    font-weight: 700!important;
+    margin: 2px 0;
+    animation: promotion-price 1s infinite;
+}
+@keyframes promotion-price  {
+    0%   {color: rgb(221, 127, 127);}
+    10%  {color: rgb(221, 176, 127);}
+    20%  {color: rgb(177, 221, 127);}
+    30%  {color: rgb(166, 221, 127);}
+    40%  {color: rgb(127, 221, 216);}
+    50%  {color: rgb(127, 221, 209);}
+    60%  {color: rgb(127, 141, 221);}
+    70%  {color: rgb(144, 127, 221);}
+    80%  {color: rgb(221, 127, 221);}
+    90%  {color: rgb(255, 0, 128);}
+    95%  {transform: scale(1.05, 1.05);}
+    100% {color: rgb(220, 7, 71);}
+}
+.listed-price {
+    text-decoration: line-through;
+    font-size: 12px !important;
+    margin: 3px 0;
+}
+.percent-discount {
+    width: 42px;
+    height: 24px;
+    background-color: #D42333;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 7%;
+    margin: 0 10px 0 0;
+    padding: 5.5px 4px 4px 8px;
+    font-size: 12px;
+    border-radius: 0 0 4px 4px;
+    animation: change-color 1s infinite;
+}
+@keyframes change-color {
+    20%  {background-color: rgb(221, 127, 127);}
+    70%  {background-color: red;}
+    100% {background-color: rgb(221, 127, 127);}
+  }
+.button-add-to-cart {
+    width: 140%;
+    height: 36px;
+    background-color: rgb(237, 28, 36);
+    color: #fff;
+    padding: 0px 16px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: -19.5%;
+    animation: add-to-cart-now 1.1s infinite;
+}
+.button-add-to-cart:active {
+    transform: scale(1.05);
+    border: none;
+}
+@keyframes add-to-cart-now {
+    20% {
+        transform: scale(1.05);
+    }
+    
+    70% {
+        transform: none;
+    }
+    
+    80% {
+        transform: scale(1.08);
+    }
+}
+.show-all {
+    width: 200px;
+    height: 36px;
+    margin-top: 25px;
+    margin-left: 42.5%;
+    background-color: white;
+    border: 1px solid #BD1B1B;
+    color: #BD1B1B;
+    font-weight: 500;
+}
