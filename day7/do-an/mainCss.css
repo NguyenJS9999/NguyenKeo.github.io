@@ -66,19 +66,50 @@ header {
     object-fit: cover;
     border-radius: 20px;
 }
+.bell {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    bottom: 100px;
+    color: white;
+    font-size: 20px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    padding: 1%;
+    text-decoration-line: none;
+    animation: ring-bell 0.5s infinite;
+}
+.bell:hover {
+    transform: scale(1.05);
+}
+@keyframes ring-bell {
+    25%  {transform: rotate(-10deg)}
+    30%  {transform: rotate(10deg)}
+    45%  {transform: rotate(-10deg)}
+    100% {transform: rotate(10deg)}
+}
 .arrow-up {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 57px;
+    height: 57px;
     display: flex;
     justify-content: center;
     align-items: center;
     right: 20px;
     bottom: 100px;
-    color: rgb(0, 132, 255);
-    font-size: 50px;
-    /* background-color: rgb(0, 132, 255); */
-    border-radius: 25px;
+    color: rgb(255 255 255);
+    font-size: 40px;
+    background-color: rgb(0 132 255);
+    border-radius: 50%;
+    padding: 1%;
+    text-decoration-line: none;
+}
+.arrow-up:hover {
+    transform: scale(1.1);
 }
 /* Navigation-Bar */
 .Navigation-Bar {
@@ -106,16 +137,16 @@ header {
     font-weight: 500!important;
     color: #f44336!important;
     caret-color: #f44336!important;
-    font-size: 29px;
+    /* font-size: 29px; */
     margin: 0 0 0 10px;
 }
 .container-content {
     width: 100%;
-    height: 480px;
-    /* để tạm height */
+    height: auto;
     border-radius: 4px;
     background-color: #FFFFFF;
     margin: 10px 0;
+    padding-bottom: 25px;
 }
 .items {
     margin-left: auto;
@@ -124,15 +155,13 @@ header {
     overflow: hidden;
     list-style: none;
     z-index: 1;
-    /* border: 1px dotted red; */
     display: flex;
     /* flex-direction: row; */
     justify-content: center;
 }
 .item {
     width: 99%;
-    height: 380px;
-    /* để tạm height */
+    height: auto;
     padding: 20px;
     margin: 1px;
     display: flex;
@@ -279,4 +308,59 @@ header {
     border: 1px solid #BD1B1B;
     color: #BD1B1B;
     font-weight: 500;
+}
+
+/* footer */
+.container-footer {
+    width: 100%;
+    height: 341px;
+    /* để tạm height */
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    margin: 10px 0;
+}
+.footer-items {
+    width: 1280px;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-item {
+    width: 100%;
+    height: auto;
+}
+
+.image-profile {
+    width: 100%;
+    height: auto;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+.image-profile img{
+    margin: auto;
+    /* border: 1px dotted red; */
+}
+.title-introduce {
+    color: #8B8B8B;
+    margin: 0 0 5px 0;
+}
+.personal-information {
+    width: 100%;
+    height: auto;
+    padding: 6px;
+    color: white;
+}
+.personal-information a {
+    color: #ED1C24;
+    text-decoration: none;
+}
+.personal-information p {
+    margin-left: 4px;
 }
