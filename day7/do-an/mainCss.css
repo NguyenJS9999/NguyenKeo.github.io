@@ -73,7 +73,7 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
-    border: 1px dotted white;
+    /* border: 1px dotted white; */
     margin-right: 22px;
     font-size: 25px;
     position: relative;
