@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.container-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    background-color: rgb(184, 178, 178);
+}
+
+.modal {
+    width: 384px;
+    height: 276px;
+    /* border: 1px dotted red; */
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgb(1 1 1/ 25%);
+    margin: auto;
+    position: fixed;
+    top: 285px;
+    right: 82px;
+    padding: 12px 0 0 0;
+    background-color: rgb(241, 235, 235);
+}
+
+input {
+    width: 364px;
+    height: 52px;
+    border: 1px solid grey;
+    border-radius: 3px;
+   
+}
+
+.dang-nhap {
+    width: 92%;
+    height: 52px;
+    color: white;
+    background-color: #1877f2;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+
+}
+.quen-mat-khau {
+    text-decoration: none;
+    margin: 10px;
+}
+.tao-tai-khoan-moi {
+    width: auto;
+    height: auto;
+    color: white;
+    background-color: #36a420;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+}

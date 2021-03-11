@@ -4,11 +4,12 @@
     box-sizing: border-box;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font: Roboto-Regular;
     vertical-align: baseline;
     list-style: none;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
+    text-transform: vertical;
 }
 body {
     font-family: "Roboto", sans-serif;
@@ -33,7 +34,7 @@ li {
 /* Menu 1 */
 .Multi-level-menu {
     width: 200px;
-    height: 344px;
+    height: 355px;
     border: 1px solid red;
     margin-left: 170px;
     background: white;
@@ -46,57 +47,27 @@ li {
     background-color: #fff;
 
 }
-/* Cho item ẩn đi, chỉ xuất hiện khi hover qua */
-/* .hidden-item-1,
-.hidden-item-2 {
-  color: white;
-  text-align: right;
-} */
 
 /* ul List Menu */
 .menu-list {
     width: 100%;
-    height: 100%;
-    border: 1px solid rgb(170, 0, 255);
-    /* position: relative; */
+    height: 30px;
+    /* border: 1px solid rgb(170, 0, 255); */
+    position: relative;
     color: #828482;
-    padding: 8px 0 12px;
-    list-style: none;
-    /* transition: all 0.8s; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 .menu-list li{
     width: 100%;
-    border: 1px solid rgb(0, 255, 51);
-    /* display: flex; */
-    flex-direction: column;
-    position: relative;   /* sub-menu-1 tự vào */
-    display: list-item;
+    height: auto;
+    /* border: 1px dotted rgb(0, 255, 51); */
+    padding: 4px 5px 6px 5px;
+  
 }
-/* .menu-list i {
-    width: 10%;
-    height: 60px;
-    line-height: 60px;
-} */
-/* .menu-list a {
-    position: relative;
-    color: #828482;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-} */
-/* Đổi trạng thái khi hover qua */
-/* .menu-list li:hover{
-    background-color: #ECEFF1;
-}
-.menu-list li:hover > a {
-    color: #F36D4E;
-  }
-.menu-list li:hover .hidden-item-1 {
-    color: #F36D4E;
-} */
-/* ------------------------------------------------ */
+
 /* Menu drop to sub-menu 1*/ 
 .menu-list li:hover .sub-menu-1 {
     display: block;
@@ -189,3 +160,8 @@ li {
     padding: 5px 10px 5px 10px;
     /* font-style: italic; */
 }
+
+.fa-angle-right {
+    font-size: 20px;
+    display: none;
+  }

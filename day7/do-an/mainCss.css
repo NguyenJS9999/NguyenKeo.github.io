@@ -232,12 +232,12 @@ header {
     width: 101%;
     opacity: 0.5;
 }
-@keyframes image-warning {
+/* @keyframes image-warning {
     25%  {transform: scale(1.05, 1.05);}
     50%  {transform: rotate(-1deg);}
     75%  {transform: scale(1.05, 1.05);}
     100% {transform: rotate(1deg);}
-}
+} */
 .product-name {
     width: 100%;
     /* height: auto; */
@@ -296,11 +296,11 @@ header {
     border-radius: 0 0 4px 4px;
     animation: change-color 1s infinite;
 }
-@keyframes change-color {
+/* @keyframes change-color {
     20%  {background-color: rgb(221, 127, 127);}
     70%  {background-color: red;}
     100% {background-color: rgb(221, 127, 127);}
-  }
+  } */
 .button-add-to-cart {
     width: 140%;
     height: 36px;
