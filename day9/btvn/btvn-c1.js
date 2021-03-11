@@ -1,5 +1,5 @@
 // Bài tập về nhà buổi 9 js 1 10/03/2021
-
+console.log("Câu số 1: ")
 // Đổi độ C sang độ F => C cho biết trước
 const c = 1;
 function c_to_f(c = "Chưa nhập độ C") {

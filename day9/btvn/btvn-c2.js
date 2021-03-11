@@ -1,4 +1,5 @@
 // Bài tập về nhà buổi 9 js 1 10/03/2021
+console.log("Câu số 2: ")
 // Viết hàm chuyển đổi tiền tệ: chuyển đổi từ USD, Euro sang VNĐ và ngược lại 
 console.log("Js runed")
 // Câu 1:
