@@ -7,6 +7,7 @@ function c_to_f(c = "Chưa nhập độ C") {
 }
 let c_f = c_to_f(c);
 console.log("Độ F sang độ C, độ F sẽ là: ", c_f)
+alert("Độ F sang độ C, độ F sẽ là: ", c_f)
 
 // https://www.metric-conversions.org/vi/nhiet-do/bang-do-c-sang-do-f.htm
 
@@ -17,5 +18,6 @@ function f_to_c(_f = "Chưa nhập độ F") {
 }
 let f_c = f_to_c(_f);
 console.log("Độ C sang độ F, độ C sẽ là: ", f_c)
+alert("Độ C sang độ F, độ C sẽ là: ", f_c)
 
 // https://www.metric-conversions.org/vi/nhiet-do/bang-do-f-sang-do-c.htm
