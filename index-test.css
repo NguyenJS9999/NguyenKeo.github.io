@@ -1,7 +1,7 @@
-* {
+/* * {
     border: 0.1px solid red;
     width: 10px;
-    /* text-decoration: underline; */
+    text-decoration: underline;
     box-sizing: border-box;
 }
 
@@ -26,4 +26,4 @@
 
     list-style-type: lower-alpha;
   
-}
+} */
