@@ -10,4 +10,4 @@ function theKiHienTai(namHienTai) {
 
 }
 const theki = theKiHienTai(namHienTai);
-console.log("Thế kỉ hiện tại với số năm tướng ứng (có sẵn/nhập vào): ", theki);
+console.log('Thế kỉ hiện tại với số năm tướng ứng (có sẵn/nhập vào): ', theki);
