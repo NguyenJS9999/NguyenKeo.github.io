@@ -10,6 +10,7 @@
     text-decoration: none;
     font-size: 13px;
     text-transform: vertical;
+    color: #828482;
 }
 body {
     font-family: "Roboto", sans-serif;
@@ -65,12 +66,19 @@ li {
     height: auto;
     /* border: 1px dotted rgb(0, 255, 51); */
     padding: 4px 5px 6px 5px;
-  
+}
+.menu-list li a {
+    color: #828482;
+}
+.menu-list li a:hover {
+    color: #828482;
+    text-decoration: none;
 }
 
 /* Menu drop to sub-menu 1*/ 
 .menu-list li:hover .sub-menu-1 {
     display: block;
+ 
 }
 /* sub-menu-1 */
 .sub-menu-1 {
@@ -79,6 +87,7 @@ li {
     position: absolute;
     display: none;
     background-color: rgb(228, 217, 217);
+    box-shadow: 5px 5px blue;
     top: 0px;
     left: 100%;
     display: none;

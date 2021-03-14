@@ -46,7 +46,8 @@
 
  function hocluc(x, y, z) {
      if (x < 0 || x > 10 || y < 0 || y > 10 || z < 0 || z > 10) {
-         return
+        console.log("Điểm không hợp lệ")
+        return
      }
      let a = (x + y + z) / 3;
 
