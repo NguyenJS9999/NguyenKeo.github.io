@@ -1,34 +1,25 @@
 // 3. Tính tổng các chữ số trong 1 số nguyên dương.
 console.log("Câu 3:")
 
-const soNguyenDuong = 12
+const soNguyenDuong = 123
 
-function zCong(soNguyenDuong) {
-    let numberToString = soNguyenDuong.toString()
-    console.log(typeof numberToString) 
+function congTong(soNguyenDuong) {
+    if (soNguyenDuong <= 0) {
+      return;
+    }
+  
+    let tong = 0;
+  
+    while (soNguyenDuong > 0) {
+        // Cộng rồi gán lại
 
-   
-    console.log(typeof stringToNumber) 
+        tong += soNguyenDuong % 10;
+        soNguyenDuong = Math.floor(soNguyenDuong / 10);
+        console.log(soNguyenDuong)
 
-
-
-    
-   
-}
-zCong(soNguyenDuong)
-
-// function tongCacSoNguyenDUong(soNguyenDuong) {
-//     return tong = ;
-//     let so = soNguyenDuong[1] 
-//     console.log(so)
-// }
-// tongCacSoNguyenDUong(soNguyenDuong)
-
-// function tongCuaSoNguyenDuong(soNguyenDuong)  {
-//     let congKiTu = soNguyenDuong[0] + soNguyenDuong[1]
-//     console.log(typeof congKiTu)
-
-// }
-
-// tongCuaSoNguyenDuong(soNguyenDuong)
-1549 + 1600 + 1858 + 2340 + 2615 + 2701
+    }
+    return tong;
+  }
+  
+  console.log(congTong(soNguyenDuong));
+;
