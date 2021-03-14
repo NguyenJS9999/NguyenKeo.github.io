@@ -21,5 +21,5 @@ function congTong(soNguyenDuong) {
     return tong;
   }
   
-  console.log(congTong(soNguyenDuong));
+  console.log("Tổng số mỗi chữ số của 1 số nguyên là: ", congTong(soNguyenDuong));
 ;
