@@ -90,14 +90,24 @@
  }
 
 // Giải phương trình bậc 2: ax^2 + bx + c = 0.
-function ptbac2 (a, b, c) {
-    if (a = 0) {
+function giaiPTbac2 (a, b, c) {
+    if (a === 0) {
         return;
     }
+    let delta = b * b - 4 * a * c;
+    console.log(delta);
 
-    let delta = b*b -4*a*c;
+    if (delta > 0) {
+        let x1 = (-b - Math.sqrt(delta)) / (2 * a)
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a)
+        console.log("x1 = " + x1 + "," + "x2 = " + x2);
+    } else if (delta === 0) {
+        let x = -b / (2 * a)
+        console.log(`Phương trình có nghiệm kép là ${x}`);
+    } else { 
+        console.log("Phương trình vô nghiệm")
+    }
     
-
 }
 
 // Cho 3 cạnh a,b,c kiểm tra 3 cạnh có tạo thành một tam giác không 
