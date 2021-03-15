@@ -18,6 +18,23 @@ function translate(language) {
     // } else if (language == "Croatia") {
     //     console.log("zdravo")
     // } 
+    // So sánh kiểu dữ liệu tránh nhập số hoặc kí tự đặc biệt
+    if (typeof language != "string") { 
+        return "xin chào";
+    }
+
+    if (language === "French") {
+        return "Borjou"
+    } else if (language === "Hawaiian") {
+        return "aloha"
+    } else if (language === "Germany") {
+        return "Hallo"
+    } else if (language === "Italy") {
+        return "Ciao"
+    } else if (language === "Croatia") {
+        return "zdravo"
+    } 
+
 
     switch (language) {
         case (""):
@@ -43,8 +60,10 @@ function translate(language) {
         case ("Croatia"):
             console.log("zdravo")
             break
-            
+
     }
 
 }
 translate(language)
+
+// Câu hỏi: với switch case để check khi nhập số thì viết ntn

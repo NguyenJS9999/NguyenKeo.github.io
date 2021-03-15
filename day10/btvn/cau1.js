@@ -7,13 +7,13 @@ function time() {
     console.log("Số tháng hiện tại là: ", monthNow)
 
     // let monthNow = 4
-    if ( monthNow == 1 || monthNow == 2 || monthNow == 3) {
+    if ( monthNow === 1 || monthNow === 2 || monthNow === 3) {
         console.log("Tháng hiện tại đang vào mùa Xuân")
-    } else if (  monthNow == 4 || monthNow == 5 || monthNow == 6 ) {
+    } else if (  monthNow === 4 || monthNow === 5 || monthNow === 6 ) {
         console.log("Tháng hiện tại đang vào mùa Hè")
-    } else if (  monthNow == 7 || monthNow == 8 || monthNow == 9 ) {
+    } else if (  monthNow === 7 || monthNow === 8 || monthNow === 9 ) {
         console.log("Tháng hiện tại đang vào mùa Thu")
-    } else if (  monthNow == 10 || monthNow == 11 || monthNow == 12 ) {
+    } else if (  monthNow === 10 || monthNow === 11 || monthNow === 12 ) {
         console.log("Tháng hiện tại đang vào mùa Đông")
     }
 

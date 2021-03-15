@@ -13,9 +13,9 @@ function congTong(soNguyenDuong) {
     while (soNguyenDuong > 0) {
         // Cộng rồi gán lại
 
-        tong += soNguyenDuong % 10;
+        tong += (soNguyenDuong % 10);
         soNguyenDuong = Math.floor(soNguyenDuong / 10);
-        console.log(soNguyenDuong)
+        // console.log(soNguyenDuong)
 
     }
     return tong;
