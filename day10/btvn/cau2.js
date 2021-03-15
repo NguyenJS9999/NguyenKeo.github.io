@@ -1,14 +1,15 @@
 console.log("Câu 2:")
 // Tìm năm nhuận có khi nào - là bội của 4, số năm đố chia hết cho 4
-const nam = 2029;
+const nam = 200;
 const thang = 9;
 
 function kieuNam(nam, thang) {
     let namNhuan = nam % 4; // chia hết cho 4 - phần dư bằng 0
-    console.log("Năm nhuận trả về phần dư = 0 là true: ", namNhuan) // True => 1
+    console.log("Năm nhuận trả về phần dư True=0, không nhuận là false=1 : ", namNhuan) // True => 1
 
-    if (namNhuan === 0) {
+    if (namNhuan === 0 || namNhuan % 100 !== 0) {
         console.log(`${nam} => là năm nhuận`)
+
         function soNgayNamNhuan(thang) {
             if (thang === 2) {
                 console.log(`Tháng ${thang} năm không nhuận có số ngày là: `, 29)

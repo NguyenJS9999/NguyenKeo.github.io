@@ -41,7 +41,7 @@ function DateCount(m, y) {
 }
 
 function NamNhuan(y) {
-  if (y % 4 === 0 && y % 100 != 0) {
+  if (y % 4 === 0 && y % 100 !== 0) {
     return true;
   } else if (y % 400 === 0) {
     return true;
@@ -129,6 +129,6 @@ function translate(language) {
     default:
       console.log("Xin chào");
       break;
-      
+
   }
 }
