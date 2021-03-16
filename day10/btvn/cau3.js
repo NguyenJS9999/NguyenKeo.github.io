@@ -1,25 +1,18 @@
 // 3. Tính tổng các chữ số trong 1 số nguyên dương.
 console.log("Câu 3:")
 
-const soNguyenDuong = 123
-
-function congTong(soNguyenDuong) {
-    if (soNguyenDuong <= 0) {
-      return;
-    }
-  
-    let tong = 0;
-  
-    while (soNguyenDuong > 0) {
-        // Cộng rồi gán lại
-
-        tong += (soNguyenDuong % 10);
-        soNguyenDuong = Math.floor(soNguyenDuong / 10);
-        // console.log(soNguyenDuong)
-
-    }
-    return tong;
+function sum_in_number(in_number) {
+  if (in_number <= 0) {
+    return;
   }
-  
-  console.log("Tổng số mỗi chữ số của 1 số nguyên là: ", congTong(soNguyenDuong));
-;
+
+  let sum = 0;
+
+  while (in_number > 0) {
+    sum += in_number % 10;
+    in_number = Math.floor(in_number / 10);
+  }
+  return sum;
+}
+
+console.log("Tổng các số các chữ số của số Nguyên đó là: ",sum_in_number(123));
