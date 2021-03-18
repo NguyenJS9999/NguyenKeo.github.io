@@ -13,3 +13,4 @@ function sum_in_number(in_number) {
   return sum;
 }
 console.log("Tổng các số các chữ số của số Nguyên đó là: ",sum_in_number(123));
+
