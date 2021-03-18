@@ -23,12 +23,11 @@ function inRaSoHoanHao(n) {
         }
     }
 }
-inRaSoHoanHao(n)
+inRaSoHoanHao()
 // Câu 2:
 console.log("Câu 2:")
 // let numbers_N = [-1, -2, -4, 6, -8, 0, 1, 2, 4, 9, 10, 66]
-
-
+// Cách 1:
 // function find_min_max(numbers_N) {
 //     var maxInNumbers = Math.max.apply(Math, numbers_N);
 //     var minInNumbers = Math.min.apply(Math, numbers_N);
@@ -41,21 +40,23 @@ function MaxMin(array) {
     let minNumber = array[0];
     let maxNumer = array[0];
     for (let i = 0; i < array.length; i++) {
-      if (maxNumer < array[i]) {
-        maxNumer = array[i];
-      }
-  
-      if (minNumber > array[i]) {
-        minNumber = array[i];
-      }
+        if (minNumber > array[i]) {
+            minNumber = array[i];
+        }
+        if (maxNumer < array[i]) {
+            maxNumer = array[i];
+        }
+
+
     }
-    console.log("Gia tri lon nhat la: ", maxNumer);
-    console.log("Gia tri nho nhat la: ", minNumber);
-  }
-MaxMin([-1, 1, -2, 2, -3, 3, 0, -4, 4, -5, 5, -6, 6])
+    console.log("Số lớn nhất là: ", maxNumer);
+    console.log("Số nhỏ nhất là: ", minNumber);
+}
+MaxMin([8, -10, -2, 2, -3, 3, 0, -4, 4, -5, 5, -6, 6])
 // Câu 3: 
 console.log("Câu 3:")
 var array_n = [-1, -22, -4, 6, -8, 0, 1, 22, 34, 9, 100, 66];
+
 function sort_Array() {
     // Sắp xếp từ lớn đến bé theo chiều tự nhiên của hàm sort
     let n_sort_min_max = array_n.sort(function (a, b) {
@@ -72,22 +73,27 @@ console.log("Số lớn thứ 2 trong mảng số nguyên bất kì là :", sort
 
 // Câu 4:
 console.log("Câu 4:")
+var arrayN = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
 // Trả về vị trí đầu tiên của số lẻ trong mảng
-function firstOddNumber(arr) {
-    for (let i in arr) {
-        if (arr[i] % 2 === 1 || arr[i] % 2 === -1) {
-            return `Index: ${i} - value: ${arr[i]}`;
+function dau_soLe(arrayN) {
+    for (let i in arrayN) {
+        if (arrayN[i] % 2 === 1 || arrayN[i] % 2 === -1) {
+            return `Lẻ Index: ${i} - value: ${arrayN[i]}`;
         }
     }
 }
+
 // Trả về vị trí cuối cùng của số chắn trong mảng
-function lastEvenNumber(arr) {
-    for (let i = arr.length - 1; i >=0; i--) {
-        if (arr[i] % 2 === 0) {
-            return `Index: ${i} - value: ${arr[i]}`;
+function cuoi_SoChan(arrayN) {
+    for (let i = arrayN.length - 1; i >= 0; i--) {
+        if (arrayN[i] % 2 === 0) {
+            return `Chẵn Index: ${i} - value: ${arrayN[i]}`;
         }
     }
 }
+console.log( dau_soLe(arrayN)  )
+console.log( cuoi_SoChan(arrayN) )
 
 // Câu 5:
 console.log("Câu 5:")
@@ -150,4 +156,3 @@ n_sort_minTOmax2(array_n)
 //     console.log("Sắp xếp tắng dần", array_n[value])
 //     return value;
 // }
-
