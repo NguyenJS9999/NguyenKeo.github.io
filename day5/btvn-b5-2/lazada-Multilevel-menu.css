@@ -30,12 +30,12 @@ li {
     width: 1519px;
     z-index: 1;
     position: absolute;
-    margin-top: 50px;
+    margin-top: 118px;
 }
 /* Menu 1 */
 .Multi-level-menu {
     width: 200px;
-    height: 355px;
+    height: 370px;
     /* border: 1px solid red; */
     margin-left: 170px;
     background: white;
@@ -44,7 +44,7 @@ li {
     /* justify-content: flex-start; */
     /* align-items: center; */
     position: absolute;
-    box-shadow: 0 0 0.9px #828482;
+    box-shadow: 0 0 2px #828482;
     background-color: #fff;
 
 }                                                   
@@ -56,6 +56,7 @@ li {
     /* border: 1px solid rgb(170, 0, 255); */                                                       
     position: relative;                 
     color: #828482;
+    padding: 4% 0px;
     flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     align-items: center;
     justify-content: center;
@@ -67,37 +68,56 @@ li {
     /* border: 1px dotted rgb(0, 255, 51); */
     padding: 4px 5px 6px 5px;
 }
+.menu-list li:hover {
+    background-color: #ECEFF1;
+}
 .menu-list li a {
     color: #828482;
+    font-weight: 400;
 }
 .menu-list li a:hover {
-    color: #828482;
+    color: #F26D00;
     text-decoration: none;
 }
 
 /* Menu drop to sub-menu 1*/ 
 .menu-list li:hover .sub-menu-1 {
     display: block;
- 
 }
+i {
+   color: white;
+}
+li:hover i {
+    color: #F36D00;
+    float: right;
+    margin-top: 1.5%;
+    font-size: 15px;
+    /* font-weight: 400; */
+}
+
+
 /* sub-menu-1 */
 .sub-menu-1 {
     width: 100%;
-    height: 100%;
+    height: 370px;
     position: absolute;
     display: none;
-    background-color: rgb(228, 217, 217);
-    box-shadow: 0 0 0.9px #828482;;
+    /* background-color: rgb(228, 217, 217); */
+    box-shadow: 0 0 2px #828482;
+    padding: 4% 0px;
     top: 0px;
-    left: 101%;
-    display: none;
+    left: 100.5%;
     z-index: 1;
 }
 .sub-menu-1 li {
     color: #828482;
     background-color: white;
     padding: 5px 10px 5px 10px;
-    box-shadow: 0 0 0.9px #828482;
+    /* box-shadow: 0 0 0.9px #828482; */
+}
+.sub-menu-1 li:hover {
+    background-color: #ECEFF1;
+    color: #F26D00;
 }
 
 
@@ -111,10 +131,11 @@ li {
     height: 100%;
     position: absolute;
     display: none;
-    background-color: rgb(228, 217, 217);
-    box-shadow: 0 0 0.9px #828482;
+    /* background-color: rgb(228, 217, 217); */
+    box-shadow: 0 0 2px #828482;
+    padding: 4% 0px;
     top: 0px;
-    left: 100%;
+    left: 100.5%;
     display: none;
     z-index: 2;
 }
@@ -123,6 +144,10 @@ li {
     background-color: white;
     padding: 5px 10px 5px 10px;
     /* font-style: italic; */
+}
+.sub-menu-2 li:hover {
+    background-color: #ECEFF1;
+    color: #F26D00;
 }
 
 /* sub-menu-3 */
@@ -135,9 +160,12 @@ li {
     height: 100%;
     position: absolute;
     display: none;
-    background-color: rgb(228, 217, 217);
+    padding: 4% 0px;
+    /* background-color: rgb(228, 217, 217); */
+    box-shadow: 0 0 2px #828482;
+
     top: 0px;
-    left: 100%;
+    left: 100.5%;
     display: none;
     z-index: 3;
 }
@@ -146,6 +174,10 @@ li {
     background-color: white;
     padding: 5px 10px 5px 10px;
     /* font-style: italic; */
+}
+.sub-menu-3 li:hover {
+    background-color: #ECEFF1;
+    color: #F26D00;
 }
 
 /* sub-menu-4 */
@@ -158,9 +190,12 @@ li {
     height: 100%;
     position: absolute;
     display: none;
-    background-color: rgb(217, 217, 228);
+    padding: 4% 0px;
+    /* background-color: rgb(217, 217, 228); */
+    box-shadow: 0 0 2px #828482;
+
     top: 0px;
-    left: 100%;
+    left: 100.5%;
     display: none;
     z-index: 4;
 }
@@ -170,8 +205,7 @@ li {
     padding: 5px 10px 5px 10px;
     /* font-style: italic; */
 }
-
-.fa-angle-right {
-    font-size: 20px;
-    display: none;
-  }
+.sub-menu-3 li:hover {
+    background-color: #ECEFF1;
+    color: #F26D00;
+}

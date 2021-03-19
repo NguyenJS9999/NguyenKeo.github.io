@@ -105,3 +105,32 @@ function isoscelesTriangleInverse(h, a) {
 
 isoscelesTriangleInverse(4, 7)
 document.write("<br><br><br><br>")
+
+function drawIsoTriangle(h) {
+    document.writeln("<br /><br />");
+  
+    if (h <= 0 || Number.isInteger(h) === false) {
+      return "Thông số đầu vào không hợp lệ";
+    }
+  
+    let str = "";
+  
+    // Tìm độ dài đáy của tam giác cân có chiều cao h:
+    let b = h * 2 - 1;
+  
+    for (let i = 0; i < h; i++) {
+      for (let j = 0; j < b; j++) {
+        if (j < i || j > b - 1 - i) {
+          str += "*&nbsp&nbsp".fontcolor("white");
+        } else {
+          str += "*&nbsp&nbsp";
+        }
+      }
+  
+      str += "<br /><br />";
+    }
+  
+    document.writeln(str);
+  }
+  
+  drawIsoTriangle(4);
