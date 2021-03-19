@@ -6,30 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thế giới mua sắm</title>
+    <title>Siêu thị nhanh-tiện lợi</title>
 
-    <link rel="shortcut icon" type="image/png"
-        href="./image/mart-logo.png
-        ">
+    <link rel="shortcut icon" type="image/png" href="./image/mart-logo.png">
 
     <!-- mainCss.css -->
     <link rel="stylesheet" href="mainCss.css">
-    <!-- File css header -->
-    <link rel="stylesheet" href="header.css">
-    <!-- File css Navigation.css -->
-    <link rel="stylesheet" href="navigation.css">
-    <!-- File css Content-1 -->
-    <link rel="stylesheet" href="content-1.css">
-    <!-- File css Content-2 -->
-    <link rel="stylesheet" href="content-2.css">
-    <!-- File css Content-3 -->
-    <link rel="stylesheet" href="content-3.css">
-    <!-- File css Content-4 -->
-    <link rel="stylesheet" href="content-4.css">
-    <!-- File css Content-5 -->
-    <link rel="stylesheet" href="content-5.css">
-    <!-- File css content-footer -->
-    <link rel="stylesheet" href="content-footer.css">
 
     <!-- CDN font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -44,7 +26,7 @@
 
 <body id="dau-trang">
     <header>
-        <div class="container ">
+        <div class="container">
             <div class="navigator">
                 <div class="logo"><a href=""><img src="./image/mart-logo.png" alt="mart-logo"></a></div>
                 <div class="search">
@@ -52,11 +34,23 @@
                         <i class="fas fa-search search-icon"></i>
                     </div>
                 </div>
+                <div class="dangNhap-dangKi">
+                    <p>Đăng nhập</p>
+                    <p>Đăng kí</p>
+                </div>
+                <div>
+                    <a class="bell">
+                        <i class="far fa-bell"></i>
+                    </a>
+                </div>
+
                 <div class="cart">
-                    <i class="fas fa-shopping-cart"><p>68</p></i>
+                    <i class="fas fa-shopping-cart">
+                        <p>68</p>
+                    </i>
                 </div>
                 <div class="avatar">
-                    <img src="https://www.w3schools.com/w3images/avatar6.png" alt="">
+                    <a href="./infomation-profile.html"> <img src="./image/avata.jpg" alt="avata"></a>
                 </div>
 
             </div><!-- navigator -->
@@ -64,6 +58,24 @@
     </header>
 
     <div class="Navigation-Bar">
+
+        <div class="container">
+            <div class="menu-infomations">
+                <div class="menu-items">
+                    <i class="fas fa-bars"></i>
+                    <p>Danh mục sản phẩm</p>
+                </div>
+
+                <div class="infomations-contact">
+                    <i class="fas fa-chevron-down"></i>
+                    <p>Sản phẩm bạn vừa xem</p>
+                    <p>Tin tức Mart</p>
+                    <p>Tư vấn mua hàng</p>
+                </div>
+            </div>
+            
+        </div>
+
     </div> <!-- Navigation-Bar -->
     <div class="container">
         <div class="banner">
@@ -312,7 +324,7 @@
                             <p>Thêm vào giỏ</p>
                         </button>
                     </a>
-                    <div class="percent-discount">-26%&#37;</div>
+                    <div class="percent-discount">-26&#37;</div>
                 </div><!-- item 2 -->
 
                 <div class="item">
@@ -366,7 +378,7 @@
                             <p>Thêm vào giỏ</p>
                         </button>
                     </a>
-                    <div class="percent-discount">-2415&#37;</div>
+                    <div class="percent-discount">-24&#37;</div>
                 </div><!-- item 5 -->
 
             </div> <!-- items -->
@@ -381,63 +393,39 @@
         <div class="container-footer">
             <div class="footer-items">
                 <div class="footer-item">
-                    <div class="image-profile">
-                        <img src="./image/avata.jpg" alt="avata">
+                    <div class="personal-information">
+                        <div class="logo"><img id="logo-footer" src="./image/mart-logo.png" alt="mart-logo"></div>
+                        <p class="title-introduce"></p>
+                        <p>Công Ty Cổ Phần Dịch Vụ Thương Mại Tổng Hợp Mart</p>
+                        <p>MSDN: 123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp lần đầu ngày 20/09/3021</p>
+                        <p>Đăng ký thay đổi lần thứ 1004 do Sở Kế hoạch Đầu tư TP. Hồ Chí Minh ngày 13/02/3021</p>
+                        <div class="khai-bao-boCongThuong"><img src="./image/logoSaleNoti.png" alt="khai bao"></div>
                     </div>
                 </div>
                 <div class="footer-item">
                     <div class="personal-information">
-                        <h4 class="title-introduce">Thông tin cá nhân</h4>
-                        <p>Họ và tên&#58; Nguyễn Trung Nguyên</p>
-                        <p>Tuổi&#58; 35</p>
-                        <p>Nghệ nghiệp&#58; Lập trình viên front end</p>
-                        <p>Liên hệ gmail&#58; nguyentrungnguyenth14@gmail.com</p>
-                        <p>Số điện thoại&#58; 0988360149</p>
-                        <p>Sở thích&#58; Lập trình, chạy bộ, ăn, du lịch, bóng đá</p>
+                        <h4 class="title-introduce"><a href="./infomation-profile.html">Về chúng tôi</a></h4>
+                        <p>Giới thiệu về siêu thị Mart</p>
+                        <p>Danh sách các cửa hàng</p>
+                        <p>Quản lý chất lượng</p>
+                        <p>Điều khoản và điều kiện giao dịch</p>
+                        <p>Chính sách bảo mật và chia sẻ thông tin</p>
                     </div>
                 </div>
 
                 <div class="footer-item">
                     <div class="personal-information">
-                        <h4 class="title-introduce ">Danh sách sản phẩn đã làm được: </h4>
-                        <p>Sản phẩm buổi 2&#58;
-                            <a href="https://nguyenkeo.github.io/day2/Bt-b2-ve-nha.html" target="_blank" alt="san-pham-da-lam">Bài 1</a>
-                        </p>
-                        <p>Sản phẩm buổi 4&#58;
-                            <a href="https://nguyenkeo.github.io/day4/btth1.html" target="_blank"
-                            alt="san-pham-da-lam">Bài 1</a>
-                            <a href="https://nguyenkeo.github.io/day4/btvn2Buoi4.html"
-                            alt="san-pham-da-lam">Bài 2</a>
-                        </p>
-                        <p>Sản phẩm buổi 5&#58;
-                            <a href="https://nguyenkeo.github.io/day5/btvn-b5-1/btvn1-coneTechmaster.html" target="_blank"
-                            alt="san-pham-da-lam">Bài 1</a>
-                            <a href="https://nguyenkeo.github.io/day5/btvn-b5-2/lazada-Multilevel-menu.html" target="_blank"
-                            alt="san-pham-da-lam"
-                            >Bài 2</a>
-                        </p>
-                        <p>Sản phẩm buổi 6&#58;
-                            <a href="https://nguyenkeo.github.io/day6/btvn-b6-1/animation.html" target="_blank"
-                            alt="san-pham-da-lam">Bài 1</a>
-                            <a href="https://nguyenkeo.github.io/day6/btvn-b6-2-Image%20Gallery/Image-Gallery-Dad.html" target="_blank"
-                            alt="san-pham-da-lam">Bài 2</a>
-                        </p>
-                        <p>Sản phẩm buổi 7&#58;
-                            <a href="https://nguyenkeo.github.io/day7/do-an/home.html" target="_blank"
-                            alt="san-pham-da-lam">Đồ án web 1</a>
-                        </p>
+                        <h4 class="title-introduce "><a href="">Hỗ trợ khách hàng</a></h4>
+                        <p>Trung tâm hỗ trợ khách hàng</p>
+                        <p>Chính sách thanh toán</p>
+                        <p>Chính sách giao hàng</p>
+                        <p>Chính sách chiếu khấu ưu đãi mua sắm</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </footer>
-
-    <div>
-        <a class="bell">
-            <i class="far fa-bell"></i>
-        </a>
-    </div>
 
     <div>
         <a href="#dau-trang" class="arrow-up">
