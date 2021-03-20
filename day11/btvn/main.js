@@ -3,10 +3,11 @@ console.log("Câu 1:")
 
 function checkSoHoanHao(a) {
     let tongCacUocSo = 0;
+    // Các ước ố hoàn hảo nằm ở nừa đầu của số nhập vào => /2
     for (let i = 1; i <= a / 2; i++) {
         if (a % i === 0) {
             tongCacUocSo += i;
-            console.log(i);
+            // console.log(i);
         }
     }
     if (tongCacUocSo === a) {
@@ -15,7 +16,7 @@ function checkSoHoanHao(a) {
     }
     return false;
 }
-
+// quét các số hoàn hảo trả về để in ra
 function inRaSoHoanHao(n) {
     for (let i = 1; i <= n; i++) {
         if (checkSoHoanHao(i) === true) {
@@ -23,7 +24,8 @@ function inRaSoHoanHao(n) {
         }
     }
 }
-inRaSoHoanHao()
+inRaSoHoanHao(8128)
+// 6 28 496 8128
 // Câu 2:
 console.log("Câu 2:")
 // let numbers_N = [-1, -2, -4, 6, -8, 0, 1, 2, 4, 9, 10, 66]
@@ -137,22 +139,3 @@ function n_sort_min_max(array_n) {
 
 }
 n_sort_min_max(array_n)
-
-function n_sort_minTOmax2(array_n) {
-    for (var i = array_n.length - 1; i >= 0; i--) {
-        // console.log(array_n[i]);
-    }
-}
-n_sort_minTOmax2(array_n)
-
-// function n_sort_maxTOmin2(array_n) {
-//     for (var i = 0; i = array_n.length; i++) {
-//         console.log(array_n[i]);
-//     }
-// }
-// n_sort_maxTOmin2(array_n)
-
-// for (let value of array_n) {
-//     console.log("Sắp xếp tắng dần", array_n[value])
-//     return value;
-// }
