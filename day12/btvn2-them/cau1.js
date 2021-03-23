@@ -27,3 +27,14 @@ console.log("Câu 4: ")
 
 document.write("Câu 5: <br /><br />")
 console.log("Câu 5: ")
+
+function taxi(km, waitime) {
+    if (km <= 0 || waitime <= 0 ) {
+        return "Chưa đi không hợp lệ";
+    }
+    let soKm = 0;
+ 
+
+
+
+}

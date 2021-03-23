@@ -26,10 +26,10 @@ function inRaSoHoanHao(n) {
 }
 inRaSoHoanHao(8128)
 // 6 28 496 8128
-// Câu 2:
+//Câu 2:
 console.log("Câu 2:")
+// console.log("Cách 1: Dùng Hàm")// Cách 1: Dùng hàm có sẵn
 // let numbers_N = [-1, -2, -4, 6, -8, 0, 1, 2, 4, 9, 10, 66]
-// Cách 1:
 // function find_min_max(numbers_N) {
 //     var maxInNumbers = Math.max.apply(Math, numbers_N);
 //     var minInNumbers = Math.min.apply(Math, numbers_N);
@@ -37,7 +37,7 @@ console.log("Câu 2:")
 //     console.log("Giá trị nhỏ nhất là: " + minInNumbers);
 // }
 // find_min_max(numbers_N)
-
+console.log("Cách 2: vòng for") // Cách 2: dùng vòng lặp
 function MaxMin(array) {
     let minNumber = array[0];
     let maxNumer = array[0];
@@ -48,15 +48,44 @@ function MaxMin(array) {
         if (maxNumer < array[i]) {
             maxNumer = array[i];
         }
-
-
     }
     console.log("Số lớn nhất là: ", maxNumer);
     console.log("Số nhỏ nhất là: ", minNumber);
 }
-MaxMin([8, -10, -2, 2, -3, 3, 0, -4, 4, -5, 5, -6, 6])
+MaxMin([8, -1, -2, 2, -3, 3, 0, -4, 4, -5, 5, -6, 6])
+console.log("Cách 3: for in") // Cách 3: Dùng vòng lặp for in
+// Tìm số nhỏ nhất trong mảng các số nguyên
+function soNhoNhat(arraY) {
+    let Nmin = arraY[0]; // xuất phát từ bé nhất 
+
+    for (let item of arraY) {
+        if (item < Nmin) {
+            Nmin = item;
+            // console.log("arraY[i]", arraY[i])
+        }
+    }
+    return Nmin;
+}
+
+// Tìm số lớn nhất trong mảng các số nguyên
+function soLonNhat(arraY) {
+    let N_max = arraY[0];
+    for (let i in arraY) {
+        if (arraY[i] > N_max) { // lấy ra các số
+            N_max = arraY[i]; // Quét qua mảng số nào lớn hơn số trước thì gán lại
+            // console.log("arraY[i]", arraY[i])
+        }
+    }
+    return N_max;
+}
+
+let arraY = [14, -43, 239, 27, -110, 15, 315, 116, -322, -243];
+
+console.log("Số nhỏ nhất: ", soNhoNhat(arraY));
+console.log("Số lớn nhất: ", soLonNhat(arraY));
+
 // Câu 3: 
-console.log("Câu 3:")
+console.log("Câu 3: Cách 1")
 var array_n = [-1, -22, -4, 6, -8, 0, 1, 22, 34, 9, 100, 66];
 
 function sort_Array() {
@@ -71,6 +100,30 @@ function sort_Array() {
     return n_reverse[1]
 }
 console.log("Số lớn thứ 2 trong mảng số nguyên bất kì là :", sort_Array(array_n))
+
+console.log("Câu 3: Cách 2");
+function soLonNhat(array_n) {
+    let max = array_n[0];
+  
+    for (let i in array_n) {
+      if (array_n[i] > max) {
+        max = array_n[i];
+      }
+    }
+    return max;
+  }
+
+function soLonThuHai(array_n) {
+    let secondMax = array_n[0];
+
+    for (let i in array_n) {
+        if (array_n[i] < soLonNhat(array_n) && array_n[i] > secondMax) {
+            secondMax = array_n[i];
+        }
+    }
+    return secondMax;
+}
+console.log("Số lớn thứ 2 trong mảng cho trước là: ",soLonThuHai(array_n));
 
 
 // Câu 4:
@@ -94,8 +147,8 @@ function cuoi_SoChan(arrayN) {
         }
     }
 }
-console.log( dau_soLe(arrayN)  )
-console.log( cuoi_SoChan(arrayN) )
+console.log(dau_soLe(arrayN))
+console.log(cuoi_SoChan(arrayN))
 
 // Câu 5:
 console.log("Câu 5:")

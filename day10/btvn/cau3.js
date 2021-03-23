@@ -2,7 +2,7 @@
 console.log("Câu 3:")
 
 function sum_in_number(in_number) {
-  if (in_number <= 0) {
+  if (Number.isInteger (in_number) === false ||in_number <= 0) {
     return;
   }
   let sum = 0;
