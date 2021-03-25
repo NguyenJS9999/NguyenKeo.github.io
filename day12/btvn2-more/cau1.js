@@ -9,6 +9,7 @@ function checkPrimeNumber(N) {
     if (N === 2) {
         return true;
     }
+    // Ước bé nhất là một số dương khác 1 của một tập hợp số b bất kỳ là một số nguyên tố nếu không vượt quá căn bậc hai của b.
     if (N > 2) {
         for (let i = 2; i <= Math.sqrt(N); i++) {
             if (N % i === 0) {
@@ -19,31 +20,62 @@ function checkPrimeNumber(N) {
     }
 }
 // Hàm đếm số nguyên tố trong đoạn [a, b]
-function  demSoNguyenTo (a, b) {
-    let count = 0;
+function  demSoNguyenTo (x, y) {
+    let demSo = 0;
 
-    if (a > b) {
-        greater = a;
-        smaller = b;
-    } else {
-        greater = b;
-        smaller = a;
-    }
+    if (x <= y){
+        soLonHon = y;
+        soNhoHon = x;
+    } 
+    else if (x > y) {
+        soLonHon = x;
+        soNhoHon = y;
+    } 
 
-    for (let i = Math.ceil(smaller); i <= Math.floor(greater); i++) {
+    for (let i = Math.ceil(soNhoHon); i <= Math.floor(soLonHon); i++) {
         if (checkPrimeNumber(i)) {
-            count++;
+            demSo ++;
         }
     }
 
-    return `Có ${count} số nguyên tố trong đoạn [${smaller}, ${greater}]`;
+    return `Có tất cả ${demSo} số nguyên tố trong khoảng từ [${soNhoHon}, ${soLonHon}]`;
 }
 
-console.log( demSoNguyenTo (-2, 7));
-console.log( demSoNguyenTo (10.5, 30));
+console.log( demSoNguyenTo (-4, 800));
+console.log( demSoNguyenTo (100.5, 400));
 
 ////////////////////////////////////////////////////////////////
 console.log("Câu 2: ")
+// Hàm tìm vị trí của phần tử có giá trị lớn nhất trong mảng
+
+function timChiMucLonNhat(ArRay) {
+    let max = ArRay[0];
+    let maxIndex = 0;
+
+    for (let i = 0; i < ArRay.length; i++) {
+      if (ArRay[i] > max) {
+        max = ArRay[i];
+        maxIndex = i; // lấy ra chỉ mục
+      }
+    }
+  
+    return maxIndex;
+  }
+  
+  // Hàm chèn phần tử X vào phía sau phần tử có giá trị lớn nhất trong mảng
+  
+  function chenPhanTuSauChiMucMax(x, ArRay) {
+    let xIndex = timChiMucLonNhat(ArRay) + 1;
+  
+    ArRay.splice(xIndex, 0, x);
+  
+    return ArRay;
+  }
+  
+  let chuoi = [3, -5, 6, -10, 20, 67, 45, 0, -2, 6, 19];
+  
+//   console.log(chenPhanTuSauChiMucMax(33, chuoi));
+  console.log("Chèn số", chenPhanTuSauChiMucMax(36, chuoi));
 
 ////////////////////////////////////////////////////////////////
 console.log("Câu 3: ")
