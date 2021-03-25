@@ -126,4 +126,4 @@ function MaxElement(arR) {
   }
 
 
-  console.log( MaxElement(chuoi) )
+  console.log("Chuỗi có Kí tự dài nhất, trong mảng các chuỗi là: ", MaxElement(chuoi) )
