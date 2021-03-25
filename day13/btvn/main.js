@@ -1,74 +1,60 @@
 console.log("Câu 1: ");
 document.write("Câu 1: ")
 //1. Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Anh', age: 20 }. Viết hàm tính ra tuổi trung bình của toàn bộ sinh viên.
-let students = [{
-        name: "d",
-        age: 40
-    }, {
-        name: "a",
-        age: -10
-    },{
-        name: "e",
-        age: -50
-    }, {
-        name: "b",
-        age: 20
-    }, {
-        name: "f",
-        age: 60
-    },{
-        name: "c",
-        age: 30
-    },
+let students = [
+    {name: "d", age: 40 }, 
+    {name: "a", age:-10 }, 
+    {name: "e", age:-50 }, 
+    {name: "b", age: 20 }, 
+    {name: "f", age: 60 }, 
+    {name: "c", age: 30 },     
 ];
 function ageAvg(arrays) {
     let sum = 0;
     let avg = 0;
     for (let i of arrays) {
         // console.log(i.age)
-        sum = sum + i.age 
+        sum = sum + i.age
     }
     console.log("sum:", sum)
-    avg = sum / arrays.length 
+    avg = sum / arrays.length
     return avg
 }
-console.log("Avg", ageAvg(students))
-document.write("<br />", "Số tuổi trung bình của các học sinh là: ", ageAvg(students), "<br /><br />")
-
-console.log("Câu 2: ");
-document.write("Câu 2: ")
+console.log("Avg", ageAvg(students)); document.write("<br />", "Số tuổi trung bình của các học sinh là: ", ageAvg(students), "<br /><br />")
+///////////////////////////////////////////////////////////////////////////////////
+console.log("Câu 2: "); document.write("Câu 2: ")
 //2. Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Anh'', age: 20 }. 
 // Viết hàm sắp mảng theo tuổi học viên từ cao đến thấp.
 // Cách 1: Dùng hàm
-function sortArrayObject(arr) {
-    arr.sort(function (a, b) {
+function sortArrayObject(arrAy) {
+    arrAy.sort(function (a, b) {
         return b.age - a.age
     });
-   return arr
+    return arrAy
 }
-console.log(sortArrayObject(students))
-// Dùng vòng lặp for 
-function sortArrayObject(arr) {
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < i; j++) {
-        if (arr[i].age > arr[j].age) {
-          let item = arr[i];
-          arr[i] = arr[j];
-          arr[j] = item;
+console.log("Cách 1", sortArrayObject(students))
+// Cách 2: Dùng vòng lặp for 
+function sortArrayObject(arrAy) {
+    for (let i = 0; i < arrAy.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (arrAy[i].age > arrAy[j].age) {
+                let item = arrAy[i];
+                arrAy[i] = arrAy[j];
+                arrAy[j] = item;
+            }
         }
-      }
     }
-    return arr;
-  }
-console.log(sortArrayObject(students))
-//
-console.log("Câu 3: ");document.write("<br /> Câu 3: ")
+    return arrAy;
+}
+console.log("Cách 2", sortArrayObject(students));
+///////////////////////////////////////////////////////////////////////////////////
+console.log("Câu 3: "); document.write("<br /> Câu 3: ")
 let arrayFail = [false, null, undefined, NaN, 0, "", 1, 2, "a", "b"]
 // Cách 1:  dùng vòng lặp for 
-function giaTri(array){
-    let newArr =[];
-    for(let i = 0;i<array.length;i++){
-        if(array[i]) newArr.push(array[i]);
+function giaTri(array) {
+    let newArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]) newArr.push(array[i]);
     }
     return newArr
 }
@@ -92,6 +78,23 @@ removedItemFail = (arrayFail) => {
 
 console.log("Các giá trị đúng sau khi loại bỏ còn lại là: ", removedItemFail(arrayFail))
 document.write("Các giá trị đúng sau khi loại bỏ còn lại là: ", removedItemFail(arrayFail));
-//
+///////////////////////////////////////////////////////////////////////////////////
 console.log("Câu 4: ");
-document.write("<br /> Câu 4: ")
+let chuoiKiTu = "Race car"
+function CheckChuoiDoiXung( string ){
+    let String_reverseStr  =""; 
+    for(let i= string .length-1;i>=0;i--){
+            String_reverseStr  = String_reverseStr  + string [i];
+    }
+    String_reverseStr   = String_reverseStr  .split(" ").join("").toLowerCase();
+    let newStr =  string .split(" ").join("").toLowerCase();
+
+    if(newStr === String_reverseStr  ){
+        return true;
+    }else{
+        return false;
+    }
+}
+CheckChuoiDoiXung( string )
+///////////////////////////////////////////////////////////////////////////////////
+console.log("Câu 5: ");
