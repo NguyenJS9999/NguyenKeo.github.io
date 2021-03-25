@@ -26,10 +26,10 @@ changeBgColor("pink")
 // content2 = content1
 // console.log(content2)
 function copyContent(paragraph1, paragraph2) {
-    paragraph1.innerText = paragraph2.innerText;
+    document.getElementById("paragraph1").innerText = document.getElementById("paragraph2").innerText;
 }
 
-// copyContent(firstPara, secondPara);
+copyContent();
 
 //
 function changeFontSize(Font_Size) {
