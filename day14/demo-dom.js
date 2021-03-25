@@ -9,7 +9,7 @@ var hello = document.getElementById("demo");
 hello.innerHTML = "Hello word"
 hello.style.color = "blue";
 hello.style.textAlign = "center";
-hello.style.backgroundcolor = "yellow";
+hello.style.backgroundColor = "yellow";
 
 function pressOnclick() {
     hello.innerHTML = "Hi you"

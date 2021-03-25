@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="container">
+        <div class="Guess-form">
+            <b>Guess!</b>
+            <p>Bạn có 10 lượt đoán Khoảng giá trị có thể đoán từ 0 - 100.</p>
 
+            <div id="number-input">
+                <input id="number" type="number">
+                <button id="guessButton" onclick="clickGuess()">guess</button>
+            </div>
+
+            <div id="alert"></div>
+
+            <div id="resul"></div>
+
+
+        </div>
+    </div>
 
     <script src="./game.js"></script>
 </body>
