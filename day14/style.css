@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items:center; */
+    border: 0.1px dotted red;
+}
+
+.Guess-form {
+    width: 25%;
+    height: 300px;
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: center;
+    border: 0.1px dotted red;
+    background-color: rgb(154, 220, 231);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items:center;
+    
+}
+
