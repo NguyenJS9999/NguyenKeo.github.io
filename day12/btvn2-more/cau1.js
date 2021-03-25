@@ -1,4 +1,3 @@
-document.write("Câu 1: <br /><br />")
 console.log("Câu 1: ")
 // Số nguyên tố chia hết cho 1 và chính nó ngoại từ 0 à 1
 // let n = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,103,134,156,598,809,907]
@@ -6,11 +5,10 @@ function checkPrimeNumber(N) {
     if (N < 2 || Number.isInteger(N) === false) {
         return false;
     }
-    // ngoại trừ 0 và 1 => tính từ 2 lên
+    // ngoại trừ 0 và 1 => tính từ 2 lên, 2 là sng tố chẵn nhỏ nhất
     if (N === 2) {
         return true;
     }
-
     if (N > 2) {
         for (let i = 2; i <= Math.sqrt(N); i++) {
             if (N % i === 0) {
@@ -21,7 +19,7 @@ function checkPrimeNumber(N) {
     }
 }
 // Hàm đếm số nguyên tố trong đoạn [a, b]
-function countPrimeNumbers(a, b) {
+function  demSoNguyenTo (a, b) {
     let count = 0;
 
     if (a > b) {
@@ -41,75 +39,81 @@ function countPrimeNumbers(a, b) {
     return `Có ${count} số nguyên tố trong đoạn [${smaller}, ${greater}]`;
 }
 
-console.log(countPrimeNumbers(-2, 7));
-console.log(countPrimeNumbers(10.5, 30));
+console.log( demSoNguyenTo (-2, 7));
+console.log( demSoNguyenTo (10.5, 30));
 
-
+////////////////////////////////////////////////////////////////
 console.log("Câu 2: ")
 
-
+////////////////////////////////////////////////////////////////
 console.log("Câu 3: ")
+// Hàm kiểm tra 1 mảng có phải mảng tăng dần không
 
+function isAscendingArray(aRRay) {
+  for (let i = 0; i < aRRay.length; i++) {
+    if (aRRay[i] > aRRay[i + 1]) { 
+      return false;
+    }
+  }
+  return true;
+}
 
+// Hàm chèn phần tử X vào mảng sao cho mảng vẫn có thứ tự tăng dần
+
+function  chenPhanTu (y, aRRay) {
+  if ( isAscendingArray(aRRay) !== isAscendingArray(aRRay)  ) {
+    return `Mảng nhập vào không phải mảng tăng dần`;
+  }
+
+  let Index_y;
+
+  // Tìm vị trí sẽ chèn y trong mảng:
+  for (let i = 0; i < aRRay.length; i++) {
+    if (y >= aRRay[i] && y <= aRRay[i + 1]) {
+      Index_y = i + 1;
+    }
+  }
+
+  // Chèn y vào trong mảng tăng dần ban đầu:
+  aRRay.splice(Index_y, 0, y);
+  return aRRay;
+}
+
+let newArrayAdded = [-136, -125, -119, -17, 16, 18, 116, 117, 129, 140, 147, 153];
+
+console.log( chenPhanTu (100, newArrayAdded));
+//////////////////////////////////////////////////////////////// soNguyenTo
 console.log("Câu 4: ")
-
-
-console.log("Câu 5: ")
-
-
-function costTaxi() {
-    let soKM = prompt("nhap so km");
-    let b = prompt("nhap thoi gian  cho");
-    let giacuoc = 0;
-
-    if (soKM < 0 && b < 0) {
-        return "nhap lai du lieu";
+function isPalindrome(N) {
+    if (N < 0 || Number.isInteger(N) === false ) {
+      return false;
+    }
+  
+    if (N >= 0 && N < 10) {
+      return `${N} là số đối xứng`;
     }
 
-    if (soKM <= 1) {
-        giacuoc = 9000;
-    } else if (soKM > 1 && soKM < 31) {
-        giacuoc = 9000 + (soKM - 1) * 11000;
-    } else if (soKM >= 31) {
-        giacuoc = 9000 + (29 * 11000) + (soKM - 30) * 9500;
-    }
-
-    if (b > 0) {
-        let a = 0;
-        a = 20000 * b;
-        giacuoc += a
-    }
-
-
-    console.log("KM di: ", soKM);
-    console.log("thoi gian cho la:", b, "gio")
-    console.log("so tien la: ", giacuoc);
-}
-
-function calTaxiFare(distance, wait) {
-    // distance: tham số chỉ độ dài quãng đường, đơn vị km
-    // wait: tham số chỉ thời gian chờ, đơn vị hour(tiếng)
-
-    if (distance < 0 || wait < 0) {
-        return "Thông số đầu vào không hợp lệ";
-    }
-
-    let fare;
-
-    if (distance <= 1) {
-        fare = 9000;
-    } else if (distance <= 30) {
-        fare = 9000 + 11000 * (distance - 1);
+    let soBanDau = N;
+    let daoNguocSo = 0;
+   
+    do {
+      let digit = N % 10;
+      daoNguocSo = daoNguocSo * 10 + digit;
+      N = (N - digit) / 10;
+    } while (N > 0)
+  
+    if (daoNguocSo === soBanDau) {
+      return `${soBanDau} là số đối xứng`;
     } else {
-        fare = 9000 + 11000 * (30 - 1) + 9500 * (distance - 30);
+      return `${soBanDau} không phải số đối xứng`;
     }
+  }
 
-    // Cộng thêm tiền chờ:
-    fare += 20000 * wait;
-
-    return `Tiền cước taxi đi ${distance} km, chờ ${wait} tiếng là ${fare} đồng.`;
-}
-////////////////////////////////
+  console.log(isPalindrome(8));
+  console.log(isPalindrome(1234321));
+  console.log(isPalindrome(6868));
+////////////////////////////////////////////////////////////////
+console.log("Câu 5: ")
 let km = 1; 
 let waitTime = 2; // Chờ cất hành lý
 function calTaxiFare(km, waitTime) {
