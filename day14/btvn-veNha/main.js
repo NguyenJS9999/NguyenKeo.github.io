@@ -16,7 +16,7 @@ function changeBgColor(color) {
 }
 changeBgColor("pink")
 //
-// function copyContent() {
+
 // var copyContent = document.getElementById("paragraph1");
 // copyContent.innerHTML = "Nguyen"
 // var content1 = document.getElementsByClassName('paragraph1').innerHTML
@@ -29,15 +29,18 @@ function copyContent(paragraph1, paragraph2) {
     paragraph1.innerText = paragraph2.innerText;
 }
 
-copyContent(firstPara, secondPara);
-// }
-// copyContent()
+// copyContent(firstPara, secondPara);
+
 //
 function changeFontSize(Font_Size) {
-    var FontSize = document.getElementsByClassName('paragraph1', 'paragraph2', 'paragraph3');
-    // FontSize.style.fontSize = Font_Size;
+    var FontSize1 = document.getElementById("paragraph1");
+    FontSize1.style.fontSize = Font_Size + "px";
+    var FontSize2 = document.getElementById("paragraph2");
+    FontSize2.style.fontSize = Font_Size + "px";
+    var FontSize3 = document.getElementById("paragraph3");
+    FontSize3.style.fontSize = Font_Size + "px";
 }
-changeFontSize("40px")
+changeFontSize("40")
 //
 function increaseFontSize() {
 
