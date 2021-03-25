@@ -1,4 +1,4 @@
-// Câu 1:
+console.log("Câu 1: ")
 let students = [
     {
         name: "a",
@@ -33,17 +33,11 @@ function ageAvg(arrays) {
 
 console.log("Avg", ageAvg(students))
 // Câu 2: 
-let values = [false,NaN,24,0,"",undefined,null,"ANBC",true]
-function giaTri(arr){
-    let newArr =[];
-    for(let i = 0;i<arr.length;i++){
-        if(arr[i]) newArr.push(arr[i]);
-    }
-    return newArr
-}
-console.log(giaTri(values))
+console.log("Câu 2: Sắp xếp")
 
-// Câu 3: 
+// Câu 3:
+console.log("Câu 3: Lọc giá trị")
+
 let values = [false,NaN,24,0,"",undefined,null,"ANBC",true]
 function giaTri(arr){
     let newArr =[];
@@ -52,8 +46,10 @@ function giaTri(arr){
     }
     return newArr
 }
-console.log(giaTri(values))
+console.log("Các giá trị đúng sau khi loại bỏ các giá trị sai là: ", giaTri( values ) )
 // Câu 4:
+console.log("Câu 4: Kiểm tra chuỗi đối xứng")
+
 function kiemTraChuoiDoiXung(str){
     let reverseStr=""; 
     for(let i=str.length-1;i>=0;i--){
@@ -69,9 +65,22 @@ function kiemTraChuoiDoiXung(str){
     }
 }
 // Câu 5:
+console.log("Câu 5: Lọc kí tự dài nhất trong chuỗi")
+
 function max(arr) {
-    let max = ar[0].length;
-    // for () {
-        
-    // }
+    let max = arr[0].length;
+    for (let i = 1; i < arr.length; i++) {
+        if (max < arr[i].lenth) {
+            max = arr[i].length;
+        }
+    }
+
+    let array = [];
+    for (let i = 0; i < arr.lenght; i++){
+        if (arr[i].lenght === max){
+            array.push(arr[i]);
+        }
+    }
+    return array;
 }
+console.log( max( ["aba", "aa", "ad", "c", "vcd"] ) )

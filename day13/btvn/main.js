@@ -1,14 +1,26 @@
-console.log("Câu 1: ");
-document.write("Câu 1: ")
+console.log("Câu 1: Tính tuổi trung bình các học sinh");
 //1. Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Anh', age: 20 }. Viết hàm tính ra tuổi trung bình của toàn bộ sinh viên.
-let students = [
-    {name: "d", age: 40 }, 
-    {name: "a", age:-10 }, 
-    {name: "e", age:-50 }, 
-    {name: "b", age: 20 }, 
-    {name: "f", age: 60 }, 
-    {name: "c", age: 30 },     
+let students = [{
+        name: "d",
+        age: 40
+    },{
+        name: "a",
+        age: -10
+    },{
+        name: "e",
+        age: -50
+    },{
+        name: "b",
+        age: 20
+    }, {
+        name: "f",
+        age: 60
+    },{
+        name: "c",
+        age: 30
+    },
 ];
+
 function ageAvg(arrays) {
     let sum = 0;
     let avg = 0;
@@ -20,9 +32,9 @@ function ageAvg(arrays) {
     avg = sum / arrays.length
     return avg
 }
-console.log("Avg", ageAvg(students)); document.write("<br />", "Số tuổi trung bình của các học sinh là: ", ageAvg(students), "<br /><br />")
+console.log("Tuổi trung bình của các học sinh là: ", ageAvg(students));
 ///////////////////////////////////////////////////////////////////////////////////
-console.log("Câu 2: "); document.write("Câu 2: ")
+console.log("Câu 2: ");
 //2. Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Anh'', age: 20 }. 
 // Viết hàm sắp mảng theo tuổi học viên từ cao đến thấp.
 // Cách 1: Dùng hàm
@@ -47,8 +59,9 @@ function sortArrayObject(arrAy) {
     return arrAy;
 }
 console.log("Cách 2", sortArrayObject(students));
+
 ///////////////////////////////////////////////////////////////////////////////////
-console.log("Câu 3: "); document.write("<br /> Câu 3: ")
+console.log("Câu 3: ");
 let arrayFail = [false, null, undefined, NaN, 0, "", 1, 2, "a", "b"]
 // Cách 1:  dùng vòng lặp for 
 function giaTri(array) {
@@ -58,43 +71,59 @@ function giaTri(array) {
     }
     return newArr
 }
-console.log(giaTri(arrayFail))
+console.log("Cách 1: ", giaTri(arrayFail))
 // Cách 2: Dùng hàng filter 
 removedItemFail = (arrayFail) => {
     arrayFail = arrayFail.filter((value) => value);
     return arrayFail;
 };
 // Cách 3: Dùng vòng for loại trừ các giá trị sai
-// function removedItemFail(arrayFail) {
-// let deleteItem = 0;
-// for (let i in arrayFail) {
-//     console.log(i === 0)
-//     if (i === false || i === null || i === NaN || i === 0 || i === "") {
-//         deleteItem = delete arrayFail.i
-//     }
-// }
-// return arrayFail
-// }
+function removedItemFail(arrayFail) {
+    let deleteItem = 0;
+    for (let i in arrayFail) {
+        console.log(i === 0)
+        if (i === false || i === null || i === NaN || i === 0 || i === "") {
+            deleteItem = delete arrayFail.i
+        }
+    }
+    return arrayFail
+}
 
-console.log("Các giá trị đúng sau khi loại bỏ còn lại là: ", removedItemFail(arrayFail))
-document.write("Các giá trị đúng sau khi loại bỏ còn lại là: ", removedItemFail(arrayFail));
+console.log("Cách 2: Các giá trị đúng sau khi loại bỏ còn lại là: ", removedItemFail(arrayFail))
+
 ///////////////////////////////////////////////////////////////////////////////////
 console.log("Câu 4: ");
 let chuoiKiTu = "Race car"
-function CheckChuoiDoiXung( string ){
-    let String_reverseStr  =""; 
-    for(let i= string .length-1;i>=0;i--){
-            String_reverseStr  = String_reverseStr  + string [i];
-    }
-    String_reverseStr   = String_reverseStr  .split(" ").join("").toLowerCase();
-    let newStr =  string .split(" ").join("").toLowerCase();
 
-    if(newStr === String_reverseStr  ){
+function CheckChuoiDoiXung(string) {
+    let String_reverseStr = "";
+    for (let i = string.length - 1; i >= 0; i--) {
+        String_reverseStr = String_reverseStr + string[i];
+    }
+    String_reverseStr = String_reverseStr.split(" ").join("").toLowerCase();
+    let newStr = string.split(" ").join("").toLowerCase();
+
+    if (newStr === String_reverseStr) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
-CheckChuoiDoiXung( string )
+console.log("Chuỗi đó là đối xứng? ", CheckChuoiDoiXung(chuoiKiTu) )
 ///////////////////////////////////////////////////////////////////////////////////
 console.log("Câu 5: ");
+let chuoi = ["aba", "aa", "ad", "c", "vcd"]
+
+function MaxElement(arR) {
+    let length_Arr = arR.map((value) => value.length);
+  
+    length_Arr.sort((a, b) => a - b);
+    let maxLength = length_Arr[length_Arr.length - 1];
+  
+    let maxLenArr = arR.filter((value) => value.length === maxLength);
+  
+    return maxLenArr;
+  }
+
+
+  console.log( MaxElement(chuoi) )
