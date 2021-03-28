@@ -10,8 +10,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  letter-spacing: 1.2px;
+  font-size: 20px;
+  letter-spacing: 1.4px;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
   padding: 10px 20px;
   width: 500px;
   text-align: center;
-  background-color: rgb(199, 247, 247);
+  background-color: rgb(216, 255, 255);
 }
 
 .input:focus {
@@ -27,7 +27,7 @@ body {
 }
 
 .alertMessage {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   color: green;
 }
@@ -42,8 +42,8 @@ body {
 
 .input,
 .button-guess {
-  margin-right: 5px;
-  padding: 2px;
+  margin-right: 7px;
+  padding: 4px;
 }
 
 .input {
