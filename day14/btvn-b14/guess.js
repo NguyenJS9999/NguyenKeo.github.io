@@ -61,9 +61,12 @@ function clickGuess() {
       alertMessage.style.color = "blue";
     }
 
-    
+
     resultMessage.innerHTML += `Lần số: ${countNumber} bạn đoán là số: ${ inputNum } <br />`;
+    soLuotConLai.style.color = "brown";
+
     soLuotConLai.innerHTML = ` Bạn còn lại ${ countNumberRemaining } lượt đoán`;
+    soLuotConLai.style.color = "green";
     
 
     if (countNumber === 10 && countNumberRemaining === 0) {
