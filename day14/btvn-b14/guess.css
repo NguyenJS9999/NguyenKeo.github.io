@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.container {
+  width: 100%;
+  height: 657px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.random-form {
+  border: 1px dotted rgb(247, 0, 255);
+  width: auto;
+  height: auto;
+  background-color: #c7f7f7;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -150px;
+  padding: 5% 5%;
+}
+
+.title {
+  font-size: 65px;
+  color: #b86e10;
+}
+
+.notification {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(99, 28, 132);
+}
+
+.input,
+button {
+  padding: 5px;
+}
+
+.button {
+  width: auto;
+
+}
+
+.input,
+.button-guess {
+  margin-right: 5px;
+}
+
+.input:focus {
+  outline: none;
+}

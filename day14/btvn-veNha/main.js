@@ -40,7 +40,7 @@ function changeFontSize(Font_Size) {
     var FontSize3 = document.getElementById("paragraph3");
     FontSize3.style.fontSize = Font_Size + "px";
 }
-changeFontSize("40")
+changeFontSize("20")
 //
 function increaseFontSize() {
 

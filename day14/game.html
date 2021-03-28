@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game guuess</title>
+    <title>Game guess</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <div class="Guess-form">
-            <b>Guess!</b>
-            <p>Bạn có 10 lượt đoán Khoảng giá trị có thể đoán từ 0 - 100.</p>
-
-            <div id="number-input">
-                <input id="number" type="number">
-                <button id="guessButton" onclick="clickGuess()">guess</button>
-            </div>
-
-            <div id="alert"></div>
-
-            <div id="resul"></div>
-
-
-        </div>
-    </div>
+        <div class="random-form">
+          <h1 class="title">Guess!</h1>
+    
+          <p>Bạn có 10 lượt đoán </p> <br />
+          <p>Khoảng giá trị có thể đoán từ 0 đến 100</p> <br />
+          
+          <div class="action">
+            <input type="number" id="number" class="input" /> 
+    
+            <button id="guessButton" onclick="clickGuess()" type="submit" class="button guessButton">
+              Guess
+            </button>
+    
+          </div> <br />
+    
+          <p id="alert"></p> <br />
+    
+          <div class="action">
+            <p id="result"></p>
+          </div>
+    
+        </div> <!-- random-form -->
+      </div>
 
     <script src="./game.js"></script>
 </body>

@@ -1,0 +1,36 @@
+<!-- Bài tập về nhà buổi 14 (02) Game Guess radom đoán số -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess number</title>
+    <link rel="stylesheet" href="./guess.css" />
+  </head>
+  <body>
+    <for class="container">
+      <h1 class="title">Guess Number!</h1>
+
+      <p class="soLuotConLai" >Bạn có 10 lượt đoán</p>
+      <p>Khoảng giá trị có thể đoán từ 0 đến 100</p>
+
+      <input type="number" id="number" class="input" />
+
+      <button type="submit" class="btn guessButton" onclick="clickGuess()">Guess number
+      </button>
+
+      <button type="submit" class="btn buttonRestart" onclick="restartButton()">Reset
+      </button>
+
+      <p class="alertMessage"></p>
+
+      <div class="actions">
+        <p class="result"></p>
+        <p ></p>
+      </div>
+    </for>
+
+    <script src="./guess.js"></script>
+  </body>
+</html>
