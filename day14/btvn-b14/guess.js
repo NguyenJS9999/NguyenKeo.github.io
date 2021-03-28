@@ -30,12 +30,15 @@ function clickGuess() {
     alertMessage.style.color = "red";
 
   } 
-  
-  else if (inputNum < 0 || inputNum > 100 ) {
-    alertMessage.innerHTML = "Số bạn đoán nằm ngoài khoảng cho phép !";
+  else if (inputNum < 0 ) {
+    alertMessage.innerHTML = "Số bạn đoán nhỏ hơn khoảng cho phép!";
     alertMessage.style.color = "blue";
 
   } 
+  else if (inputNum > 100) {
+    alertMessage.innerHTML = "Số bạn đoán lớn hơn khoảng cho phép!";
+    alertMessage.style.color = "blue";
+  }
   
   else {
     countNumber++;
@@ -58,6 +61,7 @@ function clickGuess() {
       alertMessage.style.color = "blue";
     }
 
+    
     resultMessage.innerHTML += `Lần số: ${countNumber} bạn đoán là số: ${ inputNum } <br />`;
     soLuotConLai.innerHTML = ` Bạn còn lại ${ countNumberRemaining } lượt đoán`;
     
@@ -82,9 +86,6 @@ function clickGuess() {
 }
 
 // Khởi động lại toàn bộ trang web
-
-let btnReset = document.querySelector(".buttonRestart");
-
 function restartButton() {
   location.reload();
 }
