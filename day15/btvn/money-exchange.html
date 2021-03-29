@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển đổi tiền tệ</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="./currency.png" type="image/x-icon" />
+    <!-- css -->
+    <link rel="stylesheet" href="./money-exchange.css" />
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+
+  <body>
+    <div class="form-swap-money">
+      <h1 class="title">Chuyển đổi tiền tệ giữa các nước</h1>
+
+      <div class="container">
+        <div class="box from-currency">
+          <h2 class="box-title">Chuyển từ tiền loại:</h2>
+
+          <input type="number" class="moneyNumber from-amount" />
+          <small class="alert-Message">Vui lòng nhập số vào số tiền cần đổi!</small>
+
+          <select name="currency-unit" id="currency-unit" class="unit from-unit">
+            <option value="usd" selected>USD (Đô la Mỹ)</option>
+            <option value="eur">EUR (Euro)</option>
+            <option value="vnd">VND (Đồng Việt Nam)</option>
+          </select>
+
+        </div>
+
+        <button class="convert-btn" title="Chuyển đổi tiền tệ" onclick="convertTheMoney()">
+          <i class="far arrow-icon fa-arrow-alt-circle-right"></i>
+        </button>
+
+        <div class="box to-currency">
+          <h2 class="box-title">Sang loại tiền:</h2>
+
+          <input type="number" class="moneyNumber to-amount" />
+          <small class="alert-Message">Vui lòng nhập số !</small>
+
+          <select name="currency-unit" id="currency-unit" class="unit to-unit">
+            <option value="vnd" selected>VND (Đồng Việt Nam)</option>
+            <option value="usd">USD (Đô la Mỹ)</option>
+            <option value="eur">EUR (Euro)</option> 
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="buttons swap-button">
+        <button class="btn swap-btn" title="Hoán đổi tiền tệ" onclick="swapCurrency()">Swap Value</button>
+
+        <button class="btn reset-btn" onclick="resetBtn()">Reset Page</button>
+      </div>
+
+    </div>
+
+    <script src="./money-exchange.js"></script>
+  </body>
+</html>

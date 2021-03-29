@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    color: #CBA71D;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .form-swap-money {
+    margin-top: 100px;
+    padding: 50px;
+    width: 650px;
+    border: 3px solid #8d93ab;
+    border-radius: 8px;
+    background-color: #d6e0f0;
+    border: 1px dotted red;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .box-title {
+    margin-bottom: 20px;
+  }
+  
+  .moneyNumber {
+    width: 200px;
+    height: 30px;
+    padding: 3px;
+    display: block;
+    outline: none;
+    border: 1px solid #393b44;
+  }
+  
+  .moneyNumber:focus {
+    outline: none;
+    border-color: #32abdb;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 10px rgba(102, 175, 233, 0.6);
+  }
+  
+  select.unit {
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    padding: 3px;
+    display: block;
+    color: #393b44;
+    border: 1px solid #393b44;
+  }
+  
+  .convert-btn {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #8d93ab;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .arrow-icon:hover {
+    color: #393b44;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btn {
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font-weight: 600;
+    background-color: #f1f3f8;
+    border: 2px solid #8d93ab;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .swap-btn {
+    margin-right: 30px;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .alert-Message {
+    color: red;
+    visibility: hidden;
+  }
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curency Exchange</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Curency Exchange</h1> <br />
+        <p>Please enter the number in the box below</p>
+        <input id="number" type="number" placeholder="Enter the number">
+        <br /> <br />
+
+        <label for="">From</label> 
+        <select name="From" id="From">
+            <option id="USD" value="USD">US Dollar</option>
+            <option id="VND" value="VND" selected="">Việt Nam Đồng</option>
+        </select> <br />
+
+        <label for="">To</label>
+        <select name="To" id="To">
+            <option id="USD" value="USD">US Dollar</option>
+            <option id="VND" value="VND" selected="">Việt Nam Đồng</option>
+        </select> <br /> <br />
+
+        <button onclick="Exchange()">Convert</button>
+        <button onclick="reset()">reset</button>
+        <br /> <br />
+        <p id="result"></p>
+
+    </div>
+
+
+
+
+
+
+    <script src="currency.js"></script>
+</body>
+
+</html>
