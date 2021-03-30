@@ -45,17 +45,20 @@ console.log(weight);
 // }
 
 
-function CalculatedBMI(weight, height) {
+function CalculatedBMI() {
     // CheckNumberHeight()
     // CheckNumberWeight()
 
-    if( weight < 20 || weight > 200 || weight === "" || height < 100 || height > 200 || height === ""){
-        notificationError.innerText = "Thông số đầu vào không hợp lệ";
+    // if( weight < 20 || weight > 200 || weight === "" || height < 100 || height > 200 || height === ""){
+    //     notificationError.innerText = "Thông số đầu vào không hợp lệ";
+    //     console.log("weight", weight)
+    //     console.log("height", height)
+    //     return;
+
+    // } else {
+
         console.log(weight)
         console.log(height)
-
-    } else {
-
         let bmi = ( weight / ( height * height ) ).toFixed(1);
         console.log(bmi)
 
@@ -81,7 +84,7 @@ function CalculatedBMI(weight, height) {
 
     }
 
-}
+// }
 
 function restart() {
     window.location.reload();
