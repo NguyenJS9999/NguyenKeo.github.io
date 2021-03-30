@@ -7,51 +7,49 @@ let doctorHelp = document.querySelector(".doctor-help");
 console.log(height);
 console.log(weight);
 
-function CheckNumberHeight() {
+// function CheckNumberHeight() {
 
-    if (height === "") {
+//     if (height === "") {
 
-        notificationMessage.innerText = "Chiều cao không được phép để trống!";
+//         notificationMessage.innerText = "Chiều cao không được phép để trống!";
 
-    } else if (isNaN(height)) {
+//     } else if (isNaN(height)) {
 
-        notificationMessage.innerText = "Chiều cao nhập không đúng định dạng!";
-    } else if (height < 100 || height > 200) {
+//         notificationMessage.innerText = "Chiều cao nhập không đúng định dạng!";
+//     } else if (height < 100 || height > 200) {
 
-        notificationMessage.innerText = "Vui lòng chỉ nhập chiều cao trong khoảng từ 100 đến 200";
-    }
-    // notificationMessage.innerText = "Số chiều cao hợp lệ";
-}
-// 
+//         notificationMessage.innerText = "Vui lòng chỉ nhập chiều cao trong khoảng từ 100 đến 200";
+//     }
+//     // notificationMessage.innerText = "Số chiều cao hợp lệ";
+// }
+// // 
 
 
-function CheckNumberWeight() {
+// function CheckNumberWeight() {
 
-    if (weight === "") {
-        notificationMessage.innerText = "Cân nặng không được phép để trống!";
-        return;
+//     if (weight === "") {
+//         notificationMessage.innerText = "Cân nặng không được phép để trống!";
+//         return;
 
-    } else if (isNaN(weight)) {
-        notificationMessage.innerText = "Cân nặng nhập không đúng định dạng!";
-        return;
+//     } else if (isNaN(weight)) {
+//         notificationMessage.innerText = "Cân nặng nhập không đúng định dạng!";
+//         return;
 
-    } else if (weight < 20 || weight > 200) {
-        notificationMessage.innerText = "Vui lòng chỉ nhập cân nặng trong khoảng từ 20 đến 200";
-        return;
-    }
+//     } else if (weight < 20 || weight > 200) {
+//         notificationMessage.innerText = "Vui lòng chỉ nhập cân nặng trong khoảng từ 20 đến 200";
+//         return;
+//     }
    
-}
+// }
 
 
 function CalculatedBMI() {
-    CheckNumberHeight()
-    CheckNumberWeight()
+    // CheckNumberHeight()
+    // CheckNumberWeight()
 
     if(weight<20||weight>200||height<1||height>2){
         alert.innerHTML="thong so nhap vao khong hop le";
     } else {
-
-
 
         let bmi = (weight / (height * height)).toFixed(1);
         console.log(bmi)
@@ -75,7 +73,7 @@ function CalculatedBMI() {
             notificationMessage.innerText = "Chỉ số BMI bằng hoặc trên 30 thực sự được xem là quá béo phì.";
             doctorHelp.innerText = "Giờ ở cấp độ thừa cân béo phì như này, cơ thể bạn sẽ gây lên áp lực rất lơn tới hệ thống xương khớp, . Bạn nên đi khám bác sĩ gấp để được tư vấn kịp thời phương pháp, cách thức giảm cân phù hợp và tốt nhất. "
         }
-        
+
     }
 
 }
