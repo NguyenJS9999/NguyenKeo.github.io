@@ -1,5 +1,6 @@
 let height = document.getElementById("height").value / 100; // nhâp vào số met
 let weight = document.getElementById("weight").value;
+
 let notificationError = document.querySelector(".notification-Error");
 let notificationMessage = document.querySelector(".notificationMessage");
 let resultBMI = document.querySelector(".result-BMI");
@@ -44,16 +45,18 @@ console.log(weight);
 // }
 
 
-function CalculatedBMI() {
+function CalculatedBMI(weight, height) {
     // CheckNumberHeight()
     // CheckNumberWeight()
 
     if( weight < 20 || weight > 200 || weight === "" || height < 100 || height > 200 || height === ""){
-        notificationError.innerText = "thong so nhap vao khong hop le";
+        notificationError.innerText = "Thông số đầu vào không hợp lệ";
+        console.log(weight)
+        console.log(height)
 
     } else {
 
-        let bmi = (weight / (height * height)).toFixed(1);
+        let bmi = ( weight / ( height * height ) ).toFixed(1);
         console.log(bmi)
 
         notificationMessage.innerHTML = `Chỉ số BMI của bạn là: ${bmi}`;
