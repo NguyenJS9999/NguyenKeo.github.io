@@ -20,7 +20,7 @@ function AgeCalculation() {
   } 
   else {
     let ageNumber =  TheCurrentYear  -  YearOfBirth ;
-    publicMessage.innerText = "Năm nay bạn đã" + ageNumber + " tuổi rồi.";
+    publicMessage.innerText = "Năm nay bạn đã " + ageNumber + " tuổi rồi.";
     publicMessage.style.color = "inherit";
     publicMessage.style.fontWeight = "900";
   }
