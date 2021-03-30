@@ -1,5 +1,6 @@
 let height = document.getElementById("height").value / 100; // nhâp vào số met
 let weight = document.getElementById("weight").value;
+let notificationError = document.querySelector(".notification-Error");
 let notificationMessage = document.querySelector(".notificationMessage");
 let resultBMI = document.querySelector(".result-BMI");
 let doctorHelp = document.querySelector(".doctor-help");
@@ -47,8 +48,9 @@ function CalculatedBMI() {
     // CheckNumberHeight()
     // CheckNumberWeight()
 
-    if(weight<20||weight>200||height<1||height>2){
-        alert.innerHTML="thong so nhap vao khong hop le";
+    if( weight < 20 || weight > 200 || height < 1 || height > 2 ){
+        notificationError.innerText = "thong so nhap vao khong hop le";
+
     } else {
 
         let bmi = (weight / (height * height)).toFixed(1);
