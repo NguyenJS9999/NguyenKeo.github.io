@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc BMI</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./bmi.css">
+    <!-- bootstrapcdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+
+            <div class="form-calc-BMI">
+
+                <p class="form-calc-BMI-title" >Tính chỉ số khối cơ thể BMI</p>
+
+                <input class="input" id="height" value="160" type="number" placeholder="Nhập chiều cao (centimet)">
+
+                <input class="input" id="weight" value="60" type="number" placeholder="Nhập cân nặng (kilogram)">
+
+                <div class="buttons">
+                    <button id="button" onclick="CalculatedBMI()">Tính BMI</button>
+                    <button id="button" onclick="restart()">Làm mới</button>
+                </div>
+
+                
+
+            </div>
+
+            <div class="data-result">
+                <div class="result-BMI">Chỉ số BMI của bạn: </div>
+                <div class="notificationMessage">Thông báo kết luận</div>
+                <div class="doctor-help">Tư vấn</div>
+            </div>
+
+        </div> <!-- forms -->
+    </div> <!-- container -->
+
+    <script src="./bmi.js"></script>
+</body>
+
+</html>

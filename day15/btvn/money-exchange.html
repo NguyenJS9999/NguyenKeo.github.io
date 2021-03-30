@@ -10,15 +10,21 @@
     <link rel="shortcut icon" href="https://cdn.vietnambiz.vn/2019/9/19/144cf61d-177a-4b21-9fc6-a6075ab66009-15688726898481979540361.jpg" type="image/x-icon" />
     <!-- css -->
     <link rel="stylesheet" href="./money-exchange.css" />
-    <!-- font -->
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
 </head>
 
 <body class="image-background-opacity">
 
     <div>
         <div class="form-swap-money">
-            <h1 class="Title">Chuyển đổi tiền tệ giữa các nước <span class="dolla-icon">$</span></h1>
+            
+            <h1 class="Title">Chuyển đổi tiền tệ giữa các nước 
+                <span class="dolla-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </span>
+            </h1>
 
             <div class="container">
 
@@ -26,7 +32,7 @@
                     <p class="form-title">Chuyển từ tiền loại:</p>
 
                     <input type="number" class="moneyNumber money-from" />
-                    <small class="alert-Message">Vui lòng nhập số vào số tiền cần đổi!</small>
+                    <p class="alert-Message">Vui lòng nhập số vào số tiền cần đổi!</p>
 
                     <select name="currency-unit" id="currency-unit" class="Units type-of-unit-from">
                         <option value="USD" selected>USD (Đô la Mỹ)</option>
@@ -48,7 +54,7 @@
                     <p class="form-title">Sang loại tiền:</p>
 
                     <input type="number" class="moneyNumber money-to" />
-                    <small class="alert-Message">Vui lòng nhập số !</small>
+                    <p class="alert-Message">Vui lòng nhập số !</p>
 
                     <select name="currency-unit" id="currency-unit" class="Units type-of-unit-to">
                         <option value="VND" selected>VND (Đồng Việt Nam)</option>

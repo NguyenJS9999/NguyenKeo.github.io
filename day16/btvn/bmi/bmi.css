@@ -1,0 +1,77 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+.forms {
+  width: 80%;
+  height: 50%;
+  margin: 80px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 3px solid rgba(125,73,160, 0.8);
+  border-radius: 10px;
+}
+.form-calc-BMI {
+  width: 35%;
+  height: auto;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  border: 2px solid rgba(125,73,160, 0.9);
+  border-radius: 10px;
+}
+.form-calc-BMI-title {
+  font-size: 27px;
+  font-weight: 900;
+  color: rgba(80, 11, 126, 0.8);
+  margin: 0px 0 20px 0;
+  border-radius: 10px;
+}
+/*  */
+.data-result {
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  border: 2px solid rgba(125,73,160, 0.6);
+  border-radius: 10px;
+}
+
+.result-BMI {
+  font-size: 27px;
+  font-weight: 900;
+  color: rgba(80, 11, 126, 0.8);
+  margin: 0px 0 10px 0;
+
+}
+.notificationMessage {
+  color: #700977;
+  margin: 0px 0 10px 0;
+
+}
+
+.doctor-help {
+  color: #8666F1;
+  margin: 0px 0 10px 0;
+
+}
+
+/* .buttons {
+  border: 1px solid red;
+  margin: 20px 0px;
+} */
