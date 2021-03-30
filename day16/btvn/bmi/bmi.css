@@ -91,9 +91,8 @@ input:hover {
   border-radius: 3px;
   border: 1px solid rgb(85, 3, 161);
 
-
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .button:focus {
   outline: none;
