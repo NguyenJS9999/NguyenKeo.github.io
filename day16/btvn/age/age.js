@@ -11,6 +11,7 @@ function AgeCalculation() {
 
   if ( YearOfBirth  < 0 || Number.isInteger( YearOfBirth ) === false ) {
     publicMessage.innerText = "Số năm sinh nhập vào không hợp lệ!";
+    publicMessage.style.fontSize = "20px";
     publicMessage.style.color = "#fa0536";
   } 
   else if ( YearOfBirth  < 1900 ||  YearOfBirth  >  TheCurrentYear ) {
@@ -21,6 +22,7 @@ function AgeCalculation() {
   else {
     let ageNumber =  TheCurrentYear  -  YearOfBirth ;
     publicMessage.innerText = "Năm nay bạn đã " + ageNumber + " tuổi rồi.";
+    publicMessage.style.fontSize = "20px";
     publicMessage.style.color = "inherit";
     publicMessage.style.fontWeight = "900";
   }

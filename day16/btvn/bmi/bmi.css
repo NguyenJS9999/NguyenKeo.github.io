@@ -19,7 +19,7 @@ body {
 }
 .forms {
   width: 80%;
-  height: 50%;
+  height: 44%;
   margin: 80px 0 0 0;
   display: flex;
   justify-content: space-around;
@@ -41,6 +41,22 @@ body {
   color: rgba(80, 11, 126, 0.8);
   margin: 0px 0 20px 0;
   border-radius: 10px;
+}
+.input {
+  width: 80%;
+  height: 35px;
+  margin: 0px 0 10px 0;
+  
+}
+.buttons {
+  width: auto;
+  /* border: 1px solid red; */
+  margin: 10px 0px;
+  padding: 2px;
+}
+.buttons button {
+  width: 40%;
+  height: 30px;
 }
 /*  */
 .data-result {
@@ -71,7 +87,3 @@ body {
 
 }
 
-/* .buttons {
-  border: 1px solid red;
-  margin: 20px 0px;
-} */
