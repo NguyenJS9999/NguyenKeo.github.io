@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 40%;
+  height: 320px;
+  margin-top: 100px;
+  padding: 30px;
+  border: 3px solid #d86f28;
+  background-color: #ffebdc;
+  color: #da600f;
+  border-radius: 4px;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.titlePage {
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+.contents {
+  height: 80%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d86f28;
+  background-color: #ffddc3;
+  border-radius: 4px;
+  margin: 22px 0px 22px 0px;
+
+}
+.introduc {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0 20px 0;
+}
+
+.buttons {
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.notification-message {
+    margin: 18px 0px 18px 0px;
+    font-size: 15px;
+    letter-spacing: 1.1px;
+}
+.age-input,
+.button {
+  height: 35px;
+  padding: 5px;
+  color: #456268;
+  border-radius: 5px;
+  border: 2px solid rgba(44, 77, 87, 0.2);
+}
+
+.age-input {
+  width: 260px;
+  margin: 0px 0px 10px 0px;
+}
+
+.button {
+  width: 125px;
+  background-color: #f1f6f9;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 5px rgba(44, 77, 87, 0.3);
+  cursor: pointer;
+}
+
+.age-input,
+.calculator-button {
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.button:hover {
+  background-color: #da600f;
+  color: #fff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.age-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(44, 77, 87, 0.3);
+}
+
+.show-noti {
+  margin-top: 30px;
+  font-size: 18px;
+}

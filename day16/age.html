@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Exchange</title>
-    <link rel="stylesheet" href="./age.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính tuổi</title>
+    <link rel="stylesheet" href="./age.css" />
 </head>
+
 <body>
 
     <div class="container">
-        <div class="form-exchange">
-            <h1>Đo tuổi hiện tại</h1>
-            <input id="age" class="input" type="text" onchange="">
-            <button onclick="ageCount()" type="submit">Chuyển đổi</button>
-            <p id="alert"></p>
+        
+        <h1 class="titlePage">Tính tuổi hiện tại của bạn từ năm 2021</h1>
+
+        <div class="contents">
+            
+            <p class="introduc">Hãy nhập số năm sinh ngày xưa của bạn:</p>
+
+            <input type="number" class="age-input" />
+
+            <div class="buttons">
+                <button class="button calculator-button" onclick="AgeCalculation()">Tính tuổi</button>
+
+                <button class="button reset-button" onclick="resetPage()">Tải lại</button>
+            </div>
+
+            <p class="notification-message"></p>
+
         </div>
 
-    </div>
-
-
-
-
+    </div> <!-- container -->
     <script src="./age.js"></script>
 </body>
+
 </html>
