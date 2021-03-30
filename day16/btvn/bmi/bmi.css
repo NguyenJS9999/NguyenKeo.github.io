@@ -42,22 +42,72 @@ body {
   margin: 0px 0 20px 0;
   border-radius: 10px;
 }
+.BMI {
+  animation: bmi 1s infinite;
+  
+}
+.BMI:hover {
+  transform: scale(1.2);
+}
+@keyframes bmi {
+  25%  {transform: rotate(-10deg)}
+  50%  {transform: rotate(10deg)}
+  75%  {transform: rotate(-10deg)}
+  100% {transform: rotate(10deg)}
+}
 .input {
   width: 80%;
   height: 35px;
   margin: 0px 0 10px 0;
-  
+  color: #4c88c5;
+  border-radius: 3px;
+  border: 1px solid rgb(85, 3, 161);
+  transition: all 0.5s;
 }
+.input:focus {
+  outline: none;
+  border: 1px solid #05396d;
+}
+input:hover {
+  border: 1px solid #034994;
+  transform:  scale(1.01)
+}
+/*  */
+/* .notification-Error {
+  color: red;
+} */
+/*  */
 .buttons {
   width: auto;
-  /* border: 1px solid red; */
   margin: 10px 0px;
   padding: 2px;
+  transition: all 0.8s;
 }
-.buttons button {
+.button {
   width: 40%;
-  height: 30px;
+  height: 32px;
+  color: #e2e8ee;
+  background-color: #60209c;
+  border-radius: 3px;
+  border: 1px solid rgb(85, 3, 161);
+
+
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+.button:focus {
+  outline: none;
+  border: 1px solid #05396d;
+  
+}
+.button:hover {
+  color: #05396d;
+  background-color: #e2e8ee;
+  border: 1px solid rgba(13, 51, 93, 0.2);
+  box-shadow: 0 0 6px rgba(13, 51, 93, 0.3);
+}
+
+
 /*  */
 .data-result {
   width: 60%;
@@ -66,6 +116,12 @@ body {
   margin: 20px 0 20px 0;
   border: 2px solid rgba(125,73,160, 0.6);
   border-radius: 10px;
+}
+.data-result p {
+  color: #6f4be7;
+  color: #700977;
+  margin: 0px 0 10px 0;
+  
 }
 
 .result-BMI {
@@ -76,7 +132,7 @@ body {
 
 }
 .notificationMessage {
-  color: #700977;
+  color: #8666F1;
   margin: 0px 0 10px 0;
 
 }

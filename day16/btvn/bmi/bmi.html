@@ -19,15 +19,17 @@
 
             <div class="form-calc-BMI">
 
-                <p class="form-calc-BMI-title" >Tính chỉ số khối cơ thể BMI</p>
+                <p class="form-calc-BMI-title" >Tính chỉ số khối cơ thể <span class="BMI">BMI</span></p>
 
-                <input class="input" id="height" value="160" type="number" placeholder="Nhập chiều cao (centimet)">
+                <input class="input" id="height"  type="number" placeholder="Nhập chiều cao (centimet)">
+                <div class="notification-Error"></div>
 
-                <input class="input" id="weight" value="60" type="number" placeholder="Nhập cân nặng (kilogram)">
+                <input class="input" id="weight"  type="number" placeholder="Nhập cân nặng (kilogram)">
+                <div class="notification-Error"></div>
 
                 <div class="buttons">
-                    <button id="button" onclick="CalculatedBMI()">Tính BMI</button>
-                    <button id="button" onclick="restart()">Làm mới</button>
+                    <button class="button" onclick="CalculatedBMI()">Tính BMI</button>
+                    <button class="button" onclick="restart()">Làm mới</button>
                 </div>
 
                 
@@ -36,8 +38,10 @@
 
             <div class="data-result">
                 <div class="result-BMI">Chỉ số BMI của bạn</div>
-                <div class="notificationMessage">Thông báo kết luận</div>
-                <div class="doctor-help">Tư vấn của bác sĩ chuyển khoa dinh dưỡng</div>
+                <p>Thông báo kết luận: </p> 
+                <div class="notificationMessage"></div>
+                <p>Tư vấn của bác sĩ chuyển khoa dinh dưỡng:</p>
+                <div class="doctor-help"></div>
             </div>
 
         </div> <!-- forms -->

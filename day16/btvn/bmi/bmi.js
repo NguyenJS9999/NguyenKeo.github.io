@@ -7,46 +7,51 @@ let doctorHelp = document.querySelector(".doctor-help");
 console.log(height);
 console.log(weight);
 
-function CheckNumberBMI() {
-    InputIsValid = true;
+function CheckNumberHeight() {
 
     if (height === "") {
-        InputIsValid = false;
+
         notificationMessage.innerText = "Chiều cao không được phép để trống!";
 
     } else if (isNaN(height)) {
-        InputIsValid = false;
+
         notificationMessage.innerText = "Chiều cao nhập không đúng định dạng!";
     } else if (height < 100 || height > 200) {
-        InputIsValid = false;
+
         notificationMessage.innerText = "Vui lòng chỉ nhập chiều cao trong khoảng từ 100 đến 200";
-    } else {
-        InputIsValid = true;
-        // notificationMessage.innerText = "Số chiều cao hợp lệ";
     }
-    // 
+    // notificationMessage.innerText = "Số chiều cao hợp lệ";
+}
+// 
+
+
+function CheckNumberWeight() {
+
     if (weight === "") {
-        InputIsValid = false;
         notificationMessage.innerText = "Cân nặng không được phép để trống!";
+        return;
 
     } else if (isNaN(weight)) {
-        InputIsValid = false;
         notificationMessage.innerText = "Cân nặng nhập không đúng định dạng!";
-    } else if (weight < 20 || weight > 200) {
-        InputIsValid = false;
-        notificationMessage.innerText = "Vui lòng chỉ nhập cân nặng trong khoảng từ 100 đến 200";
-    } else {
-        InputIsValid = true;
-        // notificationMessage.innerText = "Số cân nặng hợp lệ";
-    }
-    return InputIsValid;
+        return;
 
+    } else if (weight < 20 || weight > 200) {
+        notificationMessage.innerText = "Vui lòng chỉ nhập cân nặng trong khoảng từ 20 đến 200";
+        return;
+    }
+   
 }
 
-function CalculatedBMI() {
-    CheckNumberBMI()
 
-    if (InputIsValid = true) {
+function CalculatedBMI() {
+    CheckNumberHeight()
+    CheckNumberWeight()
+
+    if(weight<20||weight>200||height<1||height>2){
+        alert.innerHTML="thong so nhap vao khong hop le";
+    } else {
+
+
 
         let bmi = (weight / (height * height)).toFixed(1);
         console.log(bmi)
@@ -66,9 +71,11 @@ function CalculatedBMI() {
             notificationMessage.innerText = "Chỉ số BMI từ 25.0 đến 29.9 là dấu hiệu ban bắt đầu thừa cân.";
             doctorHelp.innerText = "Trạng thái thừa cân lúc này chưa quá đáng lo, vì bậy ngay lúc này bạn hãy sớm tìm phương pháp và chế độ giảm cân phù hợp để nhanh chóng đưa cơ thể chở lại vóc dáng cân đối thon thả, và phòng ngừa tiềm ẩn bệnh tật về sau."
         } else {
-            doctorHelp.innerText = "Chỉ số BMI bằng hoặc trên 30 thực sự được xem là quá béo phì.";
+            resultBMI.innerHTML = `Chỉ số BMI của bạn hiện tại là: ${ bmi}`;
+            notificationMessage.innerText = "Chỉ số BMI bằng hoặc trên 30 thực sự được xem là quá béo phì.";
             doctorHelp.innerText = "Giờ ở cấp độ thừa cân béo phì như này, cơ thể bạn sẽ gây lên áp lực rất lơn tới hệ thống xương khớp, . Bạn nên đi khám bác sĩ gấp để được tư vấn kịp thời phương pháp, cách thức giảm cân phù hợp và tốt nhất. "
         }
+        
     }
 
 }
