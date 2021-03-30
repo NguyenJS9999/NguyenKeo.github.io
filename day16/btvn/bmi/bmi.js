@@ -58,9 +58,13 @@ function CalculatedBMI() {
     console.log("weight", weight)
     console.log("height", height)
 
-    if (weight < 20 || weight > 200 || weight === "" ||
-        height < 1 || height > 2 || height === "" ) {
-
+    if ( weight < 20 || weight > 200 || weight === "" || Number.isInteger(weight) === false 
+        || isNaN(weight) === false 
+        
+        || height < 1 || height > 2 || height === "" || Number.isInteger(height) === false 
+        || isNaN(height) === false) 
+        
+    {
         notificationError.innerText = "Thông số đầu vào không hợp lệ !!!";   
         return;
 
