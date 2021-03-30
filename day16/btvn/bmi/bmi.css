@@ -73,9 +73,9 @@ input:hover {
   transform:  scale(1.01)
 }
 /*  */
-/* .notification-Error {
+.notification-Error {
   color: red;
-} */
+}
 /*  */
 .buttons {
   width: auto;
