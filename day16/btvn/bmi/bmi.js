@@ -48,7 +48,7 @@ function CalculatedBMI() {
     // CheckNumberHeight()
     // CheckNumberWeight()
 
-    if( weight < 20 || weight > 200 || height < 100 || height > 200 ){
+    if( weight < 20 || weight > 200 || weight === "" || height < 100 || height > 200 || height === ""){
         notificationError.innerText = "thong so nhap vao khong hop le";
 
     } else {
