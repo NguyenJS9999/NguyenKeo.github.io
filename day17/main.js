@@ -1,63 +1,41 @@
 console.log("Buổi 17")
 
 console.log("Câu 1:")
-let soNguyen = (3, 8)
-// function tongHaiSoNguyen() {
-// let count = 0
-for (let i = 3; i > 8; i++) {
-    console.log(i.length)
+function SUMisInteger(a, b) {
+    let sum = 0;
+    if (Number.isInteger(a) === false || Number.isInteger(b) === false) {
+        return "Số đầu vào không hợp lệ";
+    }
+    for (i = a + 1; i < b; i++) {
+        sum += i;
+    }
+    console.log(`Tổng giữa hau số ${a} và số ${b} là ${sum}`);
 }
-// for (let value in soNguyen) {
-//     console.log(soNguyen[value])
 
-// }
-// if (Number.isInteger (in_number) === false || in_number <= 0) {
-//     return;
-// }
-
-
-
-// }
 
 // tongHaiSoNguyen(soNguyen)
 
+// Câu 2:
 console.log("Câu 2:")
 let text = "HELLO world"
 
 function parseString() {
-    // for (let key of text)
-    // console.log(key)
-
     let parseIntText = text.split(" ").join("-").toLowerCase();
-
-    // let noichuoi
-
-
     console.log("parseIntText: ", parseIntText)
     return parseIntText;
 }
 parseString(text)
 
-// let chuoiKiTu = "Race car"
-
-function CheckChuoiDoiXung(string) {
-    let String_reverseStr = "";
-    for (let i = string.length - 1; i >= 0; i--) {
-        String_reverseStr = String_reverseStr + string[i];
-    }
-    String_reverseStr = String_reverseStr.split(" ").join("").toLowerCase();
-    console.log("String_reverseStr", String_reverseStr)
-    let newStr = string.split(" ").join("").toLowerCase();
-
-    if (newStr === String_reverseStr) {
-        return true;
-    } else {
-        return false;
-    }
-}
-// console.log("Chuỗi đó là đối xứng? ", CheckChuoiDoiXung(chuoiKiTu) )
-
+// Câu 3:
 console.log("Câu 3:")
+let d = new Date();
+let timeNow = d.getDate();
+console.log("timeNow", timeNow)
+function time() {
+
+}
+
+
 
 console.log("Câu 4:")
 
