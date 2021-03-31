@@ -1,6 +1,7 @@
 console.log("Buổi 17")
 
 console.log("Câu 1:")
+
 function SUMisInteger(a, b) {
     let sum = 0;
     if (Number.isInteger(a) === false || Number.isInteger(b) === false) {
@@ -10,10 +11,10 @@ function SUMisInteger(a, b) {
         sum += i;
     }
     console.log(`Tổng giữa hau số ${a} và số ${b} là ${sum}`);
+    return sum;
 }
 
-
-// tongHaiSoNguyen(soNguyen)
+SUMisInteger(3, 8)
 
 // Câu 2:
 console.log("Câu 2:")
@@ -31,6 +32,7 @@ console.log("Câu 3:")
 let d = new Date();
 let timeNow = d.getDate();
 console.log("timeNow", timeNow)
+
 function time() {
 
 }
@@ -42,11 +44,27 @@ console.log("Câu 4:")
 console.log("Câu 5: Cho 1 số nguyên dương")
 let number = 530751;
 
-function sortNumber() {
-    // for () {
+function sortNumber(h, x, y) {
+    if (h <= 0 || x <= 0 || y <= 0 || x <= y) {
+        return;
+    }
 
-    // }
+    let day = 0;
+
+    do {
+        day++;
+
+        if (h - x === 0) {
+            h = h - x;
+        } else {
+            h = h - x + y;
+        }
+    } while (h > 0)
+
+    return day
 }
+
+console.log(`Sau ${day} ngày ốc sên sẽ bò lên đến miệng giếng.`, countDays(20, 8, 4));
 
 console.log("Câu 6:")
 
