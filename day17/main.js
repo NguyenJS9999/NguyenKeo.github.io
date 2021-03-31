@@ -38,22 +38,16 @@ function time() {
 }
 
 
-
+// Câu 4:
 console.log("Câu 4:")
 
-console.log("Câu 5: Cho 1 số nguyên dương")
-let number = 530751;
-
-function sortNumber(h, x, y) {
+function countDaysBring(h, x, y) {
     if (h <= 0 || x <= 0 || y <= 0 || x <= y) {
         return;
     }
-
     let day = 0;
-
     do {
         day++;
-
         if (h - x === 0) {
             h = h - x;
         } else {
@@ -61,13 +55,15 @@ function sortNumber(h, x, y) {
         }
     } while (h > 0)
 
-    return day
+    return `Sau ${day} ngày ốc sên sẽ bò lên đến miệng giếng.`;
 }
 
-console.log(`Sau ${day} ngày ốc sên sẽ bò lên đến miệng giếng.`, countDays(20, 8, 4));
+console.log(countDaysBring(40, 16, 8));
+
+// câu 5:
+console.log("Câu 5: Cho 1 số nguyên dương")
 
 console.log("Câu 6:")
-
 // let redColor =  document.querySelector(".red");
 // let greenColor = document.querySelector(".red");
 // let blueColor = document.querySelector(".blue")
