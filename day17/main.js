@@ -63,6 +63,33 @@ console.log(countDaysBring(40, 16, 8));
 // câu 5:
 console.log("Câu 5: Cho 1 số nguyên dương")
 
+function sortN(n) {
+    if (Number.isInteger(n) === false || n <= 0) {
+      return;
+    }
+  
+    let array = [];
+  
+    do {
+      array.push(n % 10);
+      n = Math.floor(n / 10);
+    } while (n > 0)
+  
+    array.sort( function(a, b) {
+       return a - b
+    });
+  
+    if (array[0] === 0) {
+      array[0] = array[1];
+      array[1] = 0;
+    }
+  
+    return array.join("");
+  }
+  
+  console.log(sortN(750993));
+  console.log(sortN(756993));
+
 // Câu 6:
 console.log("Câu 6:")
 // let bodyall = document.querySelector(".body")
