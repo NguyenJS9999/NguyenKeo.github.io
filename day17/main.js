@@ -63,29 +63,33 @@ console.log(countDaysBring(40, 16, 8));
 // câu 5:
 console.log("Câu 5: Cho 1 số nguyên dương")
 
+// Câu 6:
 console.log("Câu 6:")
-// let redColor =  document.querySelector(".red");
-// let greenColor = document.querySelector(".red");
-// let blueColor = document.querySelector(".blue")
-// let blackColor =  document.querySelector(".black")
-let bodyall = document.querySelector(".body")
-// let randomNumber = Math.floor( Math.random() );
-let random = Math.floor(Math.random() * 100);
+// let bodyall = document.querySelector(".body")
+// let randomNumber = Math.floor(Math.random() * 100);
+// console.log("random", randomNumber);
 
-console.log("random", random);
+let  maHex  = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F", ];
+function changeGbColorHex() {
+ 
 
-function red() {
-    bodyall.style.backgroundColor = "red"
-}
+  let soCacSoChiMuc =  maHex .length; // Lấy chỉ mục
+  console.log("soCacSoChiMuc", soCacSoChiMuc) 
+  let  mauNgauNhien  = "#"; // gán dấu Thăng
+  console.log( mauNgauNhien )
 
-function green() {
-    bodyall.style.backgroundColor = "green"
-}
+  for (let i = 1; i <= 6; i++) {
+    let  ChiMucNgauNhien  = Math.floor(Math.random() * soCacSoChiMuc); // ramdom số động, hex có 6 số, lặp 6 lần: = 1 và <= 
+    console.log(" ChiMucNgauNhien ",  ChiMucNgauNhien )
 
-function blue() {
-    bodyall.style.backgroundColor = "blue"
-}
+     mauNgauNhien  +=  maHex [ ChiMucNgauNhien ]; // dấu # cộng gán với số ramdom động vào vào lấy giá trị từ mảng qua index
+    console.log(" mauNgauNhien ",  mauNgauNhien ) // Ra một mã hex hoàn chỉnh
+  }
+  let changeBtn = document.querySelector(".btn-Color-Hex"); // gọi nút - nút được gán mã hex
+  console.log("changeBtn", changeBtn)
 
-function brown() {
-    bodyall.style.backgroundColor = "brown"
+  changeBtn.innerText =  mauNgauNhien ; // Gắn mã màu vào hiển thị của nút 
+  console.log("changeBtn", changeBtn)
+
+  document.body.style.backgroundColor =  mauNgauNhien ; // đổ màu cho body
 }
