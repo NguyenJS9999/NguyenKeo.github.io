@@ -85,11 +85,11 @@ function changeGbColorHex() {
      mauNgauNhien  +=  maHex [ ChiMucNgauNhien ]; // dấu # cộng gán với số ramdom động vào vào lấy giá trị từ mảng qua index
     console.log(" mauNgauNhien ",  mauNgauNhien ) // Ra một mã hex hoàn chỉnh
   }
-  let changeBtn = document.querySelector(".btn-Color-Hex"); // gọi nút - nút được gán mã hex
-  console.log("changeBtn", changeBtn)
+  let changeTextBtn = document.querySelector(".btn-Color-Hex"); // gọi nút - nút được gán mã hex
+  console.log("changeTextBtn", changeTextBtn)
 
-  changeBtn.innerText =  mauNgauNhien ; // Gắn mã màu vào hiển thị của nút 
-  console.log("changeBtn", changeBtn)
+  changeTextBtn.innerText =  mauNgauNhien ; // Gắn mã màu vào hiển thị của nút 
+  console.log("changeTextBtn", changeTextBtn)
 
   document.body.style.backgroundColor =  mauNgauNhien ; // đổ màu cho body
 }
