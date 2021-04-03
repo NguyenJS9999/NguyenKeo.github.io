@@ -12,67 +12,31 @@ let doctorHelp = document.querySelector(".doctor-help");
 console.log(height);
 console.log(weight);
 
-// function CheckNumberHeight() {
-
-//     if (height === "") {
-
-//         notificationMessage.innerText = "Chiều cao không được phép để trống!";
-
-//     } else if (isNaN(height)) {
-
-//         notificationMessage.innerText = "Chiều cao nhập không đúng định dạng!";
-//     } else if (height < 100 || height > 200) {
-
-//         notificationMessage.innerText = "Vui lòng chỉ nhập chiều cao trong khoảng từ 100 đến 200";
-//     }
-//     // notificationMessage.innerText = "Số chiều cao hợp lệ";
-// }
-// // 
-
-
-// function CheckNumberWeight() {
-
-//     if (weight === "") {
-//         notificationMessage.innerText = "Cân nặng không được phép để trống!";
-//         return;
-
-//     } else if (isNaN(weight)) {
-//         notificationMessage.innerText = "Cân nặng nhập không đúng định dạng!";
-//         return;
-
-//     } else if (weight < 20 || weight > 200) {
-//         notificationMessage.innerText = "Vui lòng chỉ nhập cân nặng trong khoảng từ 20 đến 200";
-//         return;
-//     }
-
-// }
-
-
 function CalculatedBMI() {
     // CheckNumberHeight()
     // CheckNumberWeight()
 
-    height = heightInput.value / 100;
+    height = heightInput.value;
     weight = weightInput.value;
 
-    console.log("weight", weight)
     console.log("height", height)
+    console.log("weight", weight)
 
-    if ( weight < 20 || weight > 200 || weight === "" || Number.isInteger(weight) === false 
-        || isNaN(weight) === false 
-        
-        || height < 1 || height > 2 || height === "" || Number.isInteger(height) === false 
-        || isNaN(height) === false) 
-        
+    if (
+        height < 100 || height > 200 || height === "" 
+        ||
+        weight < 20  || weight > 200 || weight === "" 
+    )
+
     {
-        notificationError.innerText = "Thông số đầu vào không hợp lệ !!!";   
+        notificationError.innerText = "Thông số đầu vào không hợp lệ !!!";
         return;
 
     } else {
-        console.log("weight", weight)
         console.log("height", height)
-       
-        let bmi = (weight / (height * height)).toFixed(1);
+        console.log("weight", weight)
+
+        let bmi = (weight / (  (height/100) * (height/100) )  ).toFixed(1);
         console.log("bmi", bmi)
 
         notificationMessage.innerHTML = `Chỉ số BMI của bạn là: ${bmi}`;
