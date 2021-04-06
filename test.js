@@ -46,3 +46,6 @@ var person = {
 
 console.log(person);
 
+document.getElementById("test")
+
+style.position

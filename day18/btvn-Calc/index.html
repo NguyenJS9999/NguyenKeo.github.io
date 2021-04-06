@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-calc">
+            <div class="screen">
+                <div class="calculation" placeholder="Phép tính"></div>
+                <div class="result-number"></div>
+            </div>
+
+            <div class="buttons">
+                <div class="buttons-grid">
+
+                    <div onclick="input('%')" type="button" class=" button   ">%</div>
+                    <div onclick="input('!')" type="button" class=" button   ">!</div>
+                    <div onclick="reset()" type="button" class=" button   delete-all ">C</div>
+                    <div onclick="del()" type="button" class=" button   delete-one ">&larr;</div>
+
+                    <div onclick="input('^')" type="button" class=" button   ">^</div>
+                    <div onclick="input()" type="button" class=" button   "></div>
+                    <div onclick="input('√')" type="button" class=" button   sqrt">√</div>
+                    <div onclick="input('÷')" type="button" class=" button   divide">/</div>
+
+                    <div onclick="input(7)" type="button" class=" button   seven ">7</div>
+                    <div onclick="input(8)" type="button" class=" button   eight ">8</div>
+                    <div onclick="input(9)" type="button" class=" button   nine ">9</div>
+                    <div onclick="input('×')" type="button" class=" button   multiply">x</div>
+
+                    <div onclick="input(4)" type="button" class=" button   four ">4</div>
+                    <div onclick="input(5)" type="button" class=" button   five ">5</div>
+                    <div onclick="input(6)" type="button" class=" button   six ">6</div>
+                    <div onclick="input('-')" type="button" class=" button   minus">-</div>
+
+                    <div onclick="input(1)" type="button" class=" button   one ">1</div>
+                    <div onclick="input(2)" type="button" class=" button   two ">2</div>
+                    <div onclick="input(3)" type="button" class=" button   three ">3</div>
+                    <div onclick="input('+')" type="button" class=" button   add ">+</div>
+
+
+                    <div onclick="input()" type="button" class=" button   "></div>
+                    <div onclick="input(0)" type="button" class=" button  zero ">0</div>
+                    <div onclick="input('.')" type="button" class=" button  dot " id="dot">.</div>
+                    <div onclick="equal()" type="button" class=" button  result " id="equal">=</div>
+
+                </div>
+
+            </div> <!-- buttons -->
+
+        </div>
+    </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
