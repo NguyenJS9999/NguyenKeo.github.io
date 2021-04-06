@@ -42,9 +42,14 @@ function input(value) {
     }
 
     screenDisplay.innerHTML += value;
+    return value;
 
 
 } //input
+
+// function calc() {
+//     console.log(value)
+// }
 
 function del(){
     screenDisplay.innerHTML = screenDisplay.innerHTML.slice(0, -1)
