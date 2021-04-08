@@ -15,8 +15,8 @@
 
 
 .form-calc {
-    width: 1200px;
-    height: 90%;
+    width: 600px;
+    height: 40%;
     border: 2px solid rgba(200, 200, 200, 0.8);
     border-radius: 1px;
     background-color: #F3F3F3;
@@ -32,7 +32,7 @@
 .screen {
     width: 100%;
     height: auto;
-    border: 1px solid rgba(200, 200, 200, 0.8);
+    /* border: 1px solid rgba(200, 200, 200, 0.8); */
     border-radius: 1px;
     font-size: 45px;
 }
@@ -61,7 +61,7 @@
 }
 .buttons-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(5, auto);
     background-color: #F3F3F3;
 }
 

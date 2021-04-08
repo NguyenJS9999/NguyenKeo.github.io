@@ -3,35 +3,9 @@ console.log("Buổi 18: Dom Calculator")
 //Calculator:
 let display = document.querySelector(".calculation");
 let result = document.querySelector(".result-number");
-
-// let zero = parseInt (document.getElementsByClassName("zero")[0].textContent);
-
-// let one = parseInt (document.getElementsByClassName("one")[0].textContent);
-// let two = parseInt (document.getElementsByClassName("two")[0].textContent);
-// let three = parseInt (document.getElementsByClassName("three")[0].textContent);
-// let four = parseInt (document.getElementsByClassName("four")[0].textContent);
-// let five = parseInt (document.getElementsByClassName("five")[0].textContent);
-// let six = parseInt (document.getElementsByClassName("six")[0].textContent);
-// let seven = parseInt (document.getElementsByClassName("seven")[0].textContent);
-// let eight = parseInt (document.getElementsByClassName("eight")[0].textContent);
-// let nine = parseInt (document.getElementsByClassName("nine")[0].textContent);
-// let add =  (document.getElementsByClassName("add")[0].textContent);
-
-
-// console.log( zero)
-// console.log( one)
-// console.log( two)
-// console.log( three)
-// console.log( four)
-// console.log( five)
-// console.log( six)
-// console.log( seven)
-// console.log( eight)
-// console.log( nine)
-// console.log(typeof add)
+let giaTri = "";
 
 // Input of Validate
-
 function input(value) {
     // Loại bỏ số 0 khi nhập vào
     if (display.innerHTML === "0") {
@@ -46,65 +20,65 @@ function input(value) {
     }
 
     display.innerHTML += value;
-    // console.log(typeof display, display.innerHTML)
+    giaTri += value;
+    console.log("giaTri", typeof display, display.innerHTML)
+    console.log("giaTri", typeof giaTri, giaTri.innerHTML)
 
 } //input
 
-// Nút = chạy hàm xử lý kết quả
-function calculate() {
-    // Giá trị từ ô input nhập vào
-    let calc = display.innerHTML;
-    console.log("Phép tính đầu vào", typeof calc, calc)
-    // Kết quả trả về
-    results_returned = eval(calc);
-    console.log("Kết quả trả về: ", typeof results_returned, results_returned)  
-    // Gán lại vào màn hiện kết quả
-    result.innerHTML = "=" + results_returned
 
-    // result.innerHTML = results_returned;
-}
-
-// Tính phần trăm lấy dư
-function layDu() {
-    let phanDu = display.innerHTML;
-    console.log(phanDu)
-
-    result.innerHTML = phanDu / 100;
-}
+// 1 Tính lấy dư %
 
 // Tính Căn bậc 2
 function canBacHai() {
-    let cbHai =  display.innerHTML;
+    let cbHai = giaTri.innerHTML;
     console.log(cbHai)
 
     result.innerHTML = Math.sqrt(cbHai)
-    
+
     result.innerHTML = String(cbHai.toLocaleString('en-US'));
 }
 
 // Tính bình thương
 function binhPhuong() {
-    
+
 }
 
 // Tính giai thừa
-function giaiThua () {
-    display.innerHTML = display.innerHTML + "!";
-    console.log("giath")
-    giaTri = display;
-    tich = 1;
-    console.log(giaTri)
+function giaiThua() {
+    display.innerHTML += "!";
+    console.log("giaTri", giaTri)
+    giaTri = Number(giaTri);
+    let tich = 1;
+    for (let i = 1; i <= giaTri; i++) {
+      tich *= i;
+    }
+    giaTri = String(tich);
 
-    for (let i = 1; i <=  display ; i++) {
-    console.log("i", i)
-
-        tich *= i;
-    } 
-    result.innerHTML = tich;
 }
 
 
+// Nút = chạy hàm xử lý kết quả 
+function calculate() {
+    // Tính giai thừa
+    // display.innerHTML = Array(display.innerHTML).pop()
+    console.log("display",display.innerHTML)
+    console.log("giaTri",giaTri.innerHTML)
 
+
+
+
+
+    // Giá trị từ ô input nhập vào
+    let calc = giaTri;
+    console.log("Phép tính đầu vào", typeof calc, calc)
+    // Kết quả trả về
+    results_returned = eval(calc);
+    console.log("Kết quả trả về: ", typeof results_returned, results_returned)
+    // Gán lại vào màn hiện kết quả
+    result.innerHTML = "= " + results_returned
+
+}
 
 // Xóa từng phần tử cuối chuỗi
 function del() {
@@ -113,7 +87,7 @@ function del() {
     // Chuyển chuỗi thành mảng và bỏ ký tự cuối
     var arrText = Array.from(display.innerHTML);
     arrText.splice(arrText.length - 1, 1);
-    
+
     // Nếu mảng vẫn còn giá trị thì nối lại thành chuỗi
     if (arrText.length != 0)
         display.innerHTML = arrText.join("");
@@ -121,8 +95,8 @@ function del() {
     else
         display.innerHTML = "0";
 
-
 }
+
 // Xóa hết-chuyển màn hình về rỗng
 function reset() {
     display.innerHTML = "0";
@@ -135,5 +109,3 @@ function reset() {
 //     display.innerHTML = "0";
 //     result.innerHTML = "";
 // }
-
-

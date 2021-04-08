@@ -21,37 +21,44 @@
 
             <div class="buttons">
                 <div class="buttons-grid">
-
-                    <button onclick="layDu('%')" type="button" class=" button   ">%</button>
-                    <button onclick="giaiThua()" type="button" class=" button   ">!</button>
+                    <button onclick="input('%')" type="button" class=" button   ">%</button>
+                    <button onclick="input()" type="button" class=" button "></button>                
+                    <button onclick="input()" type="button" class=" button   "></button>
                     <button onclick="reset()" type="button" class=" button delete-all butonAC ">AC</button>
                     <button onclick="del()" type="button" class=" button   delete-one ">&larr;</button>
 
-                    <button onclick="binhPhuong()" type="button" class=" button   ">x&sup2</button>
-                    <button onclick="input()" type="button" class=" button   ">x&sup3</button>
-                    <button onclick="canBacHai()" type="button" class=" button   sqrt">√</button>
+                    <button onclick="canBacHai('√(')" type="button" class=" button   sqrt">√</button>
+                    <button onclick="input('(')" type="button" class=" button   sqrt">(</button>
+                    <button onclick="input(')')" type="button" class=" button   sqrt">)</button>
+                    <button onclick="input()" type="button" class=" button   "></button>
                     <button onclick="input('/')" type="button" class=" button   buttonide">÷</button>
 
+                    <button onclick="input('^2')" type="button" class=" button   ">x<sup>2</sup></button>     
                     <button onclick="input(7)" type="button" class=" button   seven ">7</button>
                     <button onclick="input(8)" type="button" class=" button   eight ">8</button>
-                    <button onclick="input(9)" type="button" class=" button   nine ">9</button>
+                    <button onclick="input(9)" type="button" class=" button   nine ">9</button> 
                     <button onclick="input('*')" type="button" class=" button   multiply">x</button>
 
+                    <button onclick="giaiThua()" type="button" class=" button   ">!</button>
                     <button onclick="input(4)" type="button" class=" button   four ">4</button>
                     <button onclick="input(5)" type="button" class=" button   five ">5</button>
                     <button onclick="input(6)" type="button" class=" button   six ">6</button>
                     <button onclick="input('-')" type="button" class=" button   minus">-</button>
 
+
+                    <button onclick="input()" type="button" class=" button   ">x&sup3</button>
                     <button onclick="input(1)" type="button" class=" button   one ">1</button>
                     <button onclick="input(2)" type="button" class=" button   two ">2</button>
                     <button onclick="input(3)" type="button" class=" button   three ">3</button>
                     <button onclick="input('+')" type="button" class=" button   add ">+</button>
 
-
-                    <button onclick="input()" type="button" class=" button   "></button>
+                    <button onclick="input()" type="button" class=" button "></button>
+                    <button onclick="input('')" type="button" class=" button   "></button>
                     <button onclick="input(0)" type="button" class=" button  zero ">0</button>
                     <button onclick="input('.')" type="button" class=" button  dot " id="dot">.</button>
                     <button onclick="calculate()" type="button" class=" button  result " id="equal">=</button>
+
+
 
                 </div>
 
