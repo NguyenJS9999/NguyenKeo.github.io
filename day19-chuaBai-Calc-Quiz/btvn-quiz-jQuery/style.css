@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Roboto,sans-serif;
 }
 .container {
     width: 100%;
@@ -28,6 +29,8 @@
     border: 1px solid rgb(184, 21, 192);
     border-radius: 6px;
     color: white;
+    font-size: 25px;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -47,12 +50,14 @@
 .answer {
     width: 24.5%;
     height: 97%;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
     /* border: 1px solid red; */
     border-radius: 6px;
     position: relative;
     opacity: 0.9;
     transition: all 0.15s;
-    
 }
 .answer:hover {
     cursor: pointer;
@@ -62,6 +67,11 @@
     border: inherit;
     opacity: 0.8;
 }
+/*  */
+.option-content {
+
+}
+/*  */
 .option-1 {
     background-color: rgba(47,109,174, 0.9);
     border: rgba(47,109,174, 1);
