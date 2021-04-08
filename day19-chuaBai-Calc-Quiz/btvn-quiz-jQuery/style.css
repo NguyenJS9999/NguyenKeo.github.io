@@ -96,10 +96,11 @@
 .numerical-order {
     width: 29px;
     height: 28px;
+    font-size: 15px;
     background-color: inherit;
     /* border: inherit ; */
     border-radius: inherit;
-    padding: 3.5px 2px;
+    padding: 4.5px 2px;
     position: absolute;
     top: 8px;
     right: 8px;
