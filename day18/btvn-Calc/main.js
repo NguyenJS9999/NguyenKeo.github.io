@@ -54,7 +54,7 @@ function input(value) {
 function calculate() {
     // Giá trị từ ô input nhập vào
     let calc = display.innerHTML;
-    console.log(typeof calc, calc)
+    console.log("Phép tính đầu vào", typeof calc, calc)
     // Kết quả trả về
     results_returned = eval(calc);
     console.log("Kết quả trả về: ", typeof results_returned, results_returned)  
@@ -64,14 +64,43 @@ function calculate() {
     // result.innerHTML = results_returned;
 }
 
+// Tính phần trăm lấy dư
+function layDu() {
+    let phanDu = display.innerHTML;
+    console.log(phanDu)
+
+    result.innerHTML = phanDu / 100;
+}
+
+// Tính Căn bậc 2
+function canBacHai() {
+    let cbHai =  display.innerHTML;
+    console.log(cbHai)
+
+    result.innerHTML = Math.sqrt(cbHai)
+    
+    result.innerHTML = String(cbHai.toLocaleString('en-US'));
+}
+
+// Tính bình thương
+function binhPhuong() {
+    
+}
+
 // Tính giai thừa
 function giaiThua () {
-    giaTri = Number( display );
+    display.innerHTML = display.innerHTML + "!";
+    console.log("giath")
+    giaTri = display;
     tich = 1;
-    for (let i = 1; i >=  display ; i++) {
+    console.log(giaTri)
+
+    for (let i = 1; i <=  display ; i++) {
+    console.log("i", i)
+
         tich *= i;
     } 
-    result = tich
+    result.innerHTML = tich;
 }
 
 
@@ -98,8 +127,13 @@ function del() {
 function reset() {
     display.innerHTML = "0";
     result.innerHTML = ""
-    // document.querySelector(".reset").innerText = "AC";
 }
 
+// let btnAC = document.querySelector(".butonAC")
+// btnAC = addEventListener("click", AC)
+// function AC() {
+//     display.innerHTML = "0";
+//     result.innerHTML = "";
+// }
 
 
