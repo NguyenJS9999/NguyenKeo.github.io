@@ -21,6 +21,7 @@ function choose_Answer(n) {
 
     if ( answer == "Dùng text-align: center cho thẻ p chứa ảnh" ) {
         console.log("Đáp án đúng")
+        alert("Đáp án đúng")
     }
     console.log(answer)
 }
