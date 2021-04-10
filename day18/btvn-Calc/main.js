@@ -101,6 +101,7 @@ function calculate() {
 
     // Gán lại vào màn hiện kết quả lên màn hình
     result.innerHTML = "= " + results_returned.toLocaleString("vi-VN");
+    screen.innerHTML = results_returned;
 }
 
 // Xóa từng phần tử cuối chuỗi

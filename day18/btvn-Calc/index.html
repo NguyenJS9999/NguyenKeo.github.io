@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <!-- fa vicon -->
+    <link rel="shortcut icon" href="https://imgt.taimienphi.vn/cf/Images/2016/8/vdd/khoi-phuc-va-cai-dat-calculator-lai-tren-windows-10-1.jpg">
+    <!-- css -->
     <link rel="stylesheet" href="./style.css">
+
 
 </head>
 
@@ -21,40 +25,40 @@
 
             <div class="buttons">
                 <div class="buttons-grid">
-                    <button onclick="chiaMotTram('%')" type="button" class=" button   ">%</button>
-                    <button onclick="input('sin')" type="button" class=" button ">sin</button>                
-                    <button onclick="input('cos')" type="button" class=" button   ">cos</button>
-                    <button onclick="reset()" type="button" class=" button delete-all butonAC ">AC</button>
+                    <button onclick="chiaMotTram('%')" type="button" class=" button  operator-color ">%</button>
+                    <button onclick="input('sin')" type="button" class=" button operator-color">sin</button>                
+                    <button onclick="input('cos')" type="button" class=" button  operator-color ">cos</button>
+                    <button onclick="reset()" type="button" class=" button  AC-color delete-all ">AC</button>
                     <button onclick="del()" type="button" class=" button   delete-one ">&larr;</button>
 
-                    <button onclick="canBacHai('√')" type="button" class=" button   sqrt">√</button>
+                    <button onclick="canBacHai('√')" type="button" class=" button   sqrt  operator-color">√</button>
                     <button onclick="input('(')" type="button" class=" button   sqrt">(</button>
                     <button onclick="input(')')" type="button" class=" button   sqrt">)</button>
-                    <button onclick="input('tan')" type="button" class=" button   ">tan</button>
+                    <button onclick="input('tan')" type="button" class=" button  operator-color ">tan</button>
                     <button onclick="input('/')" type="button" class=" button   buttonide">÷</button>
 
-                    <button onclick="binhPhuong('')" type="button" class=" button   ">x<sup>2</sup></button>     
-                    <button onclick="input(7)" type="button" class=" button   seven ">7</button>
-                    <button onclick="input(8)" type="button" class=" button   eight ">8</button>
-                    <button onclick="input(9)" type="button" class=" button   nine ">9</button> 
+                    <button onclick="binhPhuong('')" type="button" class=" button  operator-color " >x<sup>2</sup></button>     
+                    <button onclick="input(7)" type="button" class=" button   seven  number-color "  >7</button>
+                    <button onclick="input(8)" type="button" class=" button   eight  number-color "  >8</button>
+                    <button onclick="input(9)" type="button" class=" button   nine  number-color "  >9</button> 
                     <button onclick="input('*')" type="button" class=" button   multiply">x</button>
 
-                    <button onclick="giaiThua()" type="button" class=" button   ">!</button>
-                    <button onclick="input(4)" type="button" class=" button   four ">4</button>
-                    <button onclick="input(5)" type="button" class=" button   five ">5</button>
-                    <button onclick="input(6)" type="button" class=" button   six ">6</button>
+                    <button onclick="giaiThua()" type="button" class=" button  operator-color ">!</button>
+                    <button onclick="input(4)" type="button" class=" button   four number-color   ">4</button>
+                    <button onclick="input(5)" type="button" class=" button   five number-color   ">5</button>
+                    <button onclick="input(6)" type="button" class=" button   six number-color   ">6</button>
                     <button onclick="input('-')" type="button" class=" button   minus">-</button>
 
 
-                    <button onclick="muBa()" type="button" class=" button   ">x&sup3</button>
-                    <button onclick="input(1)" type="button" class=" button   one ">1</button>
-                    <button onclick="input(2)" type="button" class=" button   two ">2</button>
-                    <button onclick="input(3)" type="button" class=" button   three ">3</button>
+                    <button onclick="muBa()" type="button" class=" button  operator-color ">x&sup3</button>
+                    <button onclick="input(1)" type="button" class=" button   one number-color   ">1</button>
+                    <button onclick="input(2)" type="button" class=" button   two number-color   ">2</button>
+                    <button onclick="input(3)" type="button" class=" button   three number-color   ">3</button>
                     <button onclick="input('+')" type="button" class=" button   add ">+</button>
 
-                    <button onclick="input('π')" type="button" class=" button ">π</button>
-                    <button onclick="input('log')" type="button" class=" button   ">log</button>
-                    <button onclick="input(0)" type="button" class=" button  zero ">0</button>
+                    <button onclick="input('π')" type="button" class=" button operator-color">π</button>
+                    <button onclick="input('log')" type="button" class=" button  operator-color ">log</button>
+                    <button onclick="input(0)" type="button" class=" button  zero number-color   ">0</button>
                     <button onclick="input('.')" type="button" class=" button  dot " id="dot">.</button>
                     <button onclick="calculate()" type="button" class=" button  result " id="equal">=</button>
 
