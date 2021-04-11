@@ -72,8 +72,17 @@ function renderQuestion(count) {
 renderQuestion(curQuestion);
 
 // Hàm kiểm tra kết quả được chọn trả về
-function choose_Answer (that) {
-        console.log("Lựa chọn số ", )
+function choose_Answer(result) {
+        console.log("Lựa chọn: ", result.innerHTML)
+        let data_result = result.innerHTML;
+        console.log("Lựa chọn: data_result ", data_result)
+        console.log("datas.answer ", datas.answer)
+
+        if (data_result == datas.answer) {
+            console.log("Kết quả đúng");
+            alert;("Kết quả đúng")
+        }
+        
 }
 
 
