@@ -35,7 +35,8 @@
     transition: all 1s ease-in-out ;
 }
 .form-calc:hover {
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
+    opacity: 0.98;
 }
 
 .screen {
