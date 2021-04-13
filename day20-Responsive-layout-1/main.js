@@ -1,3 +1,5 @@
+console.log("Set time out")
+
 setTimeout(function () {
     console.log("1")
 }, 1000)
