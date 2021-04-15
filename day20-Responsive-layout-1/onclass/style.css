@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .container {
     width: 100%;
     height: auto;
@@ -36,4 +35,8 @@
     margin: 15px 15px 15px 15px;
     background-color: #2C84E7;
 }
+
+
+
+
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web responsive layout bài 7</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style-Bai7.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!--  fone awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <!-- Mobile -->
+    <div class="container-menu-mobile">
+
+        <div class="icon-logo">
+            <span class="icon-hamber" onclick="hiddenMenu()" class="hamber-menu">
+                <i class="fas fa-bars"> </i>
+
+            </span>
+
+
+            <span class="logo">
+                <div>LOGO<br />80 x 20</div>
+            </span>
+        </div>
+
+        <div class="sub-menus-choice">
+
+            <div class="sub-menu-choice ">Menu 1</div>
+
+            <div class="sub-menu-choice ">Menu 2</div>
+
+            <div class="sub-menu-choice ">Menu 3</div>
+
+            <div class="sub-menu-choice ">Register</div>
+
+            <div class="sub-menu-choice ">Login</div>
+
+        </div>
+
+
+    </div>
+
+    <!-- PC -->
+    <div class="container-menu-desktop">
+
+        <div class="logo">LOGO<br />100 x 30</div>
+
+        <div class="buttons">
+            <div class="button-choice ">Menu 1</div>
+            <div class="white-lines"></div>
+            <div class="button-choice ">Menu 2</div>
+            <div class="white-lines"></div>
+            <div class="button-choice ">Menu 3</div>
+        </div>
+
+        <div class="login-register">
+            <div class="login-register-btn">Login</div>
+            <div class="black-lines"></div>
+            <div class="login-register-btn">Register</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="square"></div>
+    </div>
+
+    <!-- Nút Home -->
+    <a href="./index.html">
+        <div class="home-btn">Home</div>
+    </a>
+
+    <!-- Thư viện jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- Dẫn file Js -->
+    <script src="./main-Bai7.js"></script>
+</body>
+
+</html>

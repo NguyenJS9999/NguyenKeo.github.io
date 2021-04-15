@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* mobile first  */
+/* @media (max-width: 600px) { 
+  } */
+
+.container-menu-mobile {
+    width: 100%;
+    height: auto;
+    background-color: #fce5cd;
+    padding: 15px;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px dotted black;
+}
+
+/* Ẩn menu destop đi khi ở mobile*/
+.container-menu-desktop {
+  display: none;
+  
+}
+
+.icon-hamber {
+  width: 39px;
+  color: white;
+  background-color: #4a86e8;
+  border: 1px solid black;
+  padding: 5px 8px;
+  font-size: 23px;
+  font-weight: 100;
+}
+/* class ẩn dành cho toggleClass */
+/* .hidden-css-class {
+  display: block;
+  background-color: red;
+} */
+
+.sub-menus-choice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  /* background-color: #f4cccc; */
+  margin-top: 20px;
+  display: none;
+ 
+
+  
+
+}
+
+.sub-menu-choice {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #4a86e8;
+  border: 0.1px solid black;
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 85px 15px 50px 15px;
+  background-color: rgb(220, 220, 220);
+  border: 1px dotted black;
+  z-index: 1;
+}
+
+.square {
+  width: 100%;
+  height: 500px;
+  background-color: #4a86e8;
+  border: 1px solid black;
+  color: white;
+}
+
+/* Deskstop */
+@media (min-width: 600px) {
+  /* Ẩn menu của deskstop */
+  .container-menu-mobile {
+    display: none;
+
+  }
+  /* Hiện menu của mobile   */
+  .container-menu-desktop {
+    width: 100%;
+    height: 60px;
+    background-color: #d9ead3;
+    display: flex;
+    padding: 15px;
+  }
+  .icon-hamber {
+    display: none;
+  }
+
+  .logo {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .buttons {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #4a86e8;
+    margin-left: auto;
+  }
+  .white-lines {
+    width: 0px;
+    height: 15px;
+    background-color: white;
+    border: 0.1px solid white;
+  }
+  .button-choice {
+    width: 100px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #4a86e8;
+    padding: 15px;
+  }
+
+  /* .display-none {
+      display: none;
+    } */
+  .container {
+    width: 100%;
+    height: auto;
+    padding: 15px 15px 50px 15px;
+    background-color: #e9edee;
+    border: 1px dotted black;
+  }
+
+  .square {
+    width: 100%;
+    height: 500px;
+    background-color: #4a86e8;
+    border: 1px solid black;
+    color: white;
+  }
+}

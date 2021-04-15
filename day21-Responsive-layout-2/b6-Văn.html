@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* PC */
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #logo {
+            width: 100px;
+            height: 30px;
+            background-color: brown;
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #menu {
+            display: flex;
+            margin: 15px;
+        }
+
+        .item {
+            width: 100px;
+            height: 25px;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        #content {
+            height: 500px;
+            margin: 15px;
+            background-color: blue;
+        }
+
+        #icon {
+            margin: 15px;
+        }
+
+        .icon {
+            font-size: 30px;
+            display: none;
+        }
+
+        #sub-menu {
+            padding: 0px 15px;
+            display: none;
+        }
+        #sub-menu.show{
+            display: block;
+        }
+        
+        .sub-menu {
+            text-align: center;
+            background-color: blue;
+            border-style: solid;
+            border-width: 1px;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            display: none;
+        }
+        /* Di Dong */
+        @media(max-width:600px) {
+            #header {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+            }
+
+            .sub-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Di Dong -->
+    <div id="icon"><i class="fas fa-bars icon" onclick="menu()"></i></div>
+   
+    <div id="sub-menu">
+        <div class="sub-menu">Trang chủ</div>
+        <div class="sub-menu">Menu 1</div>
+        <div class="sub-menu">Menu 2</div>
+        <div class="sub-menu">Menu 3</div>
+    </div>
+
+    <!-- PC -->
+    <div id="header">
+
+        <div id="logo">logo</div>
+
+        <div id="menu">
+            <div class="item">menu 1</div>
+            <div class="item">menu 2</div>
+            <div class="item">menu 3</div>
+        </div>
+    </div>
+
+    <div id="content"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        let showMenu = false;
+        // function menu() {
+        //     if (showMenu) {
+        //         $('#sub-menu').hide();
+        //     }
+        //     else {
+        //         $("#sub-menu").show();
+        //     }
+        //     showMenu = !showMenu;
+        // }
+
+        function menu(){
+            $('#sub-menu').toggleClass('show');
+        }
+    </script>
+
+</body>
+
+</html>
