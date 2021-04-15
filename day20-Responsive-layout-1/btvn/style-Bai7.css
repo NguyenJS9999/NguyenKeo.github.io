@@ -8,22 +8,21 @@
 /* mobile first  */
 /* @media (max-width: 600px) { 
   } */
-  .container-menu-mobile {
-    width: 100%;
-    height: auto;
-    background-color: #fce5cd;
-    padding: 15px;
-    z-index: 2;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border: 1px dotted black;
+.container-menu-mobile {
+  width: 100%;
+  height: auto;
+  background-color: #fce5cd;
+  padding: 15px;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 1px dotted black;
 }
 
 /* Ẩn menu destop đi khi ở mobile*/
 .container-menu-desktop {
   display: none;
-  
 }
 .icon-logo {
   /* border: 1px solid red; */
@@ -44,7 +43,7 @@
   width: 80px;
   height: 20px;
   border: 1px solid black;
-  background-color: #F4CCCC;
+  background-color: #f4cccc;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -109,7 +108,6 @@
   /* Ẩn menu của deskstop */
   .container-menu-mobile {
     display: none;
-
   }
   /* Hiện menu của mobile   */
   .container-menu-desktop {
@@ -122,13 +120,13 @@
     align-items: center;
     padding: 15px;
   }
-/*  */
+  /*  */
 
   .logo {
     width: 100px;
     height: 30px;
     border: 1px solid black;
-    background-color: #F4CCCC;
+    background-color: #f4cccc;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -172,7 +170,7 @@
     height: 30px;
     color: black;
     border: 1px solid black;
-    background-color: #F4CCCC;
+    background-color: #f4cccc;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -209,6 +207,10 @@
     padding: 15px 15px 50px 15px;
     background-color: #e9edee;
     border: 1px dotted black;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
   }
 
   .square {
