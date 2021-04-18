@@ -1,0 +1,387 @@
+<!-- Buổi 22(Hoặc 21) 16/04/2021 web bootstrap -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- css Đặt dưới bootstrap để được ưu tiên hơn !!! -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Bootstrap btvn clone web techmaster vn</title>
+</head>
+
+<body>
+
+    <div class="container-fluid" id="header">
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="logo-brand">
+                <a href="/"><img src="https://techmaster.vn/resources/image/new_logo.png" alt="logo"></a>
+            </div>
+
+
+            <div class="parent-menu desktop">
+                <ul class="list-menu">
+                    <li class="parent-menu-item">
+                        <a class="nav-padding"><span>Lộ trình <i class="fas fa-caret-down"></i></span></a>
+                    </li>
+
+                    <li class="parent-menu-item"><span>PHÒNG LAB</span></li>
+                    <li class="parent-menu-item"><span>TRỰC TRUYẾN</span></li>
+                    <li class="parent-menu-item"><span>KHAI GIẢNG</span></li>
+                    <li class="parent-menu-item"><span>BLOG</span></li>
+                    <li class="parent-menu-item">
+                        <a class="nav-padding"><span>CHÚNG TÔI<i class="fas fa-caret-down"></i></span></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+
+    <!-- Nội cung chính -->
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12 col-xl-2 ">
+                <!--  -->
+                <div class="filter-field  mb-4">
+
+                    <p class="subjectTitle">Khuyến mãi</p>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Mới ra mắt" name="Khuyến mãi" value="Mới ra mắt">
+                        <label class="subjectTitleLabel  pb-4" for="Mới ra mắt"></label>Mới ra mắt</label> <br />
+                    </div>
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Đang giảm giá</label>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filter-field  mb-4">
+
+                    <p class="subjectTitle">Đối tượng người học</p>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Mới ra mắt" name="Khuyến mãi" value="Mới ra mắt">
+                        <label class="subjectTitleLabel  pb-4" for="Mới ra mắt"></label>Lớp doanh nghiệp</label>
+                    </div>
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Lớp tối</label>
+                    </div>
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Thiếu nhi</label>
+                    </div>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Học từ đầu</label>
+                    </div>
+
+                </div>
+                <!--  -->
+                <div class="filter-field  mb-4">
+
+                    <p class="subjectTitle">Chủ đề</p>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Mới ra mắt" name="Khuyến mãi" value="Mới ra mắt">
+                        <label class="subjectTitleLabel  pb-4" for="Mới ra mắt"></label>Web
+                        frontend</label>
+                    </div>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Di động</label>
+                    </div>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Web
+                            backend</label>
+                    </div>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Big Data,AI</label>
+                    </div>
+
+                    <div class="md-radio">
+                        <input class="course-filter" type="radio" id="Đang giảm giá" name="Khuyến mãi"
+                            value="Đang giảm giá">
+                        <label class="subjectTitleLabel  pb-4" for="Đang giảm giá">Kiểm thử</label>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Khổi phải nội dung khác khoác học -->
+            <div class="col-md-12 col-xl-10 padding-3rem  ">
+
+                <!-- Ô tìm kiếm và lọc -->
+                <div class="search-course borderView">
+                    <input class="col-lg-4 mb-4 me-2    col-md-6  col-sm-12" type="text" placeholder="Tìm kiếm khóa học"
+                        id="input-search-course" class="form-control">
+                    <i class="fas fa-search search "></i>
+                    <i class="fas fa-filter filter"></i>
+                </div>
+                <!--  -->
+                <div class="row ">
+                    <!-- list-courses -->
+
+                    <!-- 2 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+                        <a href="/khoa-hoc/25487/web-co-ban-html5-css3-va-javascript-online">
+                            <div class="course-thumbnail">
+                                <img src="https://techmaster.vn/media/fileman/Uploads/web-thumnail.png"
+                                    alt="Web cơ bản HTML5, CSS3 và Javascript Online">
+                            </div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Web cơ bản HTML5, CSS3 và Javascript Online
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>4.6 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <!---->
+                            <div class="course-price"><span class="new-price">400.000đ</span> <span
+                                    class="old-price">500.000đ</span></div>
+                        </a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+                        <a href="/khoa-hoc/ev5/javascript-can-ban-tong-hop-12-game-huyen-thoai">
+                            <div class="course-thumbnail"><img
+                                    src="https://techmaster.vn/media/static/10194/bv7f8ms51coduae6ij60"
+                                    alt="Javascript căn bản - Tổng hợp 12 game huyền thoại"></div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Javascript căn bản - Tổng hợp 12 game huyền thoại
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>4.5 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <!---->
+                            <div class="course-price"><span class="new-price">400.000đ</span> <span
+                                    class="old-price">500.000đ</span></div>
+                        </a>
+                    </div>
+
+
+
+                    <!-- 1 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+                        <div class="tech-card"></div><a href="/khoa-hoc/oaf/lap-trinh-nodejs-cap-nhat-2021">
+                            <div class="course-thumbnail"><img
+                                    src="https://techmaster.vn/media/static/9479/c18735c51cochrklno30"
+                                    alt="Lập trình Nodejs (cập nhật 2021)"></div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Lập trình Nodejs (cập nhật 2021)
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>4.6 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <div class="course-price"><span class="new-price">300,000đ</span></div>
+                            <!---->
+                        </a>
+                    </div>
+                    <!-- 4 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+
+                        <a
+                            href="https://techmaster.vn/khoa-hoc/38y/lap-trinh-di-dong-da-nen-tang-react-native-online-cap-nhat-2021">
+                            <div class="course-thumbnail"><img
+                                    src="https://techmaster.vn/media/static/bub3enc51co7s932dsk0/c105hnk51coag9451ev0"
+                                    alt="Lập trình di động đa nền tảng React Native Online (cập nhật 2021)"></div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Lập trình di động đa nền tảng React Native Online (cập nhật 2021)
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>5 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <!---->
+                            <div class="course-price"><span class="new-price">480.000đ</span> <span
+                                    class="old-price">600.000đ</span></div>
+                        </a>
+
+                    </div>
+                    <!-- 5 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+                        <a href="/khoa-hoc/rw5/khoa-hoc-lap-trinh-da-nen-tang-voi-flutter">
+                            <div class="course-thumbnail"><img
+                                    src="https://techmaster.vn/media/static/6734/bscggh451cob9t3q7meg"
+                                    alt="Khoá học Lập trình đa nền tảng với Flutter"></div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Khoá học Lập trình đa nền tảng với Flutter
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>3.4 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <!---->
+                            <div class="course-price"><span class="new-price">480.000đ</span> <span
+                                    class="old-price">600.000đ</span></div>
+                        </a>
+                    </div>
+
+
+                    <!-- 6 -->
+                    <div class="col-xl-4  col-lg-6  col-md-12   tech-card">
+                        <a href="/khoa-hoc/xxd/lap-trinh-di-dong-ios-swift-online">
+                            <div class="course-thumbnail"><img
+                                    src="https://techmaster.vn/media/static/8028/bqa348s51cocm3n1ubq0"
+                                    alt="Lập trình di động IOS Swift online"></div>
+                            <div class="course-info">
+                                <p class="course-title">
+                                    Lập trình di động IOS Swift online
+                                </p>
+                                <p class="course-description"><span>Trực tuyến</span> <span>4.5 <i class="fas fa-star"
+                                            style="color: rgb(255, 214, 0);"></i></span></p>
+                                <!---->
+                            </div>
+                            <!---->
+                            <div class="course-price"><span class="new-price">400.000đ</span> <span
+                                    class="old-price">500.000đ</span></div>
+                        </a>
+                    </div>
+
+                </div> <!-- row -->
+
+            </div> <!-- Khối phải nội dung các khóa học -->
+
+        </div> <!-- Bộ lọc và nội dung các khóa học -->
+    </div>
+
+
+    </div> <!-- container body-content -->
+
+    <footer>
+        <div class="container">
+            <!-- footer-contents -->
+
+            <div class="row py-5">
+                <!-- <div class="col-xl-3  col-lg-6   col-md-12"> -->
+                <div class=" col-xl-3  col-lg-6   col-md-12  footer-Content">
+                    <h4>Chủ sở hữu website</h4>
+                    <ul class="footer-title-detail">
+                        <li><a href="https://techmaster.vn/about"> Công ty TNHH
+                                TechMaster Vietnam Ltd </a></li>
+                        <li><span> Số ĐKDN: 0105392153 </span></li>
+                        <li><span> Ngày cấp: 4-7-2011 </span></li>
+                        <li><span> Nơi cấp: Sở kế hoạch - đầu tư Hà nội</span></li>
+                        <li><span> Người đại diện pháp luật: Lê Minh Thu </span>
+                        </li>
+                        <li><span> Phụ trách nội dung: Trịnh Minh Cường </span></li>
+                    </ul>
+                </div> <!-- 1 -->
+
+                <div class=" col-xl-3  col-lg-6   col-md-12  footer-Content">
+                    <h4>Giới thiệu</h4>
+                    <ul class="footer-title-detail">
+                        <li><a href="https://techmaster.vn/">Học viện CNTT
+                                Techmaster</a></li>
+                        <li><a href="https://techmaster.vn/">Giảng viên</a></li>
+                        <li><a href="https://techmaster.vn/">Quy định</a></li>
+                        <li><a href="https://techmaster.vn/">Hướng dẫn mua khóa
+                                học</a></li>
+                        <li><a href="https://techmaster.vn/">Ưu đãi và hoàn trả học
+                                ph</a></li>
+                        <li><a href="https://techmaster.vn/">Bảo vệ thông tin khách
+                                hàng</a></li>
+                </div> <!-- 2 -->
+
+                <div class=" col-xl-3  col-lg-6   col-md-12  footer-Content">
+                    <h4>Tư vấn tuyển sinh</h4>
+                    <ul class="footer-title-detail">
+                        <li><span>Tư vấn viên :</span></li>
+                        <li><a href="https://techmaster.vn/">1. Nguyễn Thanh Hương -
+                                0382416368</a></li>
+                        <li><a href="https://techmaster.vn/">huong@techmaster.vn</a>
+                        </li>
+                        <li><a href="https://techmaster.vn/">2. Phạm Mẫn -
+                                0963023185</a></li>
+                        <li><a href="https://techmaster.vn/">manpham@techmaster.vn</a>
+                        </li>
+                        <li><a href="https://techmaster.vn/">Tư vấn đào tạo doanh
+                                nghiệp: 090 220 9011</a></li>
+                        <li><a href="https://techmaster.vn/">cuong@techmaster.vn</a>
+                        </li>
+                    </ul>
+                </div> <!-- 3 -->
+
+                <div class=" col-xl-3  col-lg-6   col-md-12  footer-Content">
+                    <h4>Địa chỉ</h4>
+                    <ul class="footer-title-detail">
+                        <li><a href="https://techmaster.vn/">Cơ sở Tố Hữu: Tầng 12A,
+                                tòa nhà Viwaseen<br /> Tower, số
+                                48, Tố Hữu, Lê Văn Lương kéo dài,<br /> Hà Nội</a>
+                        </li>
+                        <li><a href="https://techmaster.vn/">Cơ sở Nguyễn Đình
+                                Chiểu: 14 ngõ 4, Nguyễn Đình Chiểu, Quận
+                                Hai Bà Trưng, Hà Nội</a></li>
+                        <li>
+                            <div class="social-network-links">
+                                <a class="social-network-icon " href="https://www.facebook.com/techmastervn/?fref=ts"><i
+                                        class="fab fa-facebook-square"></i></a>
+                                <a class="social-network-icon " href="https://www.youtube.com/user/TechMasterVN"><i
+                                        class="fab fa-youtube-square"></i></a>
+                                <a class="social-network-icon " href="https://github.com/arrowjs"><i
+                                        class="fab fa-github-square"></i></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div> <!-- 4 -->
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

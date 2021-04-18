@@ -93,6 +93,7 @@
   background-color: rgb(220, 220, 220);
   border: 1px dotted black;
   z-index: 1;
+  /* khoảng cách lưới nên thêm div bọc */
 }
 
 .square {
