@@ -1,0 +1,375 @@
+/* font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/* font Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.menu-group-7 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 56px;
+}
+.logo {
+  /* border: 0.1px dotted red; */
+  top: calc(50% - 28px / 2 - 6px);
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.064727px;
+
+  color: #ffffff;
+  top: calc(50% - 28px / 2 - 6px);
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+}
+.menu-Group-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item {
+  /* border: 0.1px dotted red; */
+  margin-left: 21px;
+  font-family: Poppins, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  letter-spacing: 0.0509971px;
+  color: #ffffff;
+}
+#sign-up {
+  color: black;
+  background: #deff06;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.127264);
+  padding: 13px 26px 14px 30px;
+}
+
+header.container {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  /* padding-top: 40px; */
+}
+
+nav {
+  height: 44px;
+  text-align: center;
+}
+
+.hero-main-content {
+  max-width: 680px;
+  margin: auto;
+  margin-top: 128px;
+}
+
+.hero-title,
+.hero-description {
+  font-family: Poppins, Arial, sans-serif; /* Cần nhúng font vào */
+  font-style: normal;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 54px;
+  letter-spacing: 1.12px;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.151183);
+}
+
+.hero-description {
+  margin: 0;
+  padding: 0 30px;
+  font-weight: 500;
+  font-size: 20px;
+  mix-blend-mode: normal;
+  opacity: 0.91;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+}
+
+.hero-form {
+  text-align: center;
+}
+
+.hero-image {
+  margin-top: 50px;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+/* ///////////////////////////////////////// */
+/* Section Two - Group-6 - Các mẫu xe ôtô  */
+.section-two-big-button {
+  max-width: 1277px;
+  /* height: 763px; */
+  height: auto;
+  margin: auto;
+  text-align: center;
+  /* border: 0.1px dotted rgb(13, 0, 255); */
+}
+/*  */
+.hottest-deals-header {
+  /* border: 0.1px solid red; */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+  text-align: center;
+}
+
+.hottest-deals-header h3 {
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+}
+.hottest-deals-header p {
+  color: #696969;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+}
+/*  */
+.group-6 {
+  height: auto;
+  margin-top: 82px;
+  /* border: 0.1px dotted rgb(255, 0, 247); */
+}
+.car-card {
+  width: auto;
+  height: auto;
+}
+.rectangle-4 {
+  height: 188px;
+  background-color: rgba(234, 234, 234, 1);
+  padding: 21px 21px 30px 29px;
+  object-fit: cover;
+  position: relative;
+}
+.price-tag {
+  width: 86px;
+  height: 44px;
+  background-color: rgba(234, 234, 234, 1);
+  position: absolute;
+  z-index: 1;
+  top: 26px;
+  right: -8px;
+}
+.price-number {
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 32px;
+  right: 8px;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+.car-card-img {
+  /* position: absolute; */
+  /* z-index: 3;
+  top: 21px;
+  right: 21px; */
+}
+.car-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.0517816px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  text-shadow: 0px 10px 30px;
+}
+.big-button {
+  width: 228px;
+  background: #f5a623;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.14);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.059748px;
+  color: #ffffff;
+  padding: 20px 23.5px 17px 23.5px;
+  margin: auto;
+  margin-top: 48px;
+}
+/* ///////////////////////////////////////// */
+.section-three {
+  max-width: 1256px;
+  /* height: 447px; */
+  height: auto;
+  margin: auto;
+  margin-top: 84px;
+  /* border: 1px dotted red; */
+}
+.buying-tips-header {
+  max-width: 528px;
+  /* height: 86px; */
+  margin: auto;
+  text-align: center;
+  /* border: 1px dotted red; */
+}
+.buying-tips-header h3 {
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+}
+.buying-tips-header p {
+  color: #696969;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+}
+.buyers-hecklist {
+  width: auto;
+  height: auto;
+  margin-top: 51px;
+  /* border: 0.1px dotted rgb(0, 255, 94); */
+}
+.buyer-hecklist {
+  /* max-width: 400px; */
+  /* height: 200px; */
+  position: relative;
+  text-align: center;
+  object-fit: cover;
+  /* border: 0.1px dotted red; */
+}
+.buyer-hecklist img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.buyer-hecklist p {
+  position: absolute;
+  height: 36px;
+  left: 24.25%;
+  /* right: 18.75%; */
+  top: calc(50% - 36px / 2 + 63px);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.0517816px;
+  color: #ffffff;
+  text-shadow: 0px 10px 30px rgb(0 0 0 / 44%);
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.443699);
+}
+
+.section-three-big-button {
+  max-width: 228px;
+  height: 60px;
+  background: #f5a623;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.14);
+  padding: 20px 40.5px 17px 40.5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+.section-three-big-button {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.059748px;
+  color: #ffffff;
+}
+/* ///////////////////////////////////////// */
+.section-four {
+  max-width: 1440px;
+  height: 348px;
+  margin-top: 82px;
+  background-color: rgba(254, 194 ,4 ,1);
+  text-align: center;
+}
+.section-four-input-group {
+  border: 0.1px dotted red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-sign-me-up {
+  background: #DEFF06;
+  text-align: center;
+  padding: 18px 34px 17px 15px;
+}
+/* ///////////////////////////////////////// */
+footer {
+  max-width: 1440px;
+  height: 98px;
+  background-color: rgba(52, 44, 44, 1);
+}
+
+/* ///////////////////////////////////////// */
+/*  Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+/* getbootstrap 5.0.0 breakpoints */
+/* Small */
+@media (max-width: 576px) {
+}
+/* Medium */
+@media (min-width: 768px) {
+}
+/* Large */
+@media (min-width: 992px) {
+}
+/* Extra large */
+@media (min-width: 1200px) {
+}
+/* Extra extra large */
+@media (min-width: 1400px) {
+}
+
+/* border: 0.1px dotted red; */
