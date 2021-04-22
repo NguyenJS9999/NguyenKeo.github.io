@@ -70,6 +70,7 @@ body {
   padding: 10px 20px;
   box-shadow: 1px 3px 5px 0px rgb(50 50 50 / 60%);
   z-index: 100;
+  display: none;
 }
 .sub-menu-item {
   border-bottom: 0.5px solid rgba(117, 117, 117, 0.2);
