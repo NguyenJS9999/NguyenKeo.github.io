@@ -22,7 +22,68 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 56px;
+  /* border: 1px dotted red; */
+  /* position: relative; */
+
 }
+/*  Menu mobile icon Hambeger */
+.menu-group-7-mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px;
+  /* border: 1px dotted red; */
+  position: relative;
+  /* margin-top: 40px; */
+  display: none;
+
+}
+.menu-icon {
+  color: white;
+  font-size: 24px;
+  width: 24px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.logo-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  left: calc(60% - 129.39px);
+}
+/* sun menu hide */
+.sub-menus-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute; */
+  border: 1px dotted red;
+  background-color: rgba(255, 255, 255, 0.98);
+  width: 100%;
+  height: auto;
+  padding: 10px 20px;
+  box-shadow: 1px 3px 5px 0px rgb(50 50 50 / 60%);
+  z-index: 100;
+}
+.sub-menu-item {
+  border-bottom: 0.5px solid rgba(117, 117, 117, 0.2);
+  color: #757575;
+  width: 100%;
+  line-height: 45px;
+  font-size: 16px;
+  margin: 0 12px;
+}
+.sub-menu-login {
+  border-bottom:  #757575;
+}
+
+/* Menu màn lớn */
 .logo {
   /* border: 0.1px dotted red; */
   top: calc(50% - 28px / 2 - 6px);
@@ -65,7 +126,7 @@ body {
 }
 
 header.container {
-  background-image: url(../img/background.jpg);
+  background-image: url(../img/header-background.jpg);
   background-repeat: no-repeat;
   /* padding-top: 40px; */
 }
@@ -106,11 +167,62 @@ nav {
   opacity: 0.91;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
 }
-
-.hero-form {
-  text-align: center;
+/*  */
+.hero-form-header-search {
+  margin: auto;
+  margin-top: 18px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.14));
+  display: flex;
+  justify-content: center;
+}
+.input-model {
+  width: 307px;
+  height: 55px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+.input-postcode {
+  width: 142px;
+  /* xóa viền xung quanh - sau thêm 2 bên */
+  border: none;
+  border-left: 1px solid rgba(117, 117, 117, 0.2);
+  border-right: 1px solid rgba(117, 117, 117, 0.2);
+  height: 55px;
+  padding: 10px 20px;
+  outline: none;
 }
 
+.btn-search {
+  text-align: center;
+  cursor: pointer;
+  color: #757575;
+  background-color: #deff06;
+  transition: all 0.5s ease;
+  height: 55px;
+  height: 55px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+.btn-search:hover,
+.menu-item.active:hover {
+  background: radial-gradient(
+    circle,
+    rgba(245, 166, 35, 0.7) 0%,
+    rgba(222, 255, 6, 1) 100%
+  );
+}
+.btn-search::placeholder {
+  color: #757575;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.05px;
+}
+/*  */
 .hero-image {
   margin-top: 50px;
 }
@@ -120,7 +232,7 @@ nav {
 }
 /* ///////////////////////////////////////// */
 /* Section Two - Group-6 - Các mẫu xe ôtô  */
-.section-two-big-button {
+.section-two {
   max-width: 1277px;
   /* height: 763px; */
   height: auto;
@@ -133,9 +245,6 @@ nav {
   /* border: 0.1px solid red; */
   font-family: Poppins;
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
   /* identical to box height */
   text-align: center;
 }
@@ -145,6 +254,10 @@ nav {
   mix-blend-mode: normal;
   opacity: 0.8;
   text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.065px;
 }
 .hottest-deals-header p {
   color: #696969;
@@ -164,10 +277,11 @@ nav {
 }
 .rectangle-4 {
   height: 188px;
-  background-color: rgba(234, 234, 234, 1);
+  background: rgba(227, 227, 227, 0.73);
   padding: 21px 21px 30px 29px;
   object-fit: cover;
   position: relative;
+  text-align: center;
 }
 .price-tag {
   width: 86px;
@@ -206,8 +320,9 @@ nav {
   mix-blend-mode: normal;
   opacity: 0.8;
   text-shadow: 0px 10px 30px;
+  margin-top: 7px;
 }
-.big-button {
+.section-two-big-button {
   width: 228px;
   background: #f5a623;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.14);
@@ -224,9 +339,19 @@ nav {
   margin: auto;
   margin-top: 48px;
 }
+.section-two-big-button:hover {
+  color: #757575;
+  background: linear-gradient(
+    0deg,
+    rgba(245, 166, 35, 1) 0%,
+    rgba(222, 255, 6, 1) 55%,
+    rgba(245, 166, 35, 1) 100%
+  );
+}
 /* ///////////////////////////////////////// */
 .section-three {
   max-width: 1256px;
+  width: 92%;
   /* height: 447px; */
   height: auto;
   margin: auto;
@@ -249,8 +374,15 @@ nav {
 .buying-tips-header p {
   color: #696969;
   mix-blend-mode: normal;
-  opacity: 0.5;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #696969;
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
 .buyers-hecklist {
   width: auto;
@@ -271,21 +403,21 @@ nav {
   margin-bottom: 20px;
 }
 .buyer-hecklist p {
-  position: absolute;
-  height: 36px;
-  left: 24.25%;
-  /* right: 18.75%; */
   top: calc(50% - 36px / 2 + 63px);
   font-family: Poppins;
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: #ffffff;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  letter-spacing: 0.0517816px;
-  color: #ffffff;
+  letter-spacing: 0.05px;
   text-shadow: 0px 10px 30px rgb(0 0 0 / 44%);
-  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.443699);
 }
 
 .section-three-big-button {
@@ -297,8 +429,6 @@ nav {
   text-align: center;
   margin: auto;
   margin-top: 50px;
-}
-.section-three-big-button {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -309,43 +439,157 @@ nav {
   letter-spacing: 0.059748px;
   color: #ffffff;
 }
+
+.section-three-big-button:hover {
+  color: #757575;
+  background: linear-gradient(
+    0deg,
+    rgba(245, 166, 35, 1) 0%,
+    rgba(222, 255, 6, 1) 55%,
+    rgba(245, 166, 35, 1) 100%
+  );
+}
+
 /* ///////////////////////////////////////// */
 .section-four {
   max-width: 1440px;
   height: 348px;
+  margin: auto;
   margin-top: 82px;
-  background-color: rgba(254, 194 ,4 ,1);
+  padding: 70px 0 83px 0;
+
+  /* background-color: rgba(254, 194, 4, 1); */
+  background-image: url(../img/news-background.png);
+
   text-align: center;
 }
+
+.news-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 0.115px;
+  color: #ffffff;
+  opacity: 0.8;
+  text-shadow: 0px 10px 30px rgb(0 0 0 / 13%);
+}
+.news-description {
+  margin-top: 11px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  opacity: 0.5;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.38);
+}
+.news-form {
+  margin: auto;
+  margin-top: 39px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-email {
+  width: 449px;
+  height: 55px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+.btn-signup {
+  text-align: center;
+  cursor: pointer;
+  height: 55px;
+  padding: 10px 20px;
+}
+
+/*  */
 .section-four-input-group {
   border: 0.1px dotted red;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
+.input-email::placeholder,
 .button-sign-me-up {
-  background: #DEFF06;
+  color: #757575;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.05px;
+}
+
+.button-sign-me-up {
+  width: 142px;
+  height: 55px;
+  padding: 10px 20px;
+  background: #deff06;
   text-align: center;
-  padding: 18px 34px 17px 15px;
+  background-color: #deff06;
+  border: none;
+  transition: all 0.5s ease;
 }
 /* ///////////////////////////////////////// */
 footer {
-  max-width: 1440px;
+  background-color: #342c2c;
+  color: #ffffff;
   height: 98px;
-  background-color: rgba(52, 44, 44, 1);
+  display: flex;
+  /* align-items: center; */
+  margin-top: 0;
+  border: 0.1px dotted red;
 }
 
+.footer-navigation {
+  width: 100%;
+  margin: 0px 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-footer {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #f5a623;
+  cursor: pointer;
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.footer-menu li:first-child {
+  margin-left: 0;
+}
+.menu-item {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 12px;
+}
+.menu-item:last-child {
+  margin-right: 0;
+}
+li {
+  list-style: none;
+}
 /* ///////////////////////////////////////// */
 /*  Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 40px;
-  }
-  .hero-description {
-    font-size: 18px;
-  }
-}
-
+/* getbootstrap 5.0.0 breakpoints */
+/* X-Small */
 @media (max-width: 576px) {
   .hero-title {
     font-size: 26px;
@@ -354,22 +598,74 @@ footer {
     font-size: 16px;
   }
 }
+/* Hiện icon hamberger */
 
-/* getbootstrap 5.0.0 breakpoints */
 /* Small */
-@media (max-width: 576px) {
+@media (min-width: 576px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+  /* .footer-navigation {
+    width: 100%;
+    margin: 0px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-menu {
+    margin-top: 0px;
+  } */
 }
+
+@media (max-width: 670px) {
+  .footer-navigation {
+    width: 100%;
+    margin: 12px 85px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+  }
+
+  header.container {
+    padding-top: 40px;
+  }
+  .menu-group-7-mobile {
+    display: block;
+    /* border: dotted 1px red; */
+  }
+
+  .menu-group-7 {
+    display: none;
+  }
+}
+
 /* Medium */
 @media (min-width: 768px) {
+  .hero-title {
+    font-size: 54px;
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+
 }
 /* Large */
 @media (min-width: 992px) {
+
 }
 /* Extra large */
 @media (min-width: 1200px) {
+
 }
 /* Extra extra large */
 @media (min-width: 1400px) {
-}
 
-/* border: 0.1px dotted red; */
+}
+.xemVien {
+  border: 0.1px dotted red;
+}

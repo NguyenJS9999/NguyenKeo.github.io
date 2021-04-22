@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <!-- Icon -->
+  <link rel="shortcut icon" href="./img/Logo-A9-Veneno.png">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -13,7 +14,10 @@
   <!-- Font google Poppins, Arial, sans-serif -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
   <title>Dream Cars</title>
 
 </head>
@@ -21,7 +25,30 @@
 <body>
 
   <header class="container">
+
+    <!-- Menu mobile icon Hambeger -->
+    <nav>
+      <div class="menu-group-7-mobile">
+        <!-- <div class="logo">DreamCars</div> -->
+        <div onclick="hiddenMenu()" class="menu-icon"><i class="fas fa-bars"></i></div>
+
+        <div class="sub-menus-choice">
+          <div class="sub-menu-item">Search Cars</div>
+          <div class="sub-menu-item">Buyer Tips</div>
+          <div class="sub-menu-item">Finance</div>
+          <div class="sub-menu-item">Sign In</div>
+          <div class="sub-menu-item sub-menu-login">Sign Up</div>
+        </div>
+
+        
+        <div class="logo-mobile">
+          <div class="logo">DreamCars</div>
+        </div>
+
+      </div>
+    </nav>
     <!-- <nav>Menu làm tương tự bài Responsive layout</nav> -->
+    <!-- Menu màn lớn -->
     <nav>
       <div class="menu-group-7">
         <div class="logo">DreamCars</div>
@@ -36,6 +63,8 @@
       </div>
     </nav>
 
+
+
     <div class="hero-main-content">
       <h1 class="hero-title">Find Your Dream Car</h1>
 
@@ -44,11 +73,15 @@
         vehicle today
       </p>
 
-      <div class="hero-form">
-        <input type="text" placeholder="Search make or model" />
-        <input type="text" placeholder="Postcode" />
-        <button>Find My Car</button>
+      <div class="hero-form-header-search">
+
+        <input type="text" class="input input-model" placeholder="Search make or model" />
+        <input type="text" class="input-postcode" placeholder="Postcode" />
+
+        <button class="btn-search">Find My Car</button>
       </div>
+
+
 
       <div class="hero-image">
         <img src="img/mercedes-benz.png" alt="mercedes-benz" />
@@ -69,7 +102,7 @@
 
       <div class="row">
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
@@ -81,39 +114,39 @@
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£6,500</p>
+              <img class="car-card-img" src="./img/2-Skoda-Fabia.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Skoda Fabia</p>
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£10,400</p>
+              <img class="car-card-img" src="./img/3-Honda-Civic.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Honda Civic</p>
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£3,999</p>
+              <img class="car-card-img" src="./img/4-Vauxhall-Corsa.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Vauxhall Corsa</p>
           </div>
         </div>
       </div> <!-- row 1 -->
@@ -121,51 +154,51 @@
       <!-- row 2 -->
       <div class="row">
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£4,999</p>
+              <img class="car-card-img" src="./img/5-Renault-Clio.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Renault Clio</p>
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£1,999</p>
+              <img class="car-card-img" src="./img/6-Volkswagen-Polo.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Volkswagen Polo</p>
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£6,859</p>
+              <img class="car-card-img" src="./img/7-Seat-Ibiza.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">Seat Ibiza</p>
           </div>
         </div>
 
-        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-12  ">
+        <div class="col-xxl-3  col-xl-3  col-lg-4  col-md-6  col-sm-6  col-12  ">
           <div class="car-card">
             <div class="rectangle-4">
               <img class="price-tag" src="./img/price-tag.png" alt="price car">
-              <p class="price-number">£7,599</p>
-              <img class="car-card-img" src="./img/1-Ford-Focus.png" alt="Car Ford-Focus ">
+              <p class="price-number">£8,950</p>
+              <img class="car-card-img" src="./img/8-BMW-i5.png" alt="Car Ford-Focus ">
             </div>
 
-            <p class="car-name">Ford Focus</p>
+            <p class="car-name">BMW i5</p>
           </div>
         </div>
       </div> <!-- row 2 -->
@@ -216,25 +249,46 @@
 
     <div class="section-three-big-button" type="button">SEE ALL OUR GUIDES</div>
   </div> <!-- Section Three -->
+
   <!-- Section Four -->
   <div class="section-four">
-    <h3>Never Miss A Message</h3>
-    <p>Join our exclusive list for one off deals and more</p>
-    <div class="section-four-input-group">
+
+    <h2 class="news-title">Never Miss A Message</h2>
+    <p class="news-description">Join our exclusive list for one off deals and more</p>
+
+    <!-- <div class="section-four-input-group">
       <input type="text" placeholder="Enter your email add">
       <div class="button-sign-me-up" type="button">Sign Me Up</div>
+    </div> -->
+    <div class="news-form">
+      <input type="text" class="input-email" placeholder="Enter your email address.." />
+
+      <button class="button-sign-me-up">Sign Me Up</button>
     </div>
+
   </div> <!-- Section Four -->
 
-  <footer>
-    footer
+  <footer class="container">
+
+    <div class="footer-navigation ">
+
+      <div class=" logo-footer">
+        <a href="#">DreamCars</a>
+      </div>
+
+      <ul class=" footer-menu">
+        <li class="menu-item"><a href="#">Search Cars</a></li>
+        <li class="menu-item"><a href="#">Buyer Tips</a></li>
+        <li class="menu-item"><a href="#">Finance</a></li>
+      </ul>
+
+    </div> <!-- footer-navigation -->
   </footer>
 
   <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 
-  <main></main>
-
-  <footer></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
