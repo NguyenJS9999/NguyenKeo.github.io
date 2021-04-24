@@ -1,0 +1,371 @@
+/* font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/* font Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Để nhìn tạm */
+  /* color: #e82626; */
+  /* background: #F8F9FC; */
+}
+body {
+  max-width: 1440px;
+  background: rgba(248, 249, 252, 1);
+  border: 0.1px dotted red;
+  margin: auto;
+  /* tạm */
+  height: 4000px;
+  /* che chắn cho khối Testimonials */
+  /* overflow: hidden; */
+}
+.container-header {
+  max-width: 1440px;
+  margin: auto;
+  background: rgba(49, 58, 90, 1);
+  border: 0.1px dotted red;
+
+  height: 920px;
+
+  position: relative;
+}
+/* Start Navigator */
+.navigation {
+  max-width: 1177px;
+  height: auto;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1px dotted red;
+}
+
+.logo-autocryp {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 58px;
+  color: #ffffff;
+}
+.menu-infos-header {
+  max-width: 356.5px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 37px;
+  align-items: center;
+  /* border: 0.1px dotted red; */
+}
+.infos-header {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  color: #ffffff;
+  /* border: 0.1px dotted red; */
+}
+
+.login-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1px dotted red;
+}
+/* End Navigator */
+
+/* Start introduction + image*/
+.infors-introduction {
+  max-width: 229px;
+  margin-top: 229px;
+  margin-left: 131px;
+  border: 0.1px dotted red;
+}
+.infor-intro-title {
+  border: 0.1px dotted red;
+}
+
+.infor-intro-depcription {
+  border: 0.1px dotted red;
+}
+/* photo */
+.photo-description {
+  position: absolute;
+  top: 128px;
+  right: 169px;
+}
+/* End introduction + image*/
+
+/* Start Benefit */
+.benefit-container {
+  max-width: 1257px;
+  /* tạm */
+  /* height: 420px; */
+  margin: auto;
+  padding: 66px 79px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 100px;
+  align-items: center;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 0.1px dotted #ffffff;
+
+  position: absolute;
+  top: 802px;
+  /* left: 91.5px; */
+  left: calc(13% - 91.5px);
+}
+.benefit {
+  max-width: 300px;
+  /* tạm - set height để dóng ngang các div*/
+  height: 282px;
+  background: #ffffff;
+}
+.benefit-img {
+  max-width: 72px;
+  padding: 19.2px 16px;
+  background: rgba(233, 251, 243, 1);
+  /* background: #1fdb84; */
+  mix-blend-mode: normal;
+  /* opacity: 0.1; */
+  border-radius: 6px;
+}
+.benefit-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #031d5b;
+  margin-top: 26px;
+  background: inherit;
+  /* border: 0.1px dotted red; */
+}
+.benefit-dash {
+  margin-top: 29px;
+  max-width: 60px;
+  height: 4px;
+  background: #1fdb84;
+}
+.benefit-description {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  /* or 200% */
+  color: #5b6c94;
+  margin-top: 18px;
+  background: inherit;
+}
+/* End Benefit */
+
+/* Start Pricing-container */
+.Pricing-container {
+  max-width: 1130px;
+  /* tạm */
+  height: 997px;
+  margin: auto;
+  margin-top: 510px;
+
+  /* border: 0.1px dotted red; */
+}
+.pricing-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  text-align: center;
+  color: #32325c;
+  margin: 0 160px;
+  /* border: 0.1px dotted red; */
+}
+/*  */
+.pricing-durations {
+  max-width: 470px;
+  margin: auto;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0px;
+  align-items: center;
+  /* border: 0.1px dotted red; */
+  text-align: center;
+}
+.pricing-duration-month {
+  /* height: 60px; */
+  background: #ffffff;
+  /* border: 1px solid #aefdd9; */
+  border-radius: 5px 0px 0px 5px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #1fdb84;
+
+  padding: 20.5px 36.5px;
+  /* border: 0.1px dotted red; */
+}
+.pricing-duration-year {
+  /* height: 60px; */
+  background: #f1fff8;
+  /* border: 1px solid #aefdd9; */
+  border-radius: 5px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #6fdeaa;
+
+  padding: 20.5px 36.5px;
+  /* border: 0.1px dotted red; */
+}
+/* Các gói lựa chọn */
+.pricing-package-options {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 37px;
+  align-items: center;
+  /* border: 0.1px dotted red; */
+}
+.pricing-package-option {
+  /* border: 2px solid rgb(242, 192, 255); */
+  transition: all 0.4s;
+}
+.pricing-package-option:hover {
+  transform: scaleY(1.145454545454545);
+  padding: 56.5px 0px;
+  border-top: 4px solid #0a8aff;
+}
+.pricing-option-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.266667px;
+  color: #32325c;
+}
+.pricing-option-cost {
+  margin-top: 31px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 64px;
+  text-align: center;
+  color: #1fdb84;
+}
+.pricing-option-per-time {
+  margin-top: 13px;
+}
+.pricing-option-per-time,
+.pricing-option-detail {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.177778px;
+  color: #5b6c94;
+}
+.pricing-option-detail {
+  margin-top: 60px;
+}
+.pricing-get-free-trial {
+  background: #1fdb84;
+  box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
+  border-radius: 5px 0px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding: 30.5px 46.5px;
+  margin: 108px 37.5px 0px 37.5px;
+}
+/* End Pricing-container */
+
+/* Start testimonials-contraine */
+.testimonials-contrainer {
+  margin-top: 264px;
+  max-width: 1623px;
+  height: 970px;
+  border: 0.1px solid rgba(255, 225, 0, 0.672);
+  margin-left: 145px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.beveled-rectangles {
+  max-width: 378px;
+  max-height: 413px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 48px;
+  margin-right: 105px;
+  position: relative;
+}
+.beveled-rectangle {
+  width: 165px;
+  height: 413px;
+  background-image: url("../img/beveled-rectangle.png");
+  /* border: 0.1px solid red; */
+}
+
+.testimonials-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #031d5b;
+  position: absolute;
+  top: 40px;
+  left: 23px;
+  /* border: 0.1px solid rgb(0, 8, 255); */
+}
+
+.testimonials-horizontal-slide-menu {
+  max-width: 810px;
+  /* width: 810px; */
+  margin-left: 105px;
+
+  background: #313a5a;
+  border: 0.1px solid rgb(255, 47, 0);
+}
+
+/* End  testimonials-contraine*/
+
+/* . {
+    margin-top: px;
+
+} */
+
+/* Start */
+/* End */

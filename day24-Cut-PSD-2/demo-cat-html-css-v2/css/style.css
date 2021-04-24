@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+header.container {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}
+
+nav {
+  height: 44px;
+  text-align: center;
+}
+
+/* ============================ */
+/* Class dùng chung */
+.text {
+  font-family: Poppins, Arial, sans-serif; /* Cần nhúng font vào */
+  font-style: normal;
+  line-height: 1.5;
+  text-align: center;
+  mix-blend-mode: normal;
+}
+
+.button-section {
+  background: #f5a623;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.14);
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  padding: 20px 24px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.button-section:hover {
+  background: #eb970b;
+}
+/* =============================== */
+
+/* ================================= */
+/* Section hero */
+.hero-main-content {
+  max-width: 680px;
+  margin: auto;
+  margin-top: 128px;
+}
+
+.hero-title,
+.hero-description {
+  color: #ffffff;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 54px;
+  letter-spacing: 1.12px;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.151183);
+}
+
+.hero-description {
+  margin: 0;
+  padding: 0 30px;
+  font-weight: 500;
+  font-size: 20px;
+  mix-blend-mode: normal;
+  opacity: 0.91;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+}
+
+.hero-form {
+  text-align: center;
+}
+
+.hero-image {
+  margin-top: 50px;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+/* ======================================== */
+
+.section-container {
+  max-width: 1277px;
+  margin: auto;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.0571121px;
+  color: #000000;
+  opacity: 0.8;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+}
+
+.section-description {
+  font-weight: 500;
+  font-size: 20px;
+  color: #696969;
+  opacity: 0.5;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* Màn hình md */
+@media (max-width: 992px) {
+  .section-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Màn hình sm */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+  .section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Màn hình xs */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .section-content {
+    grid-template-columns: 1fr;
+  }
+}

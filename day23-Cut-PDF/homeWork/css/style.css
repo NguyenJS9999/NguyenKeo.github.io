@@ -497,6 +497,9 @@ nav {
   outline: none;
   border: none;
 }
+.input-email-form {
+  width: 100%
+}
 .btn-signup {
   text-align: center;
   cursor: pointer;
