@@ -42,7 +42,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding:  0px 6px;
+  padding: 0px 6px;
   position: relative;
   /* border: 0.1px dotted red; */
   /* ẩn ở màn destop */
@@ -202,7 +202,7 @@ body {
 
 /* Start introduction + image*/
 .infor-intro-title {
-  width: 512px;
+  max-width: 512px;
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
@@ -218,7 +218,7 @@ body {
 }
 
 .infor-intro-depcription {
-  width: 553px;
+  max-width: 553px;
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
@@ -283,7 +283,7 @@ body {
 .benefit {
   max-width: 300px;
   /* tạm - set height để dóng ngang các div*/
-  height: 282px;
+  /* max-height: 282px; */
   background: #ffffff;
 }
 .benefit-img {
@@ -588,51 +588,134 @@ body {
 /* End Footer*/
 
 /* Start Responsive by @Media same bootstrap */
+
 /* X-Small */
 @media (max-width: 576px) {
-  /* Hiện menu mobile-icon hambeger <=768px */
+  /* Hiện menu mobile-icon hambeger >576px */
   .navigation-mobile {
     display: block;
     display: flex;
   }
-
+  /* Ẩn menu desktop */
   .navigation-desktop {
     display: none;
+  }
+  /* benefit container co lại 2 hàng */
+  .benefit-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 100px;
+    margin: 0% 0% 0% 10.5%;
+  }
+  /* margin top khối Pricing tăng lên là 810px */
+  .Pricing-container {
+    margin-top: 1050px;
+  }
+  /* Khối Pricing co 1 hàng bé chia đôi */
+  .pricing-title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .pricing-package-options {
+    display: grid;
+    grid-template-columns: 0.9fr;
+    grid-gap: 25px;
+    margin: 1% 0% 0% 8%;
   }
 }
+
 /* Small */
 @media (min-width: 576px) {
-  /* Hiện menu mobile-icon hambeger <=768px */
+  /* Hiện menu mobile-icon hambeger <=576px */
   .navigation-mobile {
     display: block;
     display: flex;
   }
-
+  /* Ẩn menu desktop */
   .navigation-desktop {
     display: none;
+  }
+
+  /* benefit container co lại 2 hàng */
+  .benefit-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    margin: 0px 5%;
+  }
+  /* margin top khối Pricing tăng lên là 810px */
+  .Pricing-container {
+    margin-top: 1100px;
+  }
+  /* Khối Pricing co 2 hàng bé chia đôi */
+  .pricing-title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .pricing-package-options {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 25px;
   }
 }
 
 /* Medium */
 @media (min-width: 768px) {
-  /* Hiện menu mobile-icon hambeger <=768px */
+  /* Ẩn menu mobile-icon hambeger (lơn hơn) <=768px */
   .navigation-mobile {
     display: block;
     display: none;
   }
 
-  .navigation-desktop {
-    display: block;
-    display: flex;
-    padding: 0px 5px
-  }
-}
-/* Large */
-@media (min-width: 992px) {
+  /* Hiện menu desktop flex lại, thêm padding */
   .navigation-desktop {
     display: block;
     display: flex;
     padding: 0px 5px;
+  }
+
+  /* benefit container co lại 2 hàng */
+  .benefit-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    margin: 0px 5%;
+  }
+  /* margin top khối Pricing tăng lên là 810px */
+  .Pricing-container {
+    margin-top: 910px;
+  }
+  /* Khối Pricing co 2 hàng bé chia đôi */
+  .pricing-package-options {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 25px;
+  }
+}
+/* Large */
+@media (min-width: 992px) {
+  /* Hiện menu desktop flex lại, thêm padding */
+  .navigation-desktop {
+    display: block;
+    display: flex;
+    padding: 0px 5px;
+  }
+  /* benefit container co lại 2 hàng */
+  .benefit-container {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-gap: 100px;
+    margin-right: 5%;
+  }
+  /* margin top khối Pricing tăng lên là 810px */
+  .Pricing-container {
+    margin-top: 510px;
+  }
+  /* Khối Pricing co 2 hàng bé chia đôi */
+  .pricing-package-options {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-gap: 25px;
   }
 }
 /* Extra large */
@@ -641,6 +724,14 @@ body {
     display: block;
     display: flex;
   }
+
+  /* benefit container co lại 3 hàng */
+  .benefit-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+    margin: 0% 6% 0% 0%;
+  }
 }
 /* Extra extra large */
 @media (min-width: 1400px) {
@@ -648,6 +739,7 @@ body {
     display: block;
     display: flex;
   }
+  /* benefit container mặc định màn 1920 co lại 3 hàng */
 }
 
 /* End Responsive by @Media same  bootstrap*/
