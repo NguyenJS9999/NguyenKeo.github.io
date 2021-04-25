@@ -283,7 +283,7 @@ body {
 .benefit {
   max-width: 300px;
   /* tạm - set height để dóng ngang các div*/
-  /* max-height: 282px; */
+  max-height: 282px;
   background: #ffffff;
 }
 .benefit-img {
@@ -654,8 +654,8 @@ body {
   }
   .pricing-package-options {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-gap: 25px;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr;
+    grid-gap: 15px;
   }
 }
 
@@ -690,6 +690,10 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     grid-gap: 25px;
+  }
+  /* Khối testimonials bị đẩy xuống */
+  .testimonials-contrainer {
+    margin-top: 700px;
   }
 }
 /* Large */
