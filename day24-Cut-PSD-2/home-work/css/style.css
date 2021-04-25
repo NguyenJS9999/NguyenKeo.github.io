@@ -596,9 +596,9 @@ body {
     display: flex;
   }
 
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: none;
-  } */
+  }
 }
 /* Small */
 @media (min-width: 576px) {
@@ -608,9 +608,9 @@ body {
     display: flex;
   }
 
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: none;
-  } */
+  }
 }
 
 /* Medium */
@@ -621,27 +621,33 @@ body {
     display: none;
   }
 
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: block;
-  } */
+    display: flex;
+    padding: 0px 5px
+  }
 }
 /* Large */
 @media (min-width: 992px) {
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: block;
-  } */
+    display: flex;
+    padding: 0px 5px;
+  }
 }
 /* Extra large */
 @media (min-width: 1200px) {
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: block;
-  } */
+    display: flex;
+  }
 }
 /* Extra extra large */
 @media (min-width: 1400px) {
-  /* .navigation-desktop {
+  .navigation-desktop {
     display: block;
-  } */
+    display: flex;
+  }
 }
 
 /* End Responsive by @Media same  bootstrap*/
