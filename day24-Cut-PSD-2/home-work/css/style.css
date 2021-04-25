@@ -470,7 +470,7 @@ body {
   margin-top: 264px;
   max-width: 1623px;
   height: 970px;
-  border: 0.1px solid rgba(255, 225, 0, 0.672);
+  /* border: 0.1px solid rgba(255, 225, 0, 0.672); */
   margin-left: 145px;
 
   display: flex;
@@ -513,7 +513,7 @@ body {
   margin-left: 105px;
 
   background: #313a5a;
-  border: 0.1px solid rgb(255, 47, 0);
+  /* border: 0.1px solid rgb(255, 47, 0); */
 }
 
 /* End  testimonials-contraine*/
@@ -523,7 +523,7 @@ body {
   max-width: 1057px;
   margin: auto;
   margin-top: 215px;
-  border: 0.1px solid rgb(255, 47, 0);
+  /* border: 0.1px solid rgb(255, 47, 0); */
 }
 .partner-title {
   font-family: Rubik;
@@ -544,10 +544,10 @@ body {
   grid-template-columns: 1fr 0.8fr 1fr 0.4fr 1fr 1.3fr;
   /* 6 phần tử cách nhau */
   grid-gap: 51.2px;
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
 }
 .trademark {
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
 }
 .trademark img {
   max-width: 100%;
@@ -567,7 +567,7 @@ body {
   justify-content: space-around; */
   align-items: center;
 
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
 }
 
 .footer-title-reserved,
@@ -578,7 +578,7 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: #5b6c94;
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
 }
 .footer-titles {
   margin-top: 50px;
