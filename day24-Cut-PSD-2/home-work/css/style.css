@@ -13,7 +13,7 @@
 body {
   max-width: 1440px;
   background: rgba(248, 249, 252, 1);
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
   margin: auto;
   /* tạm */
   height: 5000px;
@@ -23,14 +23,16 @@ body {
 .container-header {
   max-width: 1440px;
   margin: auto;
+  margin-top: -26px;
   background: rgba(49, 58, 90, 1);
-  border: 0.1px dotted red;
-
+  /* border: 0.1px dotted red; */
   height: 920px;
-
+  /* position cho chữ và ảnh */
   position: relative;
 }
-/* Start Navigator */
+
+
+/* ----- Start Navigator desktop ----- */
 .navigation {
   max-width: 1177px;
   height: auto;
@@ -78,23 +80,82 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 0.1px dotted red;
+
+  /* border: 0.1px dotted red; */
 }
-/* End Navigator */
+.login-button, .register-button {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  color: #ffffff;
+} 
+
+.login-button {
+  margin-right: 38.5px;
+}
+.register-button {
+  background: #1fdb84;
+  box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
+  border-radius: 5px 0px;
+
+  padding: 4px 24.5px 2px 26.5px;
+}
+/* ----- End Navigator desktop ----- */
 
 /* Start introduction + image*/
-.infors-introduction {
-  max-width: 229px;
-  margin-top: 229px;
-  margin-left: 131px;
-  border: 0.1px dotted red;
-}
 .infor-intro-title {
-  border: 0.1px dotted red;
+  width: 512px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 57px;
+
+  color: #ffffff;
+
+  position: absolute;
+  top: 229px;
+  margin-left: 131px;
+  /* border: 0.1px dotted red; */
 }
 
 .infor-intro-depcription {
-  border: 0.1px dotted red;
+  width: 553px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: white;
+
+  position: absolute;
+  top: 383px;
+  margin-left: 131px;
+  /* border: 0.1px dotted red; */
+}
+.head-button-get-start {
+  max-width: 200px;
+  max-height: 60px;
+
+  background: #1fdb84;
+  box-shadow: 0px -8px 34px rgba(31, 219, 132, 0.6);
+  border-radius: 0px 10px;
+  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  padding: 19.5px 47px;
+
+  position: absolute;
+  top: 546px;
+  margin-left: 131px;
 }
 /* photo */
 .photo-description {
@@ -413,36 +474,53 @@ body {
 
   border: 0.1px dotted red;
 }
-.footer-title-reserved {
+
+.footer-title-reserved,
+.footer-titles {
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
-  text-align: center;
   color: #5b6c94;
   border: 0.1px dotted red;
 }
-.footer-title-reserved, .footer-titles {
+.footer-titles {
   margin-top: 50px;
-
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 32px;
-  color: #5b6c94;
-  border: 0.1px dotted red;
+  word-spacing: 20px;
 }
 
 /* End Footer*/
 
-/* Start */
-/* End */
-/* . {
-    margin-top: px;
+/* Start Responsive by @Media same bootstrap */
+/* X-Small */
+@media (max-width: 576px) {
+  
+}
+/* Small */
+@media (min-width: 576px) {
+  
+}
+/* Medium */
+@media (min-width: 768px) {
+  /* Hiện menu mobile-icon hambeger <=768px */
 
-} */
+}
+/* Large */
+@media (min-width: 992px) {
+  
+}
+/* Extra large */
+@media (min-width: 1200px) {
+  
+}
+/* Extra extra large */
+@media (min-width: 1400px) {
+  
+}
+
+
+/* End Responsive by @Media same  bootstrap*/
 
 /* Start */
 /* End */
