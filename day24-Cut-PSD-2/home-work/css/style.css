@@ -16,7 +16,7 @@ body {
   border: 0.1px dotted red;
   margin: auto;
   /* tạm */
-  height: 4000px;
+  height: 5000px;
   /* che chắn cho khối Testimonials */
   /* overflow: hidden; */
 }
@@ -361,6 +361,47 @@ body {
 }
 
 /* End  testimonials-contraine*/
+
+/* Start */
+.partner-container {
+  max-width: 1057px;
+  margin: auto;
+  margin-top: 215px;
+  border: 0.1px solid rgb(255, 47, 0);
+
+}
+.partner-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #031d5b;
+}
+/*  */
+.partner-trademarks {
+  max-width: 1057px;
+  max-height: 50px;
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr 0.4fr 1fr 1.3fr;
+  /* 6 phần tử cách nhau */
+  grid-gap: 51.2px;
+  border: 0.1px dotted red;
+
+}
+.trademark {
+  border: 0.1px dotted red;
+
+}
+.trademark img {
+  max-width: 100%;
+  height: 100%;
+
+}
+/* End */
 
 /* . {
     margin-top: px;
