@@ -362,13 +362,12 @@ body {
 
 /* End  testimonials-contraine*/
 
-/* Start */
+/* Start partner-container */
 .partner-container {
   max-width: 1057px;
   margin: auto;
   margin-top: 215px;
   border: 0.1px solid rgb(255, 47, 0);
-
 }
 .partner-title {
   font-family: Rubik;
@@ -390,19 +389,56 @@ body {
   /* 6 phần tử cách nhau */
   grid-gap: 51.2px;
   border: 0.1px dotted red;
-
 }
 .trademark {
   border: 0.1px dotted red;
-
 }
 .trademark img {
   max-width: 100%;
   height: 100%;
-
 }
-/* End */
+/* End partner-containers */
 
+/* Start Footer */
+.footer-container {
+  max-width: 1057px;
+  /* max-height: 50px; */
+  margin: auto;
+  margin-top: 180px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  align-items: center;
+
+  border: 0.1px dotted red;
+}
+.footer-title-reserved {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #5b6c94;
+  border: 0.1px dotted red;
+}
+.footer-title-reserved, .footer-titles {
+  margin-top: 50px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #5b6c94;
+  border: 0.1px dotted red;
+}
+
+/* End Footer*/
+
+/* Start */
+/* End */
 /* . {
     margin-top: px;
 
