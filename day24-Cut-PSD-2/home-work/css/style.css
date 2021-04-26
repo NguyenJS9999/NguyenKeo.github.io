@@ -25,7 +25,6 @@ body {
   background: rgba(49, 58, 90, 1);
   display: flex;
   flex-direction: column;
-
 }
 
 .container-header {
@@ -50,7 +49,7 @@ body {
 
   padding: 0px 6px;
   /* !!! */
-  /* position: relative; */ 
+  /* position: relative; */
   /* border: 0.1px dotted red; */
   /* ẩn ở màn destop */
   display: none;
@@ -210,18 +209,17 @@ body {
 
 /* Start introduction + image*/
 .infors-introduction {
-  padding: 0px 169px 0px 131px;
+  padding: 0px 169px 0px 65px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   /* border: 0.1px dotted red; */
-
+  align-items: start;
 }
 .infors {
   display: flex;
   flex-direction: column;
   /* border: 0.1px dotted red; */
-
 }
 .infor-intro-title {
   font-family: Rubik;
@@ -231,7 +229,6 @@ body {
   line-height: 57px;
   color: #ffffff;
   margin: 153px 0 0 0;
-  padding-right: 26%;
   /* border: 0.1px dotted red; */
 }
 
@@ -266,15 +263,14 @@ body {
 }
 /* photo */
 .photo-description {
-  /* margin: 52px 169px 0px 0px ; */
+  margin: 52px 0px 0px 124px;
 }
 /* End introduction + image*/
 
 /* Start Benefit */
 .benefit-container {
-  max-width: 1257px;
+  max-width: 1300px;
   margin: auto;
-  margin-top: 118px;  
   padding: 66px 79px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -283,17 +279,13 @@ body {
   border-radius: 6px;
   background: #ffffff;
   border: 0.1px dotted #ffffff;
-
-  margin-top: -100px; 
-    position: relative;
-    top: -100px;
-  
-
+  position: relative;
+  top: -124px;
 }
 .benefit {
   max-width: 300px;
   /* tạm - set height để dóng ngang các div*/
-  max-height: 282px;
+  /* max-height: 282px; */
   background: #ffffff;
 }
 .benefit-img {
@@ -613,21 +605,28 @@ body {
   .navigation-desktop {
     display: none;
   }
+  /* Tiêu đề header dịch padding trai nhỏ hơn*/
+  .infors-introduction {
+    padding: 0px 32px 188px 32px;
+  }
+  .infor-intro-title {
+    margin: 60px 0 0 0;
+  }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
     display: none;
   }
-  
+
   /* benefit container co lại 2 hàng */
   .benefit-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 100px;
-    margin: 0% 0% 0% 10.5%;
+    margin: 0% 5.5% 0% 5.5%;
   }
   /* margin top khối Pricing tăng lên là 810px */
   .Pricing-container {
-    margin-top: 1050px;
+    /* margin-top: 1050px; */
   }
   /* Khối Pricing co 1 hàng bé chia đôi */
   .pricing-title {
@@ -653,12 +652,17 @@ body {
   .navigation-desktop {
     display: none;
   }
+  /* Tiêu đề header dịch padding trai nhỏ hơn*/
+  .infors-introduction {
+    padding: 0px 32px 188px 32px;
+  }
+  .infor-intro-title {
+    margin: 60px 0 0 0;
+  }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
     display: none;
   }
-
-
   /* benefit container co lại 2 hàng */
   .benefit-container {
     display: grid;
@@ -668,7 +672,7 @@ body {
   }
   /* margin top khối Pricing tăng lên là 810px */
   .Pricing-container {
-    margin-top: 1100px;
+    /* margin-top: 1100px; */
   }
   /* Khối Pricing co 2 hàng bé chia đôi */
   .pricing-title {
@@ -689,15 +693,18 @@ body {
     display: block;
     display: none;
   }
-
+  /* Tiêu đề header dịch padding trai nhỏ hơn*/
+  .infors-introduction {
+    padding: 0px 5% 188px 5%;
+  }
   /* Hiện menu desktop flex lại, thêm padding */
   .navigation-desktop {
     display: block;
     display: flex;
     padding: 0px 5px;
   }
-   /* Ảnh iphone ở header ẩn đi khi màn bé */
-   .photo-description {
+  /* Ảnh iphone ở header ẩn đi khi màn bé */
+  .photo-description {
     display: none;
   }
 
@@ -710,7 +717,7 @@ body {
   }
   /* margin top khối Pricing tăng lên là 810px */
   .Pricing-container {
-    margin-top: 910px;
+    /* margin-top: 910px; */
   }
   /* Khối Pricing co 2 hàng bé chia đôi */
   .pricing-package-options {
@@ -720,7 +727,7 @@ body {
   }
   /* Khối testimonials bị đẩy xuống */
   .testimonials-contrainer {
-    margin-top: 700px;
+    /* margin-top: 700px; */
   }
 }
 /* Large */
@@ -731,8 +738,12 @@ body {
     display: flex;
     padding: 0px 5px;
   }
-   /* Ảnh iphone ở header ẩn đi khi màn bé */
-   .photo-description {
+  /* Tiêu đề header dịch padding trai nhỏ hơn*/
+  .infors-introduction {
+    padding: 0px 5% 188px 5%;
+  }
+  /* Ảnh iphone ở header ẩn đi khi màn bé */
+  .photo-description {
     display: none;
   }
   /* benefit container co lại 2 hàng */
@@ -744,7 +755,7 @@ body {
   }
   /* margin top khối Pricing tăng lên là 810px */
   .Pricing-container {
-    margin-top: 510px;
+    /* margin-top: 510px; */
   }
   /* Khối Pricing co 2 hàng bé chia đôi */
   .pricing-package-options {
@@ -759,8 +770,15 @@ body {
     display: block;
     display: flex;
   }
-   /* Ảnh iphone ở header ẩn đi khi màn bé */
-   .photo-description {
+  /* Tiêu đề header dịch padding trai nhỏ hơn*/
+  .infors-introduction {
+    padding: 0px 169px 0px 62px;
+  }
+  .infor-intro-title {
+    margin: 147px 0 0 0;
+  }
+  /* Ảnh iphone ở header ẩn đi khi màn bé */
+  .photo-description {
     display: block;
   }
 
