@@ -74,7 +74,7 @@ body {
   color: #ffffff;
 }
 .menu-infos-header-mobile {
-  max-width: 100%;
+  width: 97.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -97,11 +97,12 @@ body {
   z-index: 10;
   /* border: 0.1px dotted red; */
   display: none;
+  padding-left: 18px;
 }
 .info-header-mobile {
-  width: 100%;
-  padding: 10px 218px;
-  /* border: 0.1px dotted red; */
+  width: 97%;
+  padding: 10px 90% 10px 0%;
+  border-bottom: 0.1px solid rgb(20, 138, 83);
 }
 .login-register-mobile {
   display: flex;
