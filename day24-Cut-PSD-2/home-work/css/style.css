@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 /* font Rubik */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,7 @@ body {
   /* che chắn cho khối Testimonials */
   /* overflow: hidden; */
   padding-bottom: 114px;
+  overflow-x: hidden;
 }
 .container-header-back {
   /* border: 0.1px dotted rgb(0, 255, 51); */
@@ -496,7 +498,7 @@ body {
 /* End Pricing-container */
 
 /* Start testimonials-contraine */
-.testimonials-contrainer {
+.horizontal-menu {
   margin-top: 264px;
   max-width: 1623px;
   height: 970px;
@@ -531,44 +533,67 @@ body {
   font-size: 40px;
   line-height: 48px;
   color: #031d5b;
-  /* position: absolute; */
-  /* top: 40px; */
-  /* left: 23px; */
   /* border: 0.1px solid rgb(0, 8, 255); */
 }
 
 .horizontal-slides-menu {
-  max-width: 810px;
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Tạm */
-  height: 970px;
-  /* margin-left: 105px; */
-
-  display: flex;
-  grid-gap: 41px;
+  max-width: 100%;
+  /* display: flex; */
+  /* grid-gap: 41px; */
   background: #313a5a;
   color: white;
+  /* border: 0.1px solid rgb(255, 47, 0); */
+}
+.slide {
+ 
+  max-width: 1020px;
+   /* max-width: 130%; */
+
+  display: flex;
+  position: relative;
+  top: 260px;
+  left: -150px;
   border: 0.1px solid rgb(255, 47, 0);
 }
-.menu-item {
-  max-width: 420px;
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Tạm */
-  height: 500px;
 
+.menu-item-first {
+  max-width: 420px;
+  /* height: 500px; */
   background: #1fdb84;
   box-shadow: 12px 12px 40px rgba(31, 219, 132, 0.5);
   backdrop-filter: blur(27.1828px);
+  color: #ffffff;
   border-radius: 6px;
 
-  margin-top: 260px;
   padding: 80px 60px 63px 50px;
-  border: 0.1px solid rgb(255, 47, 0);
+  margin: 0px 20px 100px 20px;
+  /* border: 0.1px solid rgb(255, 47, 0); */
+}
+.menu-item {
+  max-width: 420px;
+  /* height: 500px; */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 12px 12px 40px rgba(121, 121, 121, 0.3);
+  backdrop-filter: blur(27.1828px);
+  border-radius: 6px;
+  padding: 80px 60px 63px 50px;
+  margin: 0px 20px 100px 20px;
+  color: #5b6c94;
+  /* border: 0.1px solid rgb(255, 47, 0); */
+}
+.slick-next, .slick-arrow {
+  display: none;
+}
+
+.menu-item-img img {
+  width: 49px;
+  height: 40px;
 }
 .menu-item-content {
   margin-top: 23px;
 }
-.author-name {
+.customers-name {
   margin-top: 42px;
-
 }
 
 /* End  testimonials-contraine*/
@@ -599,9 +624,6 @@ body {
   grid-template-columns: 1fr 0.8fr 1fr 0.4fr 1fr 1.3fr;
   /* 6 phần tử cách nhau */
   grid-gap: 51.2px;
-  /* border: 0.1px dotted red; */
-}
-.trademark {
   /* border: 0.1px dotted red; */
 }
 .trademark img {
@@ -694,6 +716,10 @@ body {
     grid-gap: 25px;
     margin: 1% 0% 0% 8%;
   }
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: none;
+  }
 }
 
 /* Small */
@@ -736,6 +762,10 @@ body {
     grid-template-columns: 0.5fr 0.5fr;
     grid-gap: 15px;
   }
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: none;
+  }
 }
 
 /* Medium */
@@ -774,6 +804,10 @@ body {
     grid-template-columns: 0.5fr 0.5fr;
     grid-gap: 25px;
   }
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: none;
+  }
 }
 /* Large */
 @media (min-width: 992px) {
@@ -805,6 +839,10 @@ body {
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
     grid-gap: 25px;
   }
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: none;
+  }
 }
 /* Extra large */
 @media (min-width: 1200px) {
@@ -821,7 +859,7 @@ body {
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
-    display: block;
+    display: none;
   }
 
   /* benefit container co lại 3 hàng */
@@ -831,6 +869,10 @@ body {
     grid-gap: 100px;
     /* margin: 0% 6% 0% 0%; */
   }
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: block;
+  }
 }
 /* Extra extra large */
 @media (min-width: 1400px) {
@@ -839,6 +881,10 @@ body {
     display: flex;
   }
   /* benefit container mặc định màn 1920 co lại 3 hàng */
+  /* khối beveled ẩn đi nhường menu ngang*/
+  .beveled-rectangles {
+    display: block;
+  }
 }
 
 /* End Responsive by @Media same  bootstrap*/

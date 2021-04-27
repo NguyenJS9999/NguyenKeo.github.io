@@ -11,10 +11,13 @@ function hiddenMenu() {
     showMenu = !showMenu;
 }
 // Menu truợt ngang testimonials-contrainer
-$('.horizontal-slides-menu').slick({
-    slidesToShow: 2,
+$('.slide').slick({
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 10000,
+    centerMode: true,
+    dots: true,
+    arrows: false,
   });
 
