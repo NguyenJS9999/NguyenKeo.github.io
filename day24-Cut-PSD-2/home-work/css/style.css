@@ -10,18 +10,21 @@
   /* color: #e82626; */
   /* background: #F8F9FC; */
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 body {
   max-width: 1440px;
   background: rgba(248, 249, 252, 1);
   /* border: 0.1px dotted red; */
   margin: auto;
-  /* tạm */
-  height: 5000px;
   /* che chắn cho khối Testimonials */
   /* overflow: hidden; */
+  padding-bottom: 114px;
 }
 .container-header-back {
-  border: 0.1px dotted rgb(0, 255, 51);
+  /* border: 0.1px dotted rgb(0, 255, 51); */
   background: rgba(49, 58, 90, 1);
   display: flex;
   flex-direction: column;
@@ -32,8 +35,6 @@ body {
   margin: auto;
   margin-top: -26px;
   /* border: 0.1px dotted red; */
-  /* position cho chữ và ảnh */
-  position: relative;
 }
 
 /* ----- Start Navigator mobile ----- */
@@ -48,8 +49,6 @@ body {
   align-items: center;
 
   padding: 0px 6px;
-  /* !!! */
-  /* position: relative; */
   /* border: 0.1px dotted red; */
   /* ẩn ở màn destop */
   display: none;
@@ -62,7 +61,6 @@ body {
   mix-blend-mode: normal;
   opacity: 0.9;
   border-radius: 6px;
-  /* margin-left: 6px; */
 }
 .logo-autocryp-mobile {
   font-family: Rubik;
@@ -89,7 +87,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-
+  /* Vị trí tương đối cho menu mobile ẩn */
   position: absolute;
   top: 80px;
   left: 7px;
@@ -173,7 +171,12 @@ body {
   line-height: 34px;
   text-align: center;
   color: #ffffff;
+  transition: all 0.2s;
   /* border: 0.1px dotted red; */
+}
+
+.info-header:hover {
+  color: #bdbdbd;
 }
 
 .login-register {
@@ -193,17 +196,23 @@ body {
   line-height: 34px;
   text-align: center;
   color: #ffffff;
+  transition: all 0.2s;
 }
 
 .login-button {
   margin-right: 38.5px;
 }
+.login-button:hover {
+  color: #bdbdbd;
+}
 .register-button {
   background: #1fdb84;
   box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
   border-radius: 5px 0px;
-
   padding: 4px 24.5px 2px 26.5px;
+}
+.register-button:hover {
+  background-color: #159b5d;
 }
 /* ----- End Navigator desktop ----- */
 
@@ -260,6 +269,10 @@ body {
   color: #ffffff;
   padding: 19.5px 47px;
   margin: 55px 0 0 0;
+  transition: all 0.2s;
+}
+.head-button-get-start:hover {
+  background-color: #159b5d;
 }
 /* photo */
 .photo-description {
@@ -279,6 +292,7 @@ body {
   border-radius: 6px;
   background: #ffffff;
   border: 0.1px dotted #ffffff;
+  /* Vị trí tương đối của khối benefit trượt lên trên headẻr */
   position: relative;
   top: -124px;
 }
@@ -355,10 +369,12 @@ body {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 0px;
+  grid-gap: 1px;
   align-items: center;
   /* border: 0.1px dotted red; */
   text-align: center;
+  background: #AEFDD9;
+  border-radius: 5px;
 }
 .pricing-duration-month {
   /* height: 60px; */
@@ -375,13 +391,17 @@ body {
   color: #1fdb84;
 
   padding: 20.5px 36.5px;
+  cursor: pointer;
   /* border: 0.1px dotted red; */
+}
+.pricing-duration-month:hover {
+  box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
 }
 .pricing-duration-year {
   /* height: 60px; */
   background: #f1fff8;
   /* border: 1px solid #aefdd9; */
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
 
   font-family: Rubik;
   font-style: normal;
@@ -392,27 +412,31 @@ body {
   color: #6fdeaa;
 
   padding: 20.5px 36.5px;
+  cursor: pointer;
   /* border: 0.1px dotted red; */
+}
+.pricing-duration-year:hover {
+  box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
 }
 /* Các gói lựa chọn */
 .pricing-package-options {
-  margin-top: 120px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 37px;
+  margin-top: 64px;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-gap: 46px;
   align-items: center;
-  border-top: 4px solid white;
 
   /* border: 0.1px dotted red; */
 }
 .pricing-package-option {
   /* border: 2px solid rgb(242, 192, 255); */
-  /* transition: all 0.4s; */
+  border-top: 4px solid #f8f9fc;
+  padding: 56.5px 0 56.5px 0;
+  transition: all 0.1s;
 }
 .pricing-package-option:hover {
-  /* transform: scaleY(1.145454545454545); */
-  /* padding: 56.5px 0px; */
-  border-top: solid #0a8aff;
+  border: none;
+  border-top: 4px solid #0a8aff;
 }
 .pricing-option-title {
   font-family: Rubik;
@@ -467,6 +491,9 @@ body {
   padding: 30.5px 46.5px;
   margin: 108px 37.5px 0px 37.5px;
 }
+.pricing-get-free-trial:hover {
+  background-color: #159b5d;
+}
 /* End Pricing-container */
 
 /* Start testimonials-contraine */
@@ -489,7 +516,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-gap: 48px;
   margin-right: 105px;
-  position: relative;
+  /* position: relative; */
 }
 .beveled-rectangle {
   width: 165px;
@@ -505,9 +532,9 @@ body {
   font-size: 40px;
   line-height: 48px;
   color: #031d5b;
-  position: absolute;
-  top: 40px;
-  left: 23px;
+  /* position: absolute; */
+  /* top: 40px; */
+  /* left: 23px; */
   /* border: 0.1px solid rgb(0, 8, 255); */
 }
 
@@ -556,22 +583,16 @@ body {
 }
 .trademark img {
   max-width: 100%;
-  height: 100%;
 }
 /* End partner-containers */
 
 /* Start Footer */
 .footer-container {
   max-width: 1057px;
-  /* max-height: 50px; */
   margin: auto;
   margin-top: 180px;
   text-align: center;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
   align-items: center;
-
   /* border: 0.1px dotted red; */
 }
 
@@ -588,8 +609,19 @@ body {
 .footer-titles {
   margin-top: 50px;
   word-spacing: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 30px;
 }
-
+.footer-titles a {
+  text-decoration: none;
+  color: #5b6c94;
+}
+.footer-title {
+ /* border: 1px dotted red; */
+}
 /* End Footer*/
 
 /* Start Responsive by @Media same bootstrap */
@@ -681,7 +713,7 @@ body {
   }
   .pricing-package-options {
     display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr;
+    grid-template-columns: 0.5fr 0.5fr;
     grid-gap: 15px;
   }
 }
