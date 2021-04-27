@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Carousel</title>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  </head>
+
+  <body>
+    <div class="banner-carousel">
+      <div>
+        <img
+          src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687451210/home/hinh%20anh%20thien%20nhien%20dep%202015%20%282%29.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687487908/home/hinh%20anh%20thien%20nhien%20dep%202015%20%284%29.jpg"
+        />
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".banner-carousel").slick({
+          autoplay: true,
+          autoplaySpeed: 1000,
+          centerMode: true,
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>

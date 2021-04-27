@@ -10,3 +10,11 @@ function hiddenMenu() {
     }
     showMenu = !showMenu;
 }
+// Menu truợt ngang testimonials-contrainer
+$('.horizontal-slides-menu').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  });
+
