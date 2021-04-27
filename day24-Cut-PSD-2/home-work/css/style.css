@@ -559,8 +559,16 @@ body {
   backdrop-filter: blur(27.1828px);
   border-radius: 6px;
 
+  margin-top: 260px;
   padding: 80px 60px 63px 50px;
   border: 0.1px solid rgb(255, 47, 0);
+}
+.menu-item-content {
+  margin-top: 23px;
+}
+.author-name {
+  margin-top: 42px;
+
 }
 
 /* End  testimonials-contraine*/
