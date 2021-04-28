@@ -25,6 +25,7 @@ body {
   padding-bottom: 114px;
   overflow-x: hidden;
 }
+
 .container-header-back {
   /* border: 0.1px dotted rgb(0, 255, 51); */
   background: rgba(49, 58, 90, 1);
@@ -59,10 +60,19 @@ body {
   /* max-width: 72px; */
   padding: 10px 18px;
   background: rgba(233, 251, 243, 1);
-  color: #1fdb84;
+  color: #5ed39c;
   mix-blend-mode: normal;
   opacity: 0.9;
   border-radius: 6px;
+  transition: all 0.2s;
+}
+.icon-menu-hiden-mobile:hover {
+  background: #5ed39c;
+  color: rgba(233, 251, 243, 1);
+}
+.icon-menu-hiden-mobile:active {
+  background: #5ed39c;
+  color: rgb(33, 253, 4);
 }
 .logo-autocryp-mobile {
   font-family: Rubik;
@@ -98,6 +108,15 @@ body {
   display: none;
   padding-left: 18px;
 }
+.menu-infos-header-mobile a{
+  color: #1fdb84;
+}
+.menu-infos-header-mobile a:hover {
+  color: #18aa66;
+}
+.menu-infos-header-mobile a:active {
+  color: #117948;
+}
 .info-header-mobile {
   width: 97%;
   padding: 10px 90% 10px 0%;
@@ -118,6 +137,7 @@ body {
   line-height: 34px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .login-button-mobile {
@@ -256,7 +276,7 @@ body {
 }
 .head-button-get-start {
   max-width: 200px;
-  max-height: 60px;
+  /* max-height: 60px; */
 
   background: #1fdb84;
   box-shadow: 0px -8px 34px rgba(31, 219, 132, 0.6);
@@ -347,8 +367,6 @@ body {
 .Pricing-container {
   max-width: 1130px;
   margin: auto;
-  margin-top: 264px;
-
   /* border: 0.1px dotted red; */
 }
 .pricing-title {
@@ -507,52 +525,58 @@ body {
 
   display: flex;
   flex-direction: row;
+  grid-gap: 114.43px;
   justify-content: space-between;
 }
-.beveled-rectangles {
-  max-width: 378px;
-  max-height: 413px;
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 48px;
-  margin-right: 105px;
-  /* position: relative; */
-}
 .beveled-rectangle {
-  width: 165px;
-  height: 413px;
-  background-image: url("../img/beveled-rectangle.png");
-  /* border: 0.1px solid red; */
+  max-width: 378px;
+  /* max-height: 413px; */
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 48px;
+  /* margin-right: 105px; */
+  border: 0.1px solid red;
 }
-
 .testimonials-title {
+  width: 378px;
+  max-height: 413px;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
   color: #031d5b;
-  /* border: 0.1px solid rgb(0, 8, 255); */
+  background-image: url('../img/Group-5-autocrypt-landing-page.png');
+  background-repeat: no-repeat;
+  border: 0.1px solid rgb(0, 8, 255);
+  position: relative;
+  top: 40px;
+  left: 23px;
+}
+.beveled-rectangle img {
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .horizontal-slides-menu {
   max-width: 100%;
-  /* display: flex; */
-  /* grid-gap: 41px; */
+  display: flex;
   background: #313a5a;
   color: white;
   /* border: 0.1px solid rgb(255, 47, 0); */
+  /* position: relative; */
+  /* z-index: 100; */
+
 }
 .slide {
- 
-  max-width: 1020px;
-   /* max-width: 130%; */
-
+  max-width: 1015px;
   display: flex;
-  position: relative;
-  top: 260px;
-  left: -150px;
+  /* position: relative; */
+  /* top: 260px; */
+  /* left: -150px; */
+  /* z-index: 100; */
   border: 0.1px solid rgb(255, 47, 0);
 }
 
@@ -819,11 +843,11 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 5% 188px 5%;
+    padding: 0px 5% 25px 5%;
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
-    display: none;
+    display: block;
   }
   /* benefit container co lại 2 hàng */
   .benefit-container {
@@ -859,7 +883,7 @@ body {
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
-    display: none;
+    /* display: none; */
   }
 
   /* benefit container co lại 3 hàng */
