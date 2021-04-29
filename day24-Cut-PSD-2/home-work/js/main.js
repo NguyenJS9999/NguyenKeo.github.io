@@ -20,13 +20,6 @@ $('.slides').slick({
     centerMode: true,
     dots: true,
     arrows: false,
-
-
-
-
-
-
-    slidesToScroll: 1,
     pauseOnFocus: false,
     pauseOnHover: false,
 
