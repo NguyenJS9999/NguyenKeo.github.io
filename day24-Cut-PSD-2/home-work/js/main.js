@@ -16,7 +16,7 @@ function hiddenMenu() {
 //     slidesToShow: 2,
 //     slidesToScroll: 1,
 //     autoplay: true,
-//     autoplaySpeed: 10,
+//     autoplaySpeed: 10000,
 //     centerMode: true,
 //     dots: true,
 //     arrows: false,
