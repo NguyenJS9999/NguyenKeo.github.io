@@ -12,13 +12,51 @@ function hiddenMenu() {
 }
 
 // Menu truợt ngang testimonials-contrainer
-// $('.slide').slick({
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 10000,
-//     centerMode: true,
-//     dots: true,
-//     arrows: false,
-//   });
+$('.slides').slick({
+    slidesToShow: 2.25,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    centerMode: true,
+    dots: true,
+    arrows: false,
+
+   
+
+
+
+ 
+  slidesToScroll: 1,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+
+    responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 4.6,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3.6,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2.6,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+
+
+  });
 
