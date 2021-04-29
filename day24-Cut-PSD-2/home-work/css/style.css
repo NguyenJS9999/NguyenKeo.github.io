@@ -556,9 +556,13 @@ body {
 .slides {
   border: 0.1px dotted rgb(255, 166, 0);
   max-width: 1014.97px;
-
   display: flex;
+
+  /* position: relative;
+  top: 200px;
+  right: 150px; */
 }
+
 .slide {
   width: 417.93px;
   height: 500px;
@@ -575,8 +579,9 @@ body {
 .partner-container {
   max-width: 1057px;
   margin: auto;
+  /* margin: 215px 0% 0px 0%; */
   margin-top: 215px;
-  /* Đẩy viền ở màn bé !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  padding: 5%;
   /* border: 0.1px solid rgb(255, 47, 0); */
 }
 .partner-title {
@@ -592,11 +597,10 @@ body {
 /*  */
 .partner-trademarks {
   max-width: 1057px;
-  max-height: 50px;
+  /* max-height: 50px; */
   margin-top: 46px;
   display: grid;
-  grid-template-columns: 1fr 0.8fr 1fr 0.4fr 1fr 1.3fr;
-  /* 6 phần tử cách nhau */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 51.2px;
   /* border: 0.1px dotted red; */
 }
@@ -645,9 +649,6 @@ body {
 
 /* Start Responsive by @Media same bootstrap */
 
-
-
-
 /* X-Small */
 @media (max-width: 576px) {
   /* Hiện menu mobile-icon hambeger >576px */
@@ -678,10 +679,7 @@ body {
     grid-gap: 100px;
     margin: 0% 5.5% 0% 5.5%;
   }
-  /* margin top khối Pricing tăng lên là 810px */
-  .Pricing-container {
-    /* margin-top: 1050px; */
-  }
+
   /* Khối Pricing co 1 hàng bé chia đôi */
   .pricing-title {
     font-size: 25px;
@@ -696,6 +694,15 @@ body {
   /* khối horizontal-menu-title ẩn đi nhường menu ngang*/
   .horizontal-menu-title {
     display: none;
+  }
+  .horizontal-menu {
+    margin: 0 0 0 4.5%;
+  }
+  /* Khối partner-container */
+  .partner-trademarks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 51.2px;
   }
 }
 
@@ -744,7 +751,13 @@ body {
     display: none;
   }
   .horizontal-menu {
-    margin: 0 4.5%;
+    margin: 0 0 0 4.5%;
+  }
+  /* Khối partner-container */
+  .partner-trademarks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 51.2px;
   }
 }
 
@@ -789,9 +802,14 @@ body {
     display: none;
   }
   .horizontal-menu {
-    margin: 0 0;
+    margin: 0 0 0 4.5%;
   }
-
+  /* Khối partner-container */
+  .partner-trademarks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 51.2px;
+  }
 }
 /* Large */
 @media (min-width: 992px) {
@@ -831,7 +849,19 @@ body {
   .horizontal-menu-title-text {
     font-size: 20px;
   }
- 
+  .horizontal-menu {
+    margin: 0 0 0 0;
+  }
+  /* Khối partner-container */
+  .partner-trademarks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 51.2px;
+  }
+  /* Khối footer */
+  .footer-container {
+    margin-top: 120px;
+  }
 }
 /* Extra large */
 @media (min-width: 1200px) {
@@ -845,10 +875,6 @@ body {
   }
   .infor-intro-title {
     margin: 147px 0 0 0;
-  }
-  /* Ảnh iphone ở header ẩn đi khi màn bé */
-  .photo-description {
-    /* display: none; */
   }
 
   /* benefit container co lại 3 hàng */
@@ -866,7 +892,19 @@ body {
   .horizontal-menu-title-text {
     font-size: 35px;
   }
-
+  /* .horizontal-menu {
+    margin: 0 0 0 0;
+  } */
+  /* Khối partner-container */
+  .partner-trademarks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 51.2px;
+  }
+  /* Khối footer */
+  .footer-container {
+    margin-top: 130px;
+  }
 }
 /* Extra extra large */
 @media (min-width: 1400px) {
@@ -875,9 +913,12 @@ body {
     display: flex;
   }
   /* benefit container mặc định màn 1920 co lại 3 hàng */
-  /* khối beveled ẩn đi nhường menu ngang*/
-  .beveled-rectangles {
-    display: block;
+  /* .horizontal-menu {
+    margin: 0 0 0 0;
+  } */
+  /* Khối footer */
+  .footer-container {
+    margin-top: 150px;
   }
 }
 
