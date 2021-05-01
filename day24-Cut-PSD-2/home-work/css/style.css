@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+::selection {
+  color: #6ecea1;
+}
 body {
   max-width: 1440px;
   background: rgba(248, 249, 252, 1);
@@ -277,7 +280,6 @@ body {
 .head-button-get-start {
   max-width: 200px;
   /* max-height: 60px; */
-
   background: #1fdb84;
   box-shadow: 0px -8px 34px rgba(31, 219, 132, 0.6);
   border-radius: 0px 10px;
@@ -295,6 +297,11 @@ body {
 }
 .head-button-get-start:hover {
   background-color: #159b5d;
+  color: white;
+}
+.head-button-get-start:active {
+  background-color:rgba(255, 255, 255, 1);
+  color: #159b5d;
 }
 /* photo */
 .photo-description {
@@ -415,6 +422,10 @@ body {
 .pricing-duration-month:hover {
   box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
 }
+.pricing-duration-month:active {
+  background-color:rgba(19, 141, 84, 0.6);
+  color: white;
+}
 .pricing-duration-year {
   /* height: 60px; */
   background: #f1fff8;
@@ -435,6 +446,10 @@ body {
 }
 .pricing-duration-year:hover {
   box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
+}
+.pricing-duration-year:active {
+  background-color:rgba(19, 141, 84, 0.6);
+  color: white;
 }
 /* Các gói lựa chọn */
 .pricing-package-options {
@@ -512,6 +527,10 @@ body {
 }
 .pricing-get-free-trial:hover {
   background-color: #159b5d;
+}
+.pricing-get-free-trial:active {
+  background-color:white;
+  color: #159b5d;
 }
 /* End Pricing-container */
 
@@ -737,6 +756,10 @@ body {
 .footer-title {
   word-spacing: 17px;
   /* border: 1px dotted red; */
+}
+.footer-title:hover {
+  color:#313A5A;
+  font-weight: 600;
 }
 /* End Footer*/
 
