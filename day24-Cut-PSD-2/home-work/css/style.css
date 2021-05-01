@@ -271,7 +271,7 @@ body {
   line-height: 32px;
   color: white;
   margin: 40px 0 0 0;
-  padding-right: 21%;
+  padding-bottom: 8%;
   /* border: 0.1px dotted red; */
 }
 .head-button-get-start {
@@ -571,7 +571,7 @@ body {
   /* max-width: 1014.97px; */
   max-width: 100%;
   display: flex;
-  position: relative ;
+  position: relative;
   /* top: -730px; */
   top: 260px;
   left: -200px;
@@ -744,6 +744,10 @@ body {
 
 /* X-Small */
 @media (max-width: 576px) {
+  /* Toàn khối trên có margin hẹp lại ở màn bé */
+  .container-header {
+    margin: 0px 5.5%;
+  }
   /* Hiện menu mobile-icon hambeger >576px */
   .navigation-mobile {
     display: block;
@@ -757,8 +761,14 @@ body {
   .infors-introduction {
     /* padding: 0px 32px 188px 32px; */
   }
+  .infors {
+    margin-bottom: 34%;
+  }
   .infor-intro-title {
     margin: 60px 0 0 0;
+  }
+  .head-button-get-start {
+    margin: 0px 0 0 0;
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
@@ -777,7 +787,10 @@ body {
   .pricing-title {
     font-size: 25px;
     line-height: 40px;
-    margin: 0 35px;
+    margin: 0 9%;
+  }
+  .pricing-durations {
+    grid-template-columns: 1fr;
   }
   .pricing-package-options {
     display: grid;
@@ -795,11 +808,11 @@ body {
   .horizontal-menu {
     margin: 0 0 0 2.5%;
   }
-    /* slides nằm full khi ẩn title đi ở màn bé */
-    .slides {
-      position: relative;
-      left: 2.5%;
-    }
+  /* slides nằm full khi ẩn title đi ở màn bé */
+  .slides {
+    position: relative;
+    left: 2.5%;
+  }
   /* Khối partner-container */
   .partner-trademarks {
     display: grid;
@@ -815,6 +828,11 @@ body {
 
 /* Small */
 @media (min-width: 576px) {
+  /* Toàn khối trên có margin hẹp lại ở màn bé */
+  .container-header {
+    margin: 0px 5.5%;
+    margin-bottom: 22%;
+  }
   /* Hiện menu mobile-icon hambeger <=576px */
   .navigation-mobile {
     display: block;
@@ -828,8 +846,14 @@ body {
   .infors-introduction {
     /* padding: 0px 32px 188px 32px; */
   }
+  .infors {
+    margin-bottom: 5%;
+  }
   .infor-intro-title {
     margin: 60px 0 0 0;
+  }
+  .head-button-get-start {
+    margin: 0px 0 0 0;
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
@@ -847,6 +871,9 @@ body {
   .pricing-title {
     font-size: 25px;
     line-height: 40px;
+  }
+  .pricing-durations {
+    grid-template-columns: 1fr;
   }
   .pricing-package-options {
     display: grid;
@@ -882,6 +909,11 @@ body {
 
 /* Medium */
 @media (min-width: 768px) {
+  /* Toàn khối trên có margin hẹp lại ở màn bé */
+  .container-header {
+    margin: 0px 5.5%;
+    /* margin-bottom: 14%; */
+  }
   /* Ẩn menu mobile-icon hambeger (lơn hơn) <=768px */
   .navigation-mobile {
     display: block;
@@ -890,6 +922,12 @@ body {
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
     /* padding: 0px 5% 188px 5%; */
+  }
+  .infors {
+    margin-bottom: 25%;
+  }
+  .head-button-get-start {
+    margin: 0px 0 0 0;
   }
   /* Hiện menu desktop flex lại, thêm padding */
   .navigation-desktop {
@@ -910,7 +948,10 @@ body {
     margin: 0px 5%;
   }
 
-  /* Khối Pricing co 2 hàng bé chia đôi */
+  /* Khối Pricing */
+  .pricing-durations {
+    grid-template-columns: 1fr;
+  }
   .pricing-package-options {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -925,12 +966,11 @@ body {
   }
   .horizontal-menu {
     margin: 0 0 0 2.5%;
-  
   }
   /* slides nằm full khi ẩn title đi ở màn bé */
   .slides {
     position: relative;
-    left: 0;  
+    left: 0;
   }
   /* Khối partner-container */
   .partner-trademarks {
@@ -951,9 +991,12 @@ body {
   .infors-introduction {
     /* padding: 0px 5% 25px 5%; */
   }
+  .head-button-get-start {
+    margin: 55px 0 0 0;
+  }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
-    display: block;
+    display: none;
   }
   .photo-description img {
   }
@@ -966,6 +1009,9 @@ body {
   }
 
   /* Khối Pricing co 2 hàng bé chia đôi */
+  .pricing-durations {
+    grid-template-columns: 1fr 2fr;
+  }
   .pricing-package-options {
     display: grid;
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
@@ -986,8 +1032,8 @@ body {
     margin: 0 0 0 0;
   }
   .slides {
-    /* left: 13.5%; */ 
-    left: -138px;
+    /* left: 13.5%; */
+    left: -105px;
   }
   /* Khối partner-container */
   .partner-trademarks {
@@ -1013,7 +1059,9 @@ body {
   .infor-intro-title {
     margin: 147px 0 0 0;
   }
-
+  .photo-description {
+    display: block;
+  }
   /* benefit container co lại 3 hàng */
   .benefit-container {
     display: grid;
@@ -1033,8 +1081,9 @@ body {
     margin: 0 0 0 0;
   } */
   .slides {
-    /* left: 13.5%; */ 
-    left: -154px;
+    /* left: 13.5%; */
+    /* left: -154px; */
+    left: -130px;
   }
   /* Khối partner-container */
   .partner-trademarks {
