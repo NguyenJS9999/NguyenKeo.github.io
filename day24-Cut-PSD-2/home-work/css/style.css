@@ -35,7 +35,7 @@ body {
 
 .container-header {
   max-width: 1440px;
-  margin: auto;
+  margin: 0px 131.5px;
   margin-top: -26px;
   /* border: 0.1px dotted red; */
 }
@@ -240,7 +240,7 @@ body {
 
 /* Start introduction + image*/
 .infors-introduction {
-  padding: 0px 169px 0px 65px;
+  /* padding: 0px 169px 0px 65px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -755,7 +755,7 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 32px 188px 32px;
+    /* padding: 0px 32px 188px 32px; */
   }
   .infor-intro-title {
     margin: 60px 0 0 0;
@@ -777,6 +777,7 @@ body {
   .pricing-title {
     font-size: 25px;
     line-height: 40px;
+    margin: 0 35px;
   }
   .pricing-package-options {
     display: grid;
@@ -807,14 +808,8 @@ body {
   }
   /* Khối footer */
   .footer-titles {
-    /* max-width: 780px; */
-    margin: auto;
-    margin-top: 50px;
-    word-spacing: 20px;
-    display: flex;
-    /* flex-direction: row; */
-    /* display: grid; */
-    /* grid-template-columns: 0.2fr 0.2fr; */
+    display: grid;
+    grid-template-columns: 0.8fr 0.4fr;
   }
 }
 
@@ -831,7 +826,7 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 32px 188px 32px;
+    /* padding: 0px 32px 188px 32px; */
   }
   .infor-intro-title {
     margin: 60px 0 0 0;
@@ -894,7 +889,7 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 5% 188px 5%;
+    /* padding: 0px 5% 188px 5%; */
   }
   /* Hiện menu desktop flex lại, thêm padding */
   .navigation-desktop {
@@ -954,7 +949,7 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 5% 25px 5%;
+    /* padding: 0px 5% 25px 5%; */
   }
   /* Ảnh iphone ở header ẩn đi khi màn bé */
   .photo-description {
@@ -1013,7 +1008,7 @@ body {
   }
   /* Tiêu đề header dịch padding trai nhỏ hơn*/
   .infors-introduction {
-    padding: 0px 169px 0px 62px;
+    /* padding: 0px 169px 0px 62px; */
   }
   .infor-intro-title {
     margin: 147px 0 0 0;
