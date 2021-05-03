@@ -317,7 +317,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 100px;
-  align-items: center;
+  /* align-items: center; */
   border-radius: 6px;
   background: #ffffff;
   border: 0.1px dotted #ffffff;
@@ -804,6 +804,7 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 100px;
     margin: 0% 5.5% 0% 5.5%;
+    padding: 20px 20px;
   }
 
   /* Khối Pricing co 1 hàng bé chia đôi */
@@ -885,6 +886,7 @@ body {
   /* benefit container co lại 2 hàng */
   .benefit-container {
     display: grid;
+    padding: 20px 20px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
     margin: 0px 5%;
