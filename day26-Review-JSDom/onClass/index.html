@@ -1,0 +1,107 @@
+<!-- Ôn tập Js DOM (1) 05/05/2021 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiêu đề</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Bootstrap 5.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1>Câu 4 Popovers</h1>
+    <div class="container-buttons">
+        <!-- <button class="" onclick="send('1')">1</button>
+        <button class="" onclick="send('2')">2</button>
+        <button class="" onclick="send('3')">3</button> -->
+
+        <button onclick="send('top')" type="button" class="btn btn-primary"> Popover on top
+            <div class="thongBao thongBao1">Đây là nội dung bên trong Popover top</div>
+        </button>
+
+        <button onclick="send('right')" type="button" class="btn btn-secondary"> Popover on right
+            <div class="thongBao thongBao2">Đây là nội dung bên trong Popover right</div>
+        </button>
+
+        <button onclick="send('bottom')" type="button" class="btn btn-success"> Popover on bottom
+            <div class="thongBao thongBao3">Đây là nội dung bên trong Popover bottom</div>
+        </button>
+
+        <button onclick="send('left')" type="button" class="btn btn-danger"> Popover on left
+            <div class="thongBao thongBao4">Đây là nội dung bên trong Popover left</div>
+        </button>
+
+    </div>
+
+    <h1>Câu 6 Tab</h1>
+
+    <div class="container-tab">
+        <div class="tabs">
+
+            <div onclick="tabContent('Home')">Home</div>
+
+            <div onclick="tabContent('Menu1')">Menu 1</div>
+
+            <div onclick="tabContent('Menu2')">Menu 2</div>
+
+        </div>
+
+        <div class="content-out"></div>
+
+
+        <div class="tabs-content">
+            <div id="home">Nội dung Home</div>
+            <div id="Menu1">Nội dung Menu1</div>
+            <div id="Menu2">Nội dung Menu2</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+
+    </ul>
+
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active  tab">
+            <h3>HOME</h3>
+            <p>HOME Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade tab">
+            <h3>Profile</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade tab">
+            <h3>Contact</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam.</p>
+        </div>
+
+    </div> -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/* font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/* font Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+::selection {
+    color: red;
+}
+
+
+/* Start Responsive by @Media same bootstrap */
+
+/* X-Small */
+@media (max-width: 576px) {
+    
+}
+
+/* Small */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium */
+@media (min-width: 768px) {
+    
+}
+
+/* Large */
+@media (min-width: 992px) {
+    
+}
+
+/* Extra large */
+@media (min-width: 1200px) {
+    
+}
+
+/* Extra extra large */
+@media (min-width: 1400px) {
+    
+}
+/* End Responsive by @Media same  bootstrap*/
+
+/* Start */
+/* End */

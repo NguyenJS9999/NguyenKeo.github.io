@@ -1,0 +1,49 @@
+/* Start câu 1 Accordion */
+.container-Accordion {
+    max-width: 1920px;
+    padding: 0px 1%;
+    /* border: 0.1px dotted red; */
+    /* text-align: center; */
+  }
+  
+  .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      border: 0.1px solid #eee;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #ccc; 
+    }
+    
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+  /* End câu 1 Accordion */
+  /* Nút Home */
+.button-home {
+  border: none;
+  border: 1px solid rgb(133, 65, 16);
+  background: goldenrod;
+  padding: 5px 30px 12px 30px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px;
+}
+.button-home:hover {
+  color: goldenrod;
+  background-color: white;
+}

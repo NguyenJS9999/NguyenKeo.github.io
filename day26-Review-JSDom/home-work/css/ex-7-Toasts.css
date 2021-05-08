@@ -1,0 +1,18 @@
+/* Start câu 7 Toasts */
+/* End câu 7 Toasts */
+/* Nút Home */
+.button-home {
+    border: none;
+    border: 1px solid rgb(133, 65, 16);
+    background: goldenrod;
+    padding: 5px 30px 12px 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px;
+  }
+  .button-home:hover {
+    color: goldenrod;
+    background-color: white;
+  }
