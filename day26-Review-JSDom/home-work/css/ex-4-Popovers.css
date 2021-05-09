@@ -1,19 +1,110 @@
 /* Start câu 4  Popovers*/
+.container-popovers {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  grid-gap: 50px;
+  margin-top: 10%;
+  border: 1px solid red;
+  /* border-radius: 10px; */
+  text-align: center;
+  padding: 0 0%;
+
+}
+.btn  {
+  width: 160px;
+  padding: 0.675rem 0 !important;
+  /* border: 1px solid red; */
+
+}
+.container-popover-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 5%;
+  border: 1px solid red;
+}
+.container-popover-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 5%;
+  border: 1px solid red;
+}
+
+.popover-on {
+  /* border: 1px solid red; */
+  /* width: 240px; */
+  position: relative;
+  margin: auto;
+}
+.popover-pop {
+    /* width: 200px; */
+    /* height: auto; */
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px 25px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+}
+.hide-class {
+  display: none;
+}
+
+.popover-top {
+  left: 10px;
+  top: -50px;
+}
+.popover-right {
+  top: 7px;
+  right: -166px;
+}
+.popover-bottom {
+  bottom: -50px;
+  left: 0px;
+}
+.popover-left {
+  left: -152px;
+  top: 8px;
+}
+
+
+
+
+
 
 /* End câu 4 Popovers */
 /* Nút Home */
 .button-home {
-    border: none;
-    border: 1px solid rgb(133, 65, 16);
-    background: goldenrod;
-    padding: 5px 30px 12px 30px;
-    border-radius: 10px;
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-    margin: 20px;
-  }
-  .button-home:hover {
-    color: goldenrod;
-    background-color: white;
-  }
+  border: none;
+  border: 1px solid rgb(133, 65, 16);
+  background: goldenrod;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s;
+}
+.button-home:hover {
+  color: goldenrod;
+  background-color: white;
+}
+/* Đề bài */
+.thread {
+  max-width: 1920px;
+  text-align: center;
+  color: rgb(213, 172, 172);
+  margin-top: 25%;
+  /* position: fixed; */
+  bottom: 10%;
+  left: 21.5%;
+}

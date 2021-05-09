@@ -33,7 +33,7 @@
     <div class="container mt-5">
       <ul class="nav nav-tabs">
         <li class="nav-item" onclick="changeTabContent(this, '#home')">
-          <a class="nav-link        active      " href="#">Home</a>
+          <a class="nav-link    active          " href="#">Home</a>
         </li>
         <li class="nav-item" onclick="changeTabContent(this, '#about')">
           <a class="nav-link" href="#">About</a>
@@ -44,8 +44,10 @@
       </ul>
 
       <div class="tab-content mt-3">
+        <!-- Thẻ rỗng được ghi đè thông tin lên để hiển thị sau khi click ở onclick  -->
         <div id="tab-content"></div>
 
+        <!-- 1 -->
         <div id="home" class="tab-pane">
           <!-- <h3>HOME</h3> -->
 
@@ -61,20 +63,19 @@
           </div>
 
         </div>
-        <!--  -->
+        <!-- 2 about -->
         <div id="about" class="tab-pane fade">
           <!-- <h3>Profile</h3> -->
 
           <div class="tab-pane-detail">
             <img class="tab-pane-image" src="../img/about.png" alt="home">
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Contact information of the owner, detailed information about a specific object. Like name, age, year of birth address
             </p>
 
           </div>
         </div>
-        <!--  -->
+        <!-- 3 contact -->
         <div id="contact" class="tab-pane fade">
           <!-- <h3>Contact</h3> -->
 
@@ -82,8 +83,7 @@
 
             <img class="tab-pane-image" src="../img/contact.png" alt="home">
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              Contact information of the owner contact number
             </p>
 
           </div>
@@ -96,10 +96,10 @@
 
   </div> <!-- container-tab -->
 
-  <!-- <div class="container"> -->
+
   <div class="thread">Bấm vào Tab sẽ hiển thị nội dung của Tab đó ở bên dưới. Nội dung có cả text lẫn ảnh.
     Tab đang active phải có style khác với các Tab còn lại.</div>
-  <!-- </div> -->
+
 
   <div class="container">
     <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
