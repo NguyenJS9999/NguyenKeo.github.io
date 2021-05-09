@@ -16,7 +16,7 @@
 
   <!-- css -->
   <link rel="stylesheet" href="../css/ex-6-Tab.css">
-  
+
 
   <!-- slick crocell CDN CSS -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -28,57 +28,83 @@
 </head>
 
 <body>
+  <div class="container-tab">
 
-  <div class="container mt-5">
+    <div class="container mt-5">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" onclick="changeTabContent(this, '#home')">
+          <a class="nav-link        active      " href="#">Home</a>
+        </li>
+        <li class="nav-item" onclick="changeTabContent(this, '#about')">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item" onclick="changeTabContent(this, '#contact')">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
 
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" >Contact</a>
-      </li>
-    </ul>
+      <div class="tab-content mt-3">
+        <div id="tab-content"></div>
 
-    <div class="tab-content mt-3"></div>
+        <div id="home" class="tab-pane">
+          <!-- <h3>HOME</h3> -->
 
-    <div class="tab-content">
-  
-      <div id="home" class="tab-pane fade in active">
-        <h3>HOME</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      
-      <div id="menu1" class="tab-pane fade">
-        <h3>Menu 1</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      
-      <div id="menu2" class="tab-pane fade">
-        <h3>Menu 2</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      </div>
-      
-      <div id="menu3" class="tab-pane fade">
-        <h3>Menu 3</h3>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-      </div>
-      
+          <div class="tab-pane-detail">
+            <img class="tab-pane-image" src="../img/home.png" alt="home">
+
+            <p>
+              Raw denim you probably haven’t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro
+              synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+              retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
+              placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+            </p>
+          </div>
+
+        </div>
+        <!--  -->
+        <div id="about" class="tab-pane fade">
+          <!-- <h3>Profile</h3> -->
+
+          <div class="tab-pane-detail">
+            <img class="tab-pane-image" src="../img/about.png" alt="home">
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+          </div>
+        </div>
+        <!--  -->
+        <div id="contact" class="tab-pane fade">
+          <!-- <h3>Contact</h3> -->
+
+          <div class="tab-pane-detail">
+
+            <img class="tab-pane-image" src="../img/contact.png" alt="home">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div> <!-- tab-content mt-3 -->
     </div>
-  </div>
 
-  <br><br><br><br><br>
+  </div> <!-- container-tab -->
+
+  <!-- <div class="container"> -->
+  <div class="thread">Bấm vào Tab sẽ hiển thị nội dung của Tab đó ở bên dưới. Nội dung có cả text lẫn ảnh.
+    Tab đang active phải có style khác với các Tab còn lại.</div>
+  <!-- </div> -->
+
   <div class="container">
-    <a href="../index.html"> <button class="button-home">Home</button> </a>
+    <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
     <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
-</div>
-
+  </div>
 
   <!-- Thư viện Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
