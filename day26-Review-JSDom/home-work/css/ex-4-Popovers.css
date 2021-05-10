@@ -19,20 +19,20 @@
   /* border: 1px solid red; */
 
 }
-.container-popover-left {
+/* .container-popover-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   grid-gap: 5%;
   border: 1px solid red;
-}
-.container-popover-right {
+} */
+/* .container-popover-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   grid-gap: 5%;
   border: 1px solid red;
-}
+} */
 
 .popover-on {
   /* border: 1px solid red; */

@@ -17,7 +17,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/ex-5-Progress.css">
 
-  
+
     <!-- slick crocell CDN CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
@@ -31,12 +31,36 @@
 
 
 
-    <div>Progress</div>
+    <div class="container-process">
 
+        <div class="process">
+
+            <div class="actual-progress"></div>
+
+        </div>
+
+        <div class="buttons mt-5">
+            <button type="button" class="btn btn-success">Start</button>
+            <button type="button" class="btn btn-danger">Pause</button>
+            <button type="button" class="btn btn-warning">Reset</button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="thread">
+        Tạo thanh Progress Bar và 3 nút: <br/>
+        ● Start: Bắt đầu chạy progress, mỗi giây tăng 1%. Khi đã bắt đầu chạy thì disable nút này.<br/>
+        ● Pause / Resume: Ban đầu bị disable. Khi progress đang chạy active, bấm vào sẽ dừng<br/>
+        progress, bấm tiếp thì progress tiếp tục chạy cho đến khi đạt 100%.<br/>
+        ● Reset: Chuyển progress về 0%.
+    </div>
 
 
     <div class="container">
-        <a href="../index.html"> <button class="button-home">Home</button> </a>
+        <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
         <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
     </div>
 

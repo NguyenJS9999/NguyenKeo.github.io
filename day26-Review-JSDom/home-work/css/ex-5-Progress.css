@@ -1,18 +1,74 @@
 /* Start câu 5  Progress*/
+.container-process {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 20px;
+  margin-top: 6%;
+  text-align: center;
+  padding: 0px 10px;
+}
+/* Diện tích hiện thước đo cho 100% tiến trình */
+.process {
+  max-width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background: gray;
+  position: relative;
+}
+/* Hiện % tiến trình thực tế */
+.actual-progress {
+  height: inherit;
+  /* Phần trăm % */
+  width: auto;
+  border-radius: inherit;
+  background: rgb(44, 151, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.buttons {
+  max-width: 1920px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  grid-gap: 100px;
+  border: 1px dotted red;
+}
 /* End câu 5  Progress*/
 /* Nút Home */
 .button-home {
-    border: none;
-    border: 1px solid rgb(133, 65, 16);
-    background: goldenrod;
-    padding: 5px 30px 12px 30px;
-    border-radius: 10px;
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-    margin: 20px;
-  }
-  .button-home:hover {
-    color: goldenrod;
-    background-color: white;
-  }
+  border: none;
+  border: 1px solid rgb(133, 65, 16);
+  background: goldenrod;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s;
+}
+.button-home:hover {
+  color: goldenrod;
+  background-color: white;
+}
+/* Đề bài */
+.thread {
+  max-width: 1920px;
+  text-align: center;
+  color: rgb(213, 172, 172);
+  margin-top: 25%;
+  /* position: fixed; */
+  bottom: 10%;
+  left: 21.5%;
+}
