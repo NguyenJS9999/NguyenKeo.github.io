@@ -27,15 +27,52 @@
 </head>
 
 <body>
+  <h1 class="text-center mt-3">Modal</h1>
+
+  <div class="container-modal mt-5 text-center">
+
+    <!-- Nút mở modal -->
+    <button type="button" class="btn-open  btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+
+    <div class="text mt-5 px-5">
+      <h3>Demo Modal</h3>
+      
+      <p class="text-center mt-4">Bấm vào nút Launch để bật Modal, khi Modal bật lên sẽ có 1 lớp phủ che nội dung content.
+        Trên Modal bấm vào dấu X ở góc hoặc nút Close để đóng Modal</p>
+    </div>
 
 
-  <div class="container-modal">
-    Modal
-    <h1>Modal</h1>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
 
-    <p>Sử dụng Modal</p>
-    <button type="button" class="btn btn-default">Open modal</button>
-    <button type="button" class="btn btn-primary">Primary</button>
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button id="close" type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+
+          <div class="modal-body">
+            Sau khi bấm vào nút Launch demo modal rồi, Modal bật lên sẽ có 1 lớp phủ che nội dung content trên web.
+            Trên Modal bấm vào dấu X ở góc hoặc nút Close hoặc ra ngoài nền vs modal để đóng Modal
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close" id="close" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop close"></div>
+
+
   </div>
 
 

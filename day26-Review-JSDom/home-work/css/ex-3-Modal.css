@@ -1,8 +1,8 @@
 /* Start câu 3 Modal */
 .container-modal {
-  max-width: 1920px;
+  max-width: 70%;
   padding: 0px 1%;
-  border: 0.1px dotted red;
+  /* border: 0.1px dotted red; */
   margin: auto;
   text-align: center;
   margin-top: 5%;
@@ -10,21 +10,71 @@
 p {
   text-align: left;
 }
+.btn-open {
+  position: relative;
+  z-index: 0;
+}
 /* Định dạng các thẻ mô tả cho nội dung*/
-.accordion {
-  background-color: #eee;
+.modal {
+  /* css block mở ra để hiện mới thấy để css được */
+  /* display: block !important; */
+  /* background-color: rgba(50, 50, 50, 0.6); */
+}
+.modal-dialog {
+  position: relative;
+  top: 13.5%;
+}
+.fade:not(.show) {
+  opacity: 1;
+}
+
+.modal-box {
+  max-width: 25%;
+  background-color: white;
   color: #444;
-  color: rgb(0, 110, 255);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
-  transition: 0.4s;
-  border: 0.1px solid #eee;
+  transition: all 0.4s;
+  border: 0.1px solid rgb(197, 11, 11);
+  position: absolute;
+  top: 25%;
+  left: 44%;
+  z-index: 100;
+
 }
+.modal-box-title {
+  border-bottom: 0.1px solid gray;
+  padding: 18px;
+}
+.modal-box-content {
+  border-bottom: 0.1px solid gray;
+  padding: 18px;
+}
+
+.modal-backdrop, .modal-dialog {
+  animation: fadeout 0.3s linear;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.modal-backdrop {
+  display: none;
+  background: black;
+  /* Sau ấn nút - thẻ phủ nền sẽ hiện mờ mờ */
+  /* opacity: 0.5; */
+  opacity: 0;
+  position: fixed;
+  z-index: 99;
+}
+
 /* End câu 3 Modal */
 /* Nút Home */
 .button-home {

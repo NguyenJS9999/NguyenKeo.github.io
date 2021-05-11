@@ -30,6 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 25px;
   position: absolute;
   top: 0px;
   left: 0px;
