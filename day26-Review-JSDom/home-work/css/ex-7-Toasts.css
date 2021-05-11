@@ -1,18 +1,113 @@
 /* Start câu 7 Toasts */
+.container-toasts {
+  max-width: 70%;
+  padding: 0px 1%;
+  /* border: 0.1px dotted red; */
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+p {
+  text-align: left;
+}
+.btn-open {
+  position: relative;
+  z-index: 0;
+}
+/* Định dạng các thẻ mô tả cho nội dung*/
+.modal {
+  /* css block mở ra để hiện mới thấy để css được */
+  /* display: block !important; */
+  top: -40px;
+  left: 550px;
+  /* background-color: rgba(50, 50, 50, 0.6); */
+}
+.modal-dialog {
+  position: relative;
+  top: 13.5%;
+}
+.fade:not(.show) {
+  opacity: 1;
+}
+
+.modal-box {
+  max-width: 25%;
+  background-color: white;
+  color: #444;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.4s;
+  border: 0.1px solid rgb(197, 11, 11);
+  position: absolute;
+  top: 25%;
+  left: 44%;
+  z-index: 100;
+}
+.modal-box-title {
+  border-bottom: 0.1px solid gray;
+  padding: 18px;
+}
+.modal-box-content {
+  border-bottom: 0.1px solid gray;
+  padding: 18px;
+}
+
+.modal-backdrop,
+.modal-dialog {
+  animation: fadeout 0.3s linear;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.modal-body {
+  background-color: #e2e1e4;
+}
+.modal-backdrop {
+  display: none;
+  background: #353a40;
+  /* Sau ấn nút - thẻ phủ nền sẽ hiện mờ mờ */
+  /* opacity: 0.5; */
+  opacity: 0;
+  position: fixed;
+  z-index: 99;
+}
+
 /* End câu 7 Toasts */
 /* Nút Home */
 .button-home {
-    border: none;
-    border: 1px solid rgb(133, 65, 16);
-    background: goldenrod;
-    padding: 5px 30px 12px 30px;
-    border-radius: 10px;
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-    margin: 20px;
-  }
-  .button-home:hover {
-    color: goldenrod;
-    background-color: white;
-  }
+  border: none;
+  border: 1px solid rgb(133, 65, 16);
+  background: goldenrod;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s;
+}
+.button-home:hover {
+  color: goldenrod;
+  background-color: white;
+}
+/* Đề bài */
+.thread {
+  text-align: center;
+  color: rgb(213, 172, 172);
+  margin-top: 0.8%;
+  position: fixed;
+  bottom: 10%;
+  left: 15%;
+}

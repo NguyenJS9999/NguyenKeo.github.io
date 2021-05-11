@@ -29,13 +29,62 @@
 
 <body>
 
-<div>Toasts</div>
+    <h1 class="text-center mt-3">Toasts</h1>
 
-
-<div class="container">
-    <a href="../index.html"> <button class="button-home">Home</button> </a>
-    <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
-</div>
+    <div class=".container-toasts mt-5 text-center">
+  
+      <!-- Nút mở modal -->
+      <button type="button" class="btn-open  btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+  
+      <div class="text mt-5 px-5">
+        <h3>Demo Toasts</h3>
+        
+        <p class="text-center mt-4">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
+            Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</p>
+      </div>
+  
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+  
+          <div class="modal-content">
+  
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button id="close" type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+  
+            </div>
+  
+            <div class="modal-body">
+                Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
+                Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.
+            </div>
+  
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close" id="close" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="modal-backdrop close"></div>
+  
+  
+    </div>
+  
+  
+    <div class="thread">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
+        Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</div>
+  
+    <div class="container">
+      <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
+      <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
+    </div>
 
 
 
