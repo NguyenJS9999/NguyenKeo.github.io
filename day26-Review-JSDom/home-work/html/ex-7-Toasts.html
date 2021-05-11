@@ -3,97 +3,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <!-- css -->
-    <link rel="stylesheet" href="../css/ex-7-Toasts.css">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/ex-7-Toasts.css">
 
-    
-    <!-- slick crocell CDN CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-    <title>Tiêu đề</title>
-    <!-- Icon -->
-    <link rel="shortcut icon" href="#">
+  <!-- slick crocell CDN CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <title>Tiêu đề</title>
+  <!-- Icon -->
+  <link rel="shortcut icon" href="#">
 
 </head>
 
 <body>
 
-    <h1 class="text-center mt-3">Toasts</h1>
+  <h1 class="text-center mt-3">Toasts</h1>
 
-    <div class=".container-toasts mt-5 text-center">
-  
-      <!-- Nút mở modal -->
-      <button type="button" class="btn-open  btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button>
-  
-      <div class="text mt-5 px-5">
-        <h3>Demo Toasts</h3>
-        
-        <p class="text-center mt-4">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
-            Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</p>
-      </div>
-  
-  
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-  
-          <div class="modal-content">
-  
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button id="close" type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
-  
-            </div>
-  
-            <div class="modal-body">
-                Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
-                Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.
-            </div>
-  
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary close" id="close" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
-  
-          </div>
+  <div class=".container-toasts mt-5 text-center">
+
+    <!-- Nút mở modal -->
+    <button type="button" class="on-toast  btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+      View Toast
+    </button>
+
+    <div class="text mt-5 px-5">
+      <h3>Demo Toasts</h3>
+
+      <p class="text-center mt-4">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
+        Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</p>
+    </div>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+      <div class="toast hide">
+        <div class="toast-header">
+          <img src="../img/boostrap-icon.png" class="rounded me-2 google-icon" alt="facebook icon" />
+          
+          <strong class="me-auto">Boostrap</strong>
+          
+          <small>5 mins ago</small>
+          <button type="button" class="btn-close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message
         </div>
       </div>
-  
-      <div class="modal-backdrop close"></div>
-  
-  
-    </div>
-  
-  
-    <div class="thread">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
-        Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</div>
-  
-    <div class="container">
-      <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
-      <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
     </div>
 
 
+  </div>
+
+
+  <div class="thread">Bấm vào 1 nút hoặc gọi hàm thì hiển thị 1 hộp thoại thông báo ở góc màn hình.
+    Thông báo sẽ tự tắt sau 1 khoảng thời gian (ví dụ 5 giây) hoặc bấm vào nút X.</div>
+
+  <div class="container">
+    <a href="../index.html"><i class="fas fa-home   button-home"></i></a>
+    <!-- <button class="button-home"><a href="index.html">Home</a></button>  -->
+  </div>
 
 
 
-    <!-- Thư viện Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- File Js -->
-    <script src="../js/ex-7-Toasts.js"></script>
+
+
+  <!-- Thư viện Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- File Js -->
+  <script src="../js/ex-7-Toasts.js"></script>
 </body>
 
 </html>
