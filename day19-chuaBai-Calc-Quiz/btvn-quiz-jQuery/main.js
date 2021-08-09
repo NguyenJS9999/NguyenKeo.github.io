@@ -1,6 +1,7 @@
 console.log("Quiz-jquery")
 
-let datas = [{
+let datas = [
+    {
         ask: "Trong các cách đặt tên biến sau, cách nào sai cú pháp?",
         answer: ["12degree", "first-name"],
         choices: [

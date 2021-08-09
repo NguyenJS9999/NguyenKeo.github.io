@@ -1,3 +1,4 @@
+// Phủ định trạng thái
 let showMenu = false;
 
 function hiddenMenu() {
