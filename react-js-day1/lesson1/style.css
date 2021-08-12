@@ -1,0 +1,15 @@
+.theClock {
+    width: 200px;
+    border: 20px solid rgb(136, 114, 114);
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+    margin-top: 5%;
+
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    background: gray;
+    font-family: 'Times New Roman', Times, serif;
+}
