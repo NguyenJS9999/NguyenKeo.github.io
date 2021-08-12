@@ -1,7 +1,8 @@
 function Product(props) {
   console.log(props.price);
   // sử lý chuỗi số thành hiện thị dạng tiền tệ
-  const productPrice = `${props.price} đ`;
+  const productPrice = `${props.price} đ` ; 
+  const productPriceConvertMoney = productPrice.toLocaleString('vi-VN')
 
   return (
     <div className=" product ">
@@ -13,7 +14,7 @@ function Product(props) {
 
       <div className=" product-description ">
         <div className=" product-name ">{props.name}</div>
-        <div className=" product-price ">{productPrice}</div>
+        <div className=" product-price ">{productPriceConvertMoney}</div>
         <div className=" product-see-detail " type="button">
           Chi tiết
         </div>
@@ -68,34 +69,17 @@ function ProductList() {
   // Hàm map tạo vòng lặp vẽ sp theo index của data
   const productsElement = products.map((product) => (
     <Product
-      name={products.name}
-      price={products.price}
-      image={products.image}
+      id = { product.id }
+      name={ product.name }
+      price={ product.price }
+      image={ product.image }
     />
   ));
-  // const productsElement
- 
-  // for ( let i = 0; i < products.length; i++) {
-  //   console.log('i', i)
-  //   productsElement = i
-  // }
-
-  console.log(productsElement)
 
   return (
     <div className=" products-container container ">
       {/* Sản phẩm được lặp */}
-
       {productsElement}
-      
-      <Product
-      name={products[0].name}
-      price={products[0].price}
-      image={products[0].image}
-    />
-  
-
-      
     </div>
   );
 }
