@@ -68,6 +68,7 @@ function ProductList() {
         "https://ruouthuonghieu.com/wp-content/uploads/2020/05/xRM_03-300x300.png.pagespeed.ic.C9G0BOWg8T.webp",
     },
   ];
+
   // Hàm map tạo vòng lặp vẽ sp theo index của data
   const productsElement = products.map((product) => (
     <Product
@@ -77,13 +78,22 @@ function ProductList() {
       image={product.image}
     />
   ));
-  // Tìm kiếm sản phẩm theo tên
+  // let productsElement;
+  // for (let i = 0; i > products.length; i++ ) { 
+  //   console.log(products[i])
+  //   productsElement = products[i]
+  // }
 
+
+
+
+  // Tìm kiếm sản phẩm theo tên
   const [inputValue, setInputValue] = React.useState("");
   // const [ProductValue, setProductValue] = React.useState("");
-  // const [searchResults, setSearchResults] = React.useState([...products]);
-
+  // let [products, setProducts] = React.useState(   )
   
+
+
   // Lấy dữ liệu ô input ép kiểu chữ ko thể viết hoa
   function handleChange(event) {
     setInputValue(event.target.value.toLowerCase().trim() );
@@ -106,7 +116,7 @@ function ProductList() {
       <div className=" container " >{inputValue}</div>  
 
       <div className=" search-product-input container ">
-        <form>
+        <form >
           <i onClick={searchProduct} className="fas fa-search   search-btn "> </i>
           <input value={inputValue} onChange={handleChange} placeholder="Tìm sản phẩm"  type="text"></input>
         </form>
