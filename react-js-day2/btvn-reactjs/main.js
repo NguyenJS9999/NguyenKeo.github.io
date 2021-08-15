@@ -1,8 +1,8 @@
 function Product(props) {
   console.log(props.price);
   // sử lý chuỗi số thành hiện thị dạng tiền tệ
-  const productPrice = `${props.price} đ` ; 
-  const productPriceConvertMoney = productPrice.toLocaleString('vi-VN')
+  const productPrice = props.price ; 
+  const productPriceConvertMoney = productPrice.toLocaleString('vi-VN') + ' đ'
 
   return (
     <div className=" product ">
@@ -28,7 +28,7 @@ function ProductList() {
     {
       id: 1,
       name: "GIN BEEFEATER",
-      price: "350,000",
+      price: 350000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2020/05/xRPC_08-300x300.png.pagespeed.ic.UCY9UxbQJ5.webp",
     },
@@ -36,7 +36,7 @@ function ProductList() {
     {
       id: 2,
       name: "SINGLE MALT WHISKY AULTMORE 18",
-      price: "1,900,000",
+      price: 1900000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2019/11/xRM_184-300x300.png.pagespeed.ic.EYEaAjopd1.webp",
     },
@@ -44,7 +44,7 @@ function ProductList() {
     {
       id: 3,
       name: "TALISKER 10 NĂM",
-      price: "1,150,000",
+      price: 1150000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2020/07/xRM_113-300x300.png.pagespeed.ic.qDpg1ta2IT.webp",
     },
@@ -52,7 +52,7 @@ function ProductList() {
     {
       id: 4,
       name: "WHISKY LAGAVULIN 16 NĂM",
-      price: "1,800,000",
+      price: 1800000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2019/11/xRM_110-300x300.png.pagespeed.ic.dBmUOD319N.webp",
     },
@@ -60,7 +60,7 @@ function ProductList() {
     {
       id: 5,
       name: "WHISKY SINGLE MALT SEXTON",
-      price: "820,000",
+      price: 820000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2020/05/xRM_03-300x300.png.pagespeed.ic.C9G0BOWg8T.webp",
     },
@@ -69,7 +69,7 @@ function ProductList() {
   // Hàm map tạo vòng lặp vẽ sp theo index của data
   const productsElement = products.map((product) => (
     <Product
-      id = { product.id }
+      key = { product.id }
       name={ product.name }
       price={ product.price }
       image={ product.image }
