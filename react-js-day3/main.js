@@ -80,6 +80,7 @@ function ProductList() {
   // Tìm kiếm sản phẩm theo tên
 
   const [inputValue, setInputValue] = React.useState("");
+  // const [ProductValue, setProductValue] = React.useState("");
   // const [searchResults, setSearchResults] = React.useState([...products]);
 
   
