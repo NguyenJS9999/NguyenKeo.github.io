@@ -78,18 +78,18 @@ function ProductList() {
   }
   // Hàm Search - Tìm kiếm sản phẩm theo tên
   function findProduct() {
+    // Cách 1: For i
     // for (let i = 0; i < PRODUCTS.length; i++) {
-    //   if (
-    //     PRODUCTS[i].name.toLowerCase().trim() ==
-    //     stateInputValue.toLowerCase().trim()
-    //   ) {
-    //     setStateProducts([PRODUCTS[i]]);
+    //   if ( PRODUCTS[i].name.toLowerCase().trim() ==  stateInputValue.toLowerCase().trim() ) {
     //     console.log("Tìm thấy sản phẩm bạn cần", [PRODUCTS[i]]);
-    //   } else {
+    //   } 
+    //   else {
     //     break;
     //   }
     // }
+    // setStateProducts(PRODUCTS[i]);
 
+    // Cách 2; Filter - includes
     let productSearch = PRODUCTS.filter(
       (nameProduct) => nameProduct.name.toLowerCase().includes(stateInputValue)
       // === stateInputValue
