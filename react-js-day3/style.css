@@ -138,6 +138,12 @@
     border: 1px solid rgba(200, 200, 200, 1);
     background: rgba(200, 200, 200, 0.5);
   }
+
+ .search-feedback {
+  color: rgba(228,35,19, 1);
+  margin-top: 2.25rem;
+  padding: 0 1rem;
+ } 
   
   /* End products-container */
   

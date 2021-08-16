@@ -2,7 +2,7 @@
 // import ReactDOM from "react-dom";
 
 function Product({ image, name, price }) {
-  console.log(price);
+  // console.log(price);
   // sử lý chuỗi số thành hiện thị dạng tiền tệ
   const productPrice = price;
   const productPriceConvertMoney = productPrice.toLocaleString("vi-VN") + " đ";
@@ -27,7 +27,8 @@ function Product({ image, name, price }) {
 }
 
 function ProductList() {
-  const products = [
+  // Dữ liệu mảng các đối tượng
+  const PRODUCTS = [
     {
       id: 1,
       name: "GIN BEEFEATER",
@@ -46,7 +47,7 @@ function ProductList() {
 
     {
       id: 3,
-      name: "TALISKER 10 NĂM",
+      name: "TALISKER 10 YEARS",
       price: 1150000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2020/07/xRM_113-300x300.png.pagespeed.ic.qDpg1ta2IT.webp",
@@ -54,7 +55,7 @@ function ProductList() {
 
     {
       id: 4,
-      name: "WHISKY LAGAVULIN 16 NĂM",
+      name: "WHISKY LAGAVULIN SMOKE 16 ",
       price: 1800000,
       image:
         "https://ruouthuonghieu.com/wp-content/uploads/2019/11/xRM_110-300x300.png.pagespeed.ic.dBmUOD319N.webp",
@@ -68,9 +69,39 @@ function ProductList() {
         "https://ruouthuonghieu.com/wp-content/uploads/2020/05/xRM_03-300x300.png.pagespeed.ic.C9G0BOWg8T.webp",
     },
   ];
+  // State/SetState, Mảng được clone lọc bị duỗi [...PRODUCTS]
+  const [stateInputValue, setStateInputValue] = React.useState("");
+  const [stateProduct, setStateProducts] = React.useState([...PRODUCTS]);
+  // Lấy dữ liệu ô input ép kiểu chữ ko thể viết hoa
+  function handleChange(event) {
+    setStateInputValue(event.target.value.toLowerCase().trim());
+  }
+  // Hàm Search - Tìm kiếm sản phẩm theo tên
+  function findProduct() {
+    // for (let i = 0; i < PRODUCTS.length; i++) {
+    //   if (
+    //     PRODUCTS[i].name.toLowerCase().trim() ===
+    //     stateInputValue.toLowerCase().trim()
+    //   ) {
+    //     setStateProducts([PRODUCTS[i]]);
+    //     console.log("Tìm thấy sản phẩm bạn cần", [PRODUCTS[i]]);
+    //   } else {
+    //     alert("Không thấy sản phẩm bạn cần tìm");
+    //     break;
+    //   }
+    // }
 
-  // Hàm map tạo vòng lặp vẽ sp theo index của data
-  const productsElement = products.map((product) => (
+    let productSearch = PRODUCTS.filter(
+      (nameProduct) => nameProduct.name.toLowerCase().includes(stateInputValue)
+      // === stateInputValue
+    );
+
+    // setStateProduct sp cập nhập giá trị vào biến được lọc theo stateProduct rồi
+    setStateProducts(productSearch);
+    console.log("productSearch", productSearch);
+  }
+  // Hàm MAP là vòng lặp qua mảng vẽ sp theo State của mảng giới hạn(Search) mới PRODUCTS
+  const productsElement = stateProduct.map((product) => (
     <Product
       key={product.id}
       name={product.name}
@@ -78,54 +109,30 @@ function ProductList() {
       image={product.image}
     />
   ));
-  // let productsElement;
-  // for (let i = 0; i > products.length; i++ ) { 
-  //   console.log(products[i])
-  //   productsElement = products[i]
-  // }
-
-
-
-
-  // Tìm kiếm sản phẩm theo tên
-  const [inputValue, setInputValue] = React.useState("");
-  // const [ProductValue, setProductValue] = React.useState("");
-  // let [products, setProducts] = React.useState(   )
-  
-
-
-  // Lấy dữ liệu ô input ép kiểu chữ ko thể viết hoa
-  function handleChange(event) {
-    setInputValue(event.target.value.toLowerCase().trim() );
-  }
-  // In giá trị của ô input - tìm kiếm theo giá trị ô input
-  function searchProduct() {
-    console.log("Giá trị ô input: ", inputValue);
-  }
-
-  // React.useEffect(() => {
-  //   let results = products.filter( (product) => 
-  //       product.name.includes(inputValue) ||
-  //       product.price.includes(inputValue)
-  //   );
-  //   setSearchResults(results);
-  // }, [inputValue]);
 
   return (
     <>
-      <div className=" container " >{inputValue}</div>  
-
       <div className=" search-product-input container ">
-        <form >
-          <i onClick={searchProduct} className="fas fa-search   search-btn "> </i>
-          <input value={inputValue} onChange={handleChange} placeholder="Tìm sản phẩm"  type="text"></input>
-        </form>
-      </div>
+        {/* <i onClick={searchProduct} className="fas fa-search   search-btn "> </i> */}
+        <i onClick={findProduct} className="fas fa-search   search-btn ">
+          {" "}
+        </i>
 
+        <input
+          onChange={handleChange}
+          placeholder="Tìm sản phẩm"
+          type="text"
+        ></input>
+      </div>
 
       <div className=" products-container container ">
         {/* Sản phẩm được lặp */}
-        {productsElement}
+        {/* Thông báo lỗi không tìm thấy sản phẩm theo search */}
+        {stateProduct.length > 0 ? (
+          productsElement
+        ) : (
+          <p className="search-feedback">Không tìm thấy sản phẩm phù hợp!</p>
+        )}
       </div>
     </>
   );
