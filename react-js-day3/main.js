@@ -80,13 +80,12 @@ function ProductList() {
   function findProduct() {
     // for (let i = 0; i < PRODUCTS.length; i++) {
     //   if (
-    //     PRODUCTS[i].name.toLowerCase().trim() ===
+    //     PRODUCTS[i].name.toLowerCase().trim() ==
     //     stateInputValue.toLowerCase().trim()
     //   ) {
     //     setStateProducts([PRODUCTS[i]]);
     //     console.log("Tìm thấy sản phẩm bạn cần", [PRODUCTS[i]]);
     //   } else {
-    //     alert("Không thấy sản phẩm bạn cần tìm");
     //     break;
     //   }
     // }
