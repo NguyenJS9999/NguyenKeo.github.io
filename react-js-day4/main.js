@@ -119,10 +119,10 @@ function ProductList() {
 
     {
       id: 12,
-      name: "Johnnie Walker Red Label",
+      name: "Single Malt Macallan 12 YO Fine Oak 40%",
       price: 350000,
       image:
-        "http://khoruou.com/Uploads/Products/2011/9/Johnnie-Walker-Red-Label.jpg",
+        "https://ruousg.com/wp-content/uploads/2020/10/Macallan-12-YO-Fine-Oak-700ml.jpg",
     },
   ];
   // State/SetState, Mảng được clone lọc bị duỗi [...PRODUCTS]
