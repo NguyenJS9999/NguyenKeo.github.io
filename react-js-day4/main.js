@@ -87,26 +87,26 @@ function ProductList() {
 
     {
       id: 8,
-      name: "Chivas 25 year",
-      price: 5850000,
+      name: "Rượu Single Malt Macallan 1824 Select Oak 1 Lít/40%",
+      price: 1600000,
       image:
-        "http://khoruou.com/Uploads/Products/2011/9/chivas-25years.jpg",
+        "https://ruousg.com/wp-content/uploads/2020/09/Macallan-1824-Select-Oak-1L.jpg",
     },
 
     {
       id: 9,
-      name: "Chivas 21 year",
-      price: 2450000,
+      name: "Single Malt Macallan Lumina 41.3%",
+      price: 2300000,
       image:
-        "http://khoruou.com/Uploads/Products/2010/12/chivas21.jpg",
+        "https://ruousg.com/wp-content/uploads/2020/10/Macallan-Lumina-700ml.jpg",
     },
 
     {
       id: 10,
-      name: "Johnnie Walker Black Label",
-      price: 670000,
+      name: "Single Malt Macallan Concept No.2/40%",
+      price: 3700000,
       image:
-        "http://khoruou.com/Uploads/Products/2012/11/Jonhnnie-wallker-black-label.jpg",
+        "https://ruousg.com/wp-content/uploads/2020/09/Macallan-Concept-No-2-700ml.jpg",
     },
 
     {
@@ -120,7 +120,7 @@ function ProductList() {
     {
       id: 12,
       name: "Single Malt Macallan 12 YO Fine Oak 40%",
-      price: 350000,
+      price: 1400000,
       image:
         "https://ruousg.com/wp-content/uploads/2020/10/Macallan-12-YO-Fine-Oak-700ml.jpg",
     },
