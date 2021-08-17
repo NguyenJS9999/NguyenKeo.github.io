@@ -85,45 +85,6 @@ function ProductList() {
         "https://sanhruou.com/media/1140/catalog/ironstone-petite-sirah.jpg",
     },
 
-    {
-      id: 8,
-      name: "Chivas 25 year",
-      price: 5850000,
-      image:
-        "http://khoruou.com/Uploads/Products/2011/9/chivas-25years.jpg",
-    },
-
-    {
-      id: 9,
-      name: "Chivas 21 year",
-      price: 2450000,
-      image:
-        "http://khoruou.com/Uploads/Products/2010/12/chivas21.jpg",
-    },
-
-    {
-      id: 10,
-      name: "Johnnie Walker Black Label",
-      price: 670000,
-      image:
-        "http://khoruou.com/Uploads/Products/2012/11/Jonhnnie-wallker-black-label.jpg",
-    },
-
-    {
-      id: 11,
-      name: "Johnnie Whisky JW Blue label Magnum 43%",
-      price: 8700000,
-      image:
-        "https://ruousg.com/wp-content/uploads/2020/10/JW-Blue-label-Magnum-1750ml.jpg",
-    },
-
-    {
-      id: 12,
-      name: "Johnnie Walker Red Label",
-      price: 350000,
-      image:
-        "http://khoruou.com/Uploads/Products/2011/9/Johnnie-Walker-Red-Label.jpg",
-    },
   ];
   // State/SetState, Mảng được clone lọc bị duỗi [...PRODUCTS]
   const [stateInputValue, setStateInputValue] = React.useState("");
