@@ -161,6 +161,26 @@ function ProductList() {
     setStateProducts(productSearch);
   }
 
+  // Lọc giá tăng dần
+  function filterPricesIncreaseUp() {
+    console.log("Giá tăng dần");
+    let filteredList = [...PRODUCTS]
+    filteredList = filteredList.sort((a, b) => a.price - b.price);
+    setStateProducts(filteredList);
+  }
+  // Lọc giá giảm dần
+  function filterPricesDecreaseDown() {
+    console.log("Giá giảm dần");
+    let filteredList = [...PRODUCTS]
+    filteredList = filteredList.sort((a, b) => b.price - a.price);
+    setStateProducts(filteredList);
+  }
+   // Xõa Lọc giá - Sắp xếp mặc định
+  function filterPricesdefault() {
+    console.log("Xóa lọc giá - Sắp xếp mặc định");
+    let filteredList = [...PRODUCTS]
+    setStateProducts(filteredList);
+  }
 
   // Hàm MAP là vòng lặp qua mảng vẽ sp theo State của mảng giới hạn(Search) mới PRODUCTS
   const productsElement = stateProduct.map((product) => (
@@ -175,6 +195,21 @@ function ProductList() {
   return (
     <>
       <div className="filters-search-container  container ">
+        <div className=" filters-container  ">
+          
+        <div onClick={filterPricesdefault} className=" filter-btn  prices-increase-default ">
+            Sắp xếp mặc định  <i className="fas fa-times"></i>
+          </div>
+
+          <div onClick={filterPricesIncreaseUp} className=" filter-btn  prices-increase-up-gradually ">
+            Giá tăng dần  <i className="fas fa-arrow-up"></i>
+          </div>
+
+          <div onClick={filterPricesDecreaseDown} className=" filter-btn  prices-decrease-down-gradually " >
+            Giá giảm dần  <i className="fas fa-arrow-down"></i>
+          </div>
+
+        </div>
 
         <div className=" search-product-input ">
           {/* <i onClick={searchProduct} className="fas fa-search   search-btn "> </i> */}
