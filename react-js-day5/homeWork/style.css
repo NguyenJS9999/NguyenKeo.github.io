@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+}
+body {
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.container-fluid {
+  padding: 0px;
+}
+
+/* style cho ô INPUT dùng chung  */
+input {
+  border: 1px solid rgba(208, 208, 208, 1);
+  padding: 8px 6px;
+  transition: all 0.2s;
+}
+input:hover {
+  box-shadow: 0px 0px 4px 0px rgba(208, 208, 208, 1);
+}
+input:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 2px 0px rgba(208, 208, 208, 1);
+}
+input::placeholder {
+  color: rgba(208, 208, 208, 0.8);
+  font-size: 14px;
+}
+h1 {
+    color: rgba(72, 156, 193, 1);;
+}
+.todo-list-container {
+  /* border: 0.1px solid red; */
+  background: rgba(72, 156, 193, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0px;
+}
+.todo-list-form {
+  /* border: 0.1px solid red; */
+  background: rgba(252, 252, 252, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+
+  padding: 16px 36px;
+}
+.add-todo {
+  /* border: 0.1px solid violet; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-todo input {
+  border: 0.1px solid rgba(72, 156, 193, 0.6);
+  width: 85%;
+}
+.add-todo input:hover, .add-todo input:focus {
+  border: 0.1px solid rgba(72, 156, 193, 1);
+}
+.add-todo-btn-add {
+  background: rgba(72, 156, 193, 1);
+  width: 14%;
+  color: #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.add-todo-btn-add:hover {
+  background: rgba(89, 163, 200, 1);
+}
+/* List các công việc cần làm và đã hoàn thành */
+.things-todo-list, 
+.works-done-list  {
+    /* border: 0.1px solid rgba(72, 156, 193, 1); */
+    background: rgba(72, 156, 193, 0.2);
+    width: 100%;
+    padding: 4px 8px;
+  }
+.works-done-list-title,
+.things-todo-list-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(89, 163, 200, 1);
+}
+
+.things-todo, 
+.works-dones {
+  /* border: 0.1px solid rgba(72, 156, 193, 1); */
+  background: rgba(72, 156, 193, 0.4);
+  width: 100%;
+  margin-top: 12px;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+.todo, 
+.work-done {
+    border-bottom: 0.1px solid rgba(255, 255, 255, 1);
+    padding: 8px 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-gap: 8px;
+}
+.todo:last-child, 
+.work-done:last-child {
+    border-bottom: none;
+}
+
+
