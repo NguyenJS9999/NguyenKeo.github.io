@@ -164,14 +164,14 @@ function ProductList() {
   // Lọc giá tăng dần
   function filterPricesIncreaseUp() {
     console.log("Giá tăng dần");
-    let filteredList = [...PRODUCTS]
+    let filteredList = [...stateProduct]
     filteredList = filteredList.sort((a, b) => a.price - b.price);
     setStateProducts(filteredList);
   }
   // Lọc giá giảm dần
   function filterPricesDecreaseDown() {
     console.log("Giá giảm dần");
-    let filteredList = [...PRODUCTS]
+    let filteredList = [...stateProduct]
     filteredList = filteredList.sort((a, b) => b.price - a.price);
     setStateProducts(filteredList);
   }
