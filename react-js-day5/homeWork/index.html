@@ -37,47 +37,109 @@
                 </span>
 
                 <div class=" things-todo-list ">
-                    
-                    <input type="checkbox" id="things-todo-list-check-all" > 
+
+                    <input type="checkbox" id="things-todo-list-check-all"> 
                     <label class=" things-todo-list-title " for='things-todo-list-check-all'>
                         Những việc <u>cần</u> thực hiện
                     </label>
 
                     <div class=" things-todo ">
+                        <!-- 1 -->
+                        <div class=" todo ">
 
-                        <div class=" todo " >
-                            <input type="checkbox" id="todo" name="todo"> 
-                            <label for="todo"> Học code</label><br>
-                        </div>
+                            <span>
+                                <input type="checkbox" id="todo" name="todo">
+                                <label for="todo">Học code</label><br>
+                            </span>
 
-                        <div class=" todo " >
-                            <input type="checkbox" id="todo" name="todo"> 
-                            <label for="todo"> Làm code</label><br>
+                            <span>
+                                <div class=" edit-todo ">
+                                    <i class="fas fa-edit"></i>
+                                </div> <span></span>
+
+                                <div class=" delete-todo ">
+                                    <i class="fas fa-times"></i>
+                                </div>
+
+                            </span>
+
                         </div>
+                        <!-- 2 -->
+                        <div class=" todo ">
+
+                            <span>
+                                <input type="checkbox" id="todo" name="todo">
+                                <label for="todo">Học code</label><br>
+                            </span>
+
+                            <span>
+                                <div class=" edit-todo ">
+                                    <i class="fas fa-edit"></i>
+                                </div> <span></span>
+
+                                <div class=" delete-todo ">
+                                    <i class="fas fa-times"></i>
+                                </div>
+
+                            </span>
+
+                        </div>
+                        <!-- 2 -->
 
                     </div>
 
+                    <!-- Nút xóa các checked -->
+                    <div class=" del-all-checked ">
+                        <span>Remove all checked todo</span>
+                    </div>
+
                 </div>
+                <!-- things-todo-list -->
 
                 <div class=" works-done-list ">
-                    <input type="checkbox" id="work-done-check-all" >
+
+                    <input type="checkbox" id="work-done-check-all">
                     <label class=" works-done-list-title " for="work-done-check-all">
                         Những việc <u>đã</u> hoàn thành
                     </label>
 
                     <div class="  works-dones ">
+                        <!-- 1 -->
+                        <div class=" work-done ">
 
-                        <div class=" work-done " >
-                            <input type="checkbox" id="work-done" name="work-done"> 
-                            <label for="work-done"> Đã học code</label><br>
-                        </div>
+                            <span>
+                                <input type="checkbox" id="work-done">
+                                <label for="todo">Đã học code</label><br>
+                            </span>
 
-                        <div class=" work-done " >
-                            <input type="checkbox" id="work-done" name="work-done"> 
-                            <label for="work-done"> Đã làm code</label><br>
+                            <span>
+                                <div class=" edit-todo ">
+                                    <i class="fas fa-edit"></i>
+                                </div> <span></span>
+
+                                <div class=" delete-todo ">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </span>
+
                         </div>
+                        <!-- 2 -->
+
+
 
                     </div>
+
+                    <!-- Nút xóa các checked -->
+                    <div class=" del-all-checked ">
+                        <span>Remove all checked todo</span>
+                    </div>
+
+
+                </div>
+                <!-- works-done-list -->
+
+                <div class=" process ">
+                    <div class=" progress ">20%</div>
                 </div>
 
             </div>
