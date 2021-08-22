@@ -189,7 +189,7 @@ function ProductList() {
       name={product.name}
       price={product.price}
       image={product.image}
-    />
+    ></Product>
   ));
 
   return (
