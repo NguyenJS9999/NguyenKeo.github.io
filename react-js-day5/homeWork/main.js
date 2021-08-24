@@ -43,16 +43,17 @@
 
 function TodoListComponent() {
   const TODOLIST = [
-    'Read the book',
-    'Buy dog food',
-]
-
+    "1 Read the book",
+    "2 Buy dog food",
+    "3 Take the book",
+    "4 Buy dog food",
+  ];
   const WORKDONE = [
-    'Eead the book',
-    'Bought dog food',
-    'Go to the super market',
-];
-
+    "1 Eead the book",
+    "2 Bought dog food",
+    "3 Go to the super market  ",
+    "4 Watch TV",
+  ];
 
   const [stateInputValue, setInputValue] = React.useState("");
   const [stateTodoList, setTodoList] = React.useState([...TODOLIST]);
@@ -61,39 +62,40 @@ function TodoListComponent() {
 
   function handleChange(event) {
     setInputValue(event.target.value);
-    // console.log('stateInputValue', stateInputValue)
     setFeedback("");
   }
   // Thêm mới công việc
   function addJob() {
     if (stateInputValue) {
-      // const newTodoList = [...stateTodoList];
-      // newTodoList.push(stateInputValue);
-      // setTodoList(newTodoList); 
-      setTodoList( [...stateTodoList, stateInputValue] )
-      setInputValue("");
-      console.log('Thêm công việc stateTodoList', stateTodoList)
+      const newTodoList = [...stateTodoList];
+      const newObject = { id: "", content: stateInputValue };
+      newTodoList.push(newObject);
+      setTodoList(newTodoList);
+      console.log(
+        "Thêm công việc stateTodoList",
+        newTodoList.id,
+        stateTodoList
+      );
     } else {
-      setFeedback(<p className="input-feedback">Vui lòng nhập công việc cần làm!</p>);
+      setFeedback(
+        <p className="input-feedback">Vui lòng nhập công việc cần làm!</p>
+      );
     }
-  }
-  // -- Xóa việc cần làm
+  } // -- Xóa công việc cần làm
   function deleteTodo(index) {
-    console.log('Xóa công việc cần làm', index)
-    let deleteTodoList = stateTodoList.slice( index, 1)
-    // if (deleteTodoList == 1) {
-    //   stateTodoList.slice( 0 )
-    // } else {
-    //   stateTodoList.slice( -1 )
-    // }
+    console.log("Xóa công việc cần làm id:", index);
+
+    let deleteTodoList = [...stateTodoList];
+    deleteTodoList.splice(index, 1);
     setTodoList(deleteTodoList);
   }
-
   // -- Xóa công việc đã hoàn thành
   function deleteWorkDone(index) {
-  console.log('Xóa công việc đã hoàn thành ', index)  
-  let deleteWorkDone = stateWorkDone.slice( index, 1)
-    setWorkDone(deleteWorkDone)
+    console.log("Xóa công việc đã hoàn thành id:", index);
+    let deleteWorkDone = [...stateWorkDone];
+    deleteWorkDone.splice(index, 1);
+
+    setWorkDone(deleteWorkDone);
   }
 
   // -- Chuyền việc đã hoàn thành về todo list
@@ -101,8 +103,6 @@ function TodoListComponent() {
   //   let newDoneList = stateWorkDone.filter((todo, index) => index !== todoIndex);
   //   setWorkDone(newDoneList);
   // }
-
-
 
   // Tích việc cần làm => đã xong
 
@@ -114,7 +114,7 @@ function TodoListComponent() {
   //   setTodoList(stateTodoList.concat(newTodoList));
   // }
 
-    // function markDoneList(event, todoIndex) {
+  // function markDoneList(event, todoIndex) {
   //   event.preventDefault();
   //   let newTodoList = stateTodoList.filter((todo, index) => index !== todoIndex);
   //   let newDoneList = stateTodoList.filter((todo, index) => index === todoIndex);
@@ -122,128 +122,138 @@ function TodoListComponent() {
   //   setWorkDone(doneList.concat(newDoneList));
   // }
 
-
-  const todoListElement = stateTodoList.map( ( todo, index ) => 
+  const todoListElement = stateTodoList.map((todo, index) => (
     // <Todo key = {index} todo={todo}> {todo} </Todo>
-
-    <div  key = {index} className=" todo ">
+    <div key={index} content={todo.content} className=" todo ">
       <span>
-        <input onClick={(event) => markTodo(event, index)} type="checkbox" />
+        <input onClick={(event) => markTodo(event, id)} type="checkbox" />
 
-        <label >{todo}</label><br />
-      </span>      
-
+        <label>{todo}</label>
+        <br />
+      </span>
       <span>
         <div className=" edit-todo ">
           <i className="fas fa-edit" />
-        </div> <span/>
-
-        <div onClick = {() => deleteTodo(index) }
-          className=" delete-todo ">
+        </div>{" "}
+        <span />
+        <div onClick={() => deleteTodo(index)} className=" delete-todo ">
           <i className="fas fa-times" />
         </div>
-
+        {/* <button onClick={(e) => deleteTodo(id, e)}>Delete Row</button> */}
+        {/* <button onClick={deleteTodo.bind(this, id)}>Delete Row</button> */}
       </span>
     </div>
+  ));
 
-    )
-
-  const workDoneElement = stateWorkDone.map( ( workDone, index ) => 
-    // <WorkDone key = {index} workDone={workDone} > {workDone} </WorkDone> 
-    <div key = {index} className=" work-done ">
+  const workDoneElement = stateWorkDone.map((workDone, index) => (
+    // <WorkDone key = {id} workDone={workDone} > {workDone} </WorkDone>
+    <div key={index} content={workDone} className=" work-done ">
       <span>
-        <input onClick={(event) => markDoneList(event, index)} 
-        defaultChecked  type="checkbox" id="work-done" />
+        <input
+          onClick={(event) => markDoneList(event, id)}
+          defaultChecked
+          type="checkbox"
+          id="work-done"
+        />
 
-        <label htmlFor="work-done">{workDone}</label><br />
+        <label htmlFor="work-done">{workDone}</label>
+        <br />
       </span>
-
       <span>
         <div className=" edit-work-done ">
           <i className="fas fa-edit" />
-        </div> <span/>
-        
-        <div onClick = {() => deleteWorkDone(index)} 
-          className=" delete-work-done ">
+        </div>{" "}
+        <span />
+        <div
+          onClick={() => deleteWorkDone(index)}
+          className=" delete-work-done "
+        >
           <i className="fas fa-times" />
         </div>
       </span>
-
     </div>
-    )
+  ));
 
   return (
-   
-<main className=" container-fluid ">
-        <section className=" todo-list-container ">    
-          <div className=" todo-list-form   container ">
-            
-            <h1>TO DO LIST</h1> {stateInputValue}
-             {/* Nhập vào công việc cần làm */}
-            <span className=" add-todo ">           
-              <input onChange={handleChange} type="text"  value={stateInputValue} placeholder="Thêm công việc" />
+    <main className=" container-fluid ">
+      <section className=" todo-list-container ">
+        <div className=" todo-list-form   container ">
+          <h1>TO DO LIST</h1> {stateInputValue}
+          {/* Nhập vào công việc cần làm */}
+          <span className=" add-todo ">
+            <input
+              onChange={handleChange}
+              type="text"
+              value={stateInputValue}
+              placeholder="Thêm công việc"
+            />
 
-              <div onClick={addJob} className=" add-todo-btn-add ">Thêm</div>
-            </span>
-            {statefeedback}
-
-            <div className=" things-todo-list ">
-              <input type="checkbox" id="things-todo-list-check-all" />&nbsp;
-              <label className=" things-todo-list-title " htmlFor="things-todo-list-check-all">
-                Những việc <u>cần</u> thực hiện
-              </label>
-              
-                {/* <div className="  things-todo "> {todoListElement} </div> */}
-
-              <div className=" things-todo "> 
-                { stateTodoList.length > 0 ? 
-                (todoListElement) : (
-                  <li className="list-feedback">Không còn công việc nào trong danh sách!</li>
-                )}
-              </div>
-
-              {/* Nút xóa các checked */}
-              <div className=" del-all-checked ">
-                <span>Remove to done list</span>
-              </div>
-
+            <div onClick={addJob} className=" add-todo-btn-add ">
+              Thêm
             </div>
-            {/* things-todo-list */}
-
-
-            <div className=" works-done-list ">
-              <input type="checkbox"/>
-
-              <label className=" works-done-list-title " htmlFor="work-done-check-all">
-                Những việc <u>đã</u> hoàn thành</label>
-              {/* <div className="  works-dones "> {workDoneElement} </div> */}
-
-              <div className=" works-dones "> 
-                { stateWorkDone.length > 0 ? 
-                (workDoneElement) : (
-                  <li className="list-feedback">Không còn công việc nào đã hoàn thành!</li>
-                )}
-              </div>
-
-              {/* Nút xóa các checked */}
-              <div className=" del-all-checked " onClick={() => removeDoneToTodoList(index)}>
-                <span>Remove todo list</span>
-              </div>
+          </span>
+          {statefeedback}
+          <div className=" things-todo-list ">
+            <input type="checkbox" id="things-todo-list-check-all" />
+            &nbsp;
+            <label
+              className=" things-todo-list-title "
+              htmlFor="things-todo-list-check-all"
+            >
+              Những việc <u>cần</u> thực hiện
+            </label>
+            {/* <div className="  things-todo "> {todoListElement} </div> */}
+            <div className=" things-todo ">
+              {stateTodoList.length > 0 ? (
+                todoListElement
+              ) : (
+                <li className="list-feedback">
+                  Không còn công việc nào trong danh sách!
+                </li>
+              )}
             </div>
-            {/* works-done-list */}
-
-
-            <div className=" process ">
-              <div className=" progress ">20%</div>
+            {/* Nút xóa các checked */}
+            <div className=" del-all-checked ">
+              <span>Remove to done list</span>
             </div>
-
           </div>
+          {/* things-todo-list */}
+          <div className=" works-done-list ">
+            <input type="checkbox" />
 
-        </section>
-      </main>
+            <label
+              className=" works-done-list-title "
+              htmlFor="work-done-check-all"
+            >
+              Những việc <u>đã</u> hoàn thành
+            </label>
+            {/* <div className="  works-dones "> {workDoneElement} </div> */}
 
+            <div className=" works-dones ">
+              {stateWorkDone.length > 0 ? (
+                workDoneElement
+              ) : (
+                <li className="list-feedback">
+                  Không còn công việc nào đã hoàn thành!
+                </li>
+              )}
+            </div>
 
-  
+            {/* Nút xóa các checked */}
+            <div
+              className=" del-all-checked "
+              onClick={() => removeDoneToTodoList(index)}
+            >
+              <span>Remove todo list</span>
+            </div>
+          </div>
+          {/* works-done-list */}
+          <div className=" process ">
+            <div className=" progress ">20%</div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 

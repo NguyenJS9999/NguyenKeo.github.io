@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.1s ease;
+  border-radius: 2px !important;
+}
+body {
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {list-style: none;}
+.container-fluid {
+  padding: 0px;
+}
+
+/* style cho ô INPUT dùng chung  */
+input {
+  border: 1px solid rgba(208, 208, 208, 1);
+  padding: 8px 6px;
+  transition: all 0.2s;
+}
+input:hover {
+  box-shadow: 0px 0px 4px 0px rgba(208, 208, 208, 1);
+}
+input:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 2px 0px rgba(208, 208, 208, 1);
+}
+input::placeholder {
+  color: rgba(208, 208, 208, 0.8);
+  color: rgba(89, 163, 200, 1);
+  font-size: 14px;
+}
+h1 {
+  color: rgba(72, 156, 193, 1);
+}
+.todo-list-container {
+  /* border: 0.1px solid red; */
+  background: rgba(72, 156, 193, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0px;
+}
+.todo-list-form {
+  /* border: 0.1px solid red; */
+  background: rgba(252, 252, 252, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+
+  padding: 16px 36px;
+}
+.add-todo {
+  /* border: 0.1px solid violet; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-todo input {
+  border: 0.1px solid rgba(72, 156, 193, 0.6);
+  width: 85%;
+  color: rgba(89, 163, 200, 1);
+}
+.add-todo input:hover,
+.add-todo input:focus {
+  border: 0.1px solid rgba(72, 156, 193, 1);
+}
+.add-todo-btn-add {
+  background: rgba(72, 156, 193, 1);
+  width: 14%;
+  color: #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.add-todo-btn-add:hover {
+  background: rgba(89, 163, 200, 1);
+}
+/* List các công việc cần làm và đã hoàn thành */
+.things-todo-list,
+.works-done-list {
+  /* border: 0.1px solid rgba(72, 156, 193, 1); */
+  background: rgba(72, 156, 193, 0.2);
+  width: 100%;
+  padding: 4px 8px;
+}
+.works-done-list-title,
+.things-todo-list-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(89, 163, 200, 1);
+}
+
+.things-todo,
+.works-dones {
+  /* border: 0.1px solid rgba(72, 156, 193, 1); */
+  /* background: rgba(72, 156, 193, 0.4); */
+  width: 100%;
+  margin-top: 12px;
+  padding: 4px 0px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 2px;
+}
+.todo,
+.work-done {
+  /* border: 0.1px solid rgb(255, 5, 5); */
+  background: rgba(72, 156, 193, 0.4);
+  padding: 8px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 8px;
+}
+.todo:hover,
+.work-done:hover {
+  background: rgba(72, 156, 193, 0.6);
+}
+
+.todo span,
+.work-done span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 12px;
+}
+.work-done label {
+  text-decoration: line-through;
+}
+
+.edit-todo,
+.delete-todo,
+.edit-work-done,
+.delete-work-done {
+  font-size: 18px;
+  cursor: pointer;
+}
+.edit-todo:hover,
+.delete-todo:hover,
+.edit-work-done:hover,
+.delete-work-done:hover {
+  color: rgba(103, 165, 192, 1);
+}
+
+/* Thông báo phản hồi */
+.input-feedback,
+.list-feedback {
+  font-size: 20px;
+  color: #91121a;
+  margin-top: 0.25rem;
+
+  position: fixed;
+  top: 90px;
+}
+.edit-popup {
+  font-size: 20px;
+  color: #91121a;
+  position: fixed;
+  top: 155px;
+}
+
+.del-all-checked {
+  /* border: 1px solid rgb(251, 73, 73); */
+  margin-top: 8px;
+}
+.del-all-checked span {
+  background: rgba(89, 163, 200, 1);
+  padding: 8px 16px;
+  color: #ffffff;
+  float: right;
+  cursor: pointer;
+}
+.del-all-checked span:hover {
+  background: rgba(89, 163, 200, 0.8);
+}
+/* Tiến trình */
+.process {
+  border: 1px solid rgba(251, 236, 73, 0.5);
+  width: 100%;
+}
+.progress {
+  background-color: rgba(251, 236, 73, 1);
+  width: 20%;
+  height: 30px;
+  padding: 16px 4px;
+  color: rgba(108, 104, 105, 1);
+  text-align: center;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
