@@ -165,8 +165,9 @@ function TodoListComponent() {
       editedDone.filter( (todo) => todo.id === stateIdEditItem );
 
       console.log('editedDone', editedDone)
-      // newTodoList.slice(stateIdEditItem, stateIdEditItem + 1)
 
+      // newTodoList.slice(stateIdEditItem, stateIdEditItem + 1)
+      // Gán lại state của job đó ...
       // setTodoList(newTodoList)
 
       // setTodoList(stateEditInputValue)
