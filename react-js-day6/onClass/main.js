@@ -92,6 +92,7 @@ function TodoListComponent() {
 
   const [stateInputValue, setInputValue] = React.useState("");
   const [stateEditInputValue, setEditInputValue] = React.useState('')
+  const [stateIdEditItem, setIdEditItem] = React.useState('')
 
   const [stateTodoList, setTodoList] = React.useState([...TODOLIST]);
   const [stateWorkDone, setWorkDone] = React.useState([...WORKDONE]);
@@ -102,9 +103,7 @@ function TodoListComponent() {
     setInputValue(event.target.value);
     setFeedback("");
   }
-  function getEditInputValue(event) {
-    setEditInputValue(event.target.value);
-  }
+ 
   // Thêm mới công việc
   function addJob() {
     if (stateInputValue) {
@@ -116,11 +115,8 @@ function TodoListComponent() {
       console.log("Thêm công việc stateTodoList", newTodoList.id, newTodoList);
     } else {
       setFeedback(
-        <p className="input-feedback">Vui lòng nhập công việc cần làm! 😠</p>
+        <p className="input-feedback">Vui lòng nhập công việc cần làm!</p>
       );
-      // setFeedback(
-      //   <p className="edit-popup">Vui lòng nhập công việc cần làm! 😠</p>
-      // );
     }
   } // -- Xóa công việc cần làm
   function deleteTodo(todoID) {
@@ -145,6 +141,9 @@ function TodoListComponent() {
     // Truyền giá trị nội dung của object vào state ô edit
     console.log('editTodoNeed : ', editTodoNeed[0].content )
     setEditInputValue( editTodoNeed[0].content )
+    // Lưu id của todo đó riêng
+    setIdEditItem(todoId)
+    
 
   }
     // -- Edit công việc đã xong - work done
@@ -155,13 +154,20 @@ function TodoListComponent() {
   function getEdit() {
     console.log('Sửa nội dung công việc')
     // if (stateEditInputValue) { 
-
-      
-
+      // AUTO_ID ++;
+     
       let EditInputTodoValue = stateEditInputValue;
-      console.log('EditInputTodoValue:', EditInputTodoValue)
+      console.log('Dữ liệu ô input edit:', EditInputTodoValue)
+      // Tạo object ghi đè mới theo id lấy đc, nội dung ở ô nhập edit
+      const newObject = { id : stateIdEditItem, content : stateEditInputValue }  
+      // Lấy object của 1 job chỉ định sửa
+      const editedDone = [...stateTodoList];
+      editedDone.filter( (todo) => todo.id === stateIdEditItem );
 
+      console.log('editedDone', editedDone)
+      // newTodoList.slice(stateIdEditItem, stateIdEditItem + 1)
 
+      // setTodoList(newTodoList)
 
       // setTodoList(stateEditInputValue)
     // } else {
@@ -169,6 +175,10 @@ function TodoListComponent() {
     // }
   }
 
+  // Lấy giá trị ô nhập khi chỉnh sửa
+  function getEditInputValue(event) {
+    setEditInputValue(event.target.value);
+  }
 
  // -- Xong việc Tích todo list chuyển sang done list
   function markDone(todoId) {
@@ -254,10 +264,12 @@ function TodoListComponent() {
 
             <div onClick={addJob} className=" add-todo-btn-add ">Thêm</div>
 
-          </span>
+          </span>  
 
           <span className=" add-todo ">  
-            <input onChange={getEditInputValue} type="text" value={stateEditInputValue} placeholder="Sửa công việc" />
+            <input onChange={getEditInputValue} 
+              value={stateEditInputValue}  
+              type="text"  placeholder="Sửa công việc" />
 
             <div onClick={getEdit} className=" add-todo-btn-add ">Sửa</div>
 
