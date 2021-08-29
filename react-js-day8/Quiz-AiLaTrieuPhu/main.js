@@ -7,7 +7,7 @@ function ProductList() {
       choices: ["A: Ong", 'B: Ruồi', "C: Muỗi", 'D: Kiến' ],
     },{ id : 2,
       question: "Câu 2: Loại bột nào sau đây không được dùng để chế biến thức ăn?",
-      answer: " B: Bột giặt ",
+      answer: " C: Bột giặt ",
       choices: [ ' A: Bột mì ', ' B: Bột gạo ', ' C: Bột giặt ', ' D: Bột năng ' ],
     },
     { id : 3,
@@ -79,6 +79,8 @@ function ProductList() {
   const [ stateSkip , setSkip ] = React.useState( 'Bỏ qua' );
   //  Số tiền thưởng - liên tiếp tương ứng với MỨC câu hỏi
   const [ stateMoneyBonus , setMoneyBonus ] = React.useState( 0 );
+  // Thông báo chúc mừng hoặc thua cuộc
+  const [ stateNotify , setNotify ] = React.useState( '' ); 
 
   // Shuffle thứ tự các lựa chọn trong mảng choices
   // for ( let i = 0; i <  QUESTIONS_DATA.length; i++ ) {
@@ -93,8 +95,6 @@ function ProductList() {
     // Nhấn nút start in ra cầu số 1
     setTextStart( 'Chơi lại' )
 
-    
-    
     let IdQuestionRestart
     if ( stateTextStart === 'Bắt đầu' ) {
       let currentQuestion = QUESTIONS_DATA.filter( (question) => question.id == stateCurrentQuestionNumber )
@@ -151,15 +151,23 @@ function ProductList() {
     let currentAnswer = currentSentence[0].answer; console.log('currentAnswer: ', currentAnswer)
 
     // let playersChoice = currentSentence[0].choices; console.log('playersChoice: ', playersChoice)
-   
-    if ( params_answer == currentAnswer ) {
-      console.log('Câu trả lời chính xác')
-      setMoneyBonus ()
-
-    }
-    let moneyBonus = MONEY_BONUS[stateCurrentQuestionNumber]
+    
     // Tăng tiền thưởng, nếu đúng 1 câu tăng 1 điểm/phải đúng liên tiếp thưởng theo index
-    setMoneyBonus( moneyBonus )
+    let moneyBonusFormat = MONEY_BONUS[stateCurrentQuestionNumber] 
+    let moneyBonus = moneyBonusFormat.toLocaleString('vi-VN')
+    console.log('moneyBonus', moneyBonus)
+
+    // toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    if ( params_answer == currentAnswer ) { console.log('Câu trả lời chính xác')
+      setNotify( 'Câu trả lời chính xác' ); alert('Câu trả lời chính xác')
+      setMoneyBonus( moneyBonus )
+    } else {
+      console.log('Câu trả lời SAI - bạn phải dừng cuộc chơi tại đây và ra về với 0 đồng')
+      setNotify( 'Câu trả lời SAI - bạn phải dừng cuộc chơi tại đây và ra về với 0 đồng' )
+      setMoneyBonus( 0 )
+    }
+   
+ 
   }
 
 
@@ -245,6 +253,10 @@ function ProductList() {
           <div className=" questions ">           
               { stateGreetingTitle }
               { questionElement } 
+
+              {/* Thông báo thắng/thua */}
+              { stateNotify }
+            
           </div>
 
           {/* Các đáp án */}
