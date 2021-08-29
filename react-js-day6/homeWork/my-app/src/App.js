@@ -2,9 +2,9 @@ import React from "react";
 // import logo from './logo.svg';
 // import { nanoid } from "nanoid";
 import './App.css';
+
 let AUTO_ID;
-function App() {
-  let AUTO_ID = 10;
+
 
 function TodoListComponent() {
   const TODOLIST = [
@@ -204,10 +204,10 @@ function TodoListComponent() {
 
   return (
       
-   <>Nguyen</>
+   <h1>Nguyen</h1>
     
   );
 }
 
-export default App;
+export default TodoListComponent;
 

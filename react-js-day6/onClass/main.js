@@ -92,13 +92,15 @@ function TodoListComponent() {
 
   const [stateInputValue, setInputValue] = React.useState("");
   const [stateEditInputValue, setEditInputValue] = React.useState('')
+  // ID edit
   const [stateIdEditItem, setIdEditItem] = React.useState('')
 
   const [stateTodoList, setTodoList] = React.useState([...TODOLIST]);
   const [stateWorkDone, setWorkDone] = React.useState([...WORKDONE]);
   const [statefeedback, setFeedback] = React.useState("");
-
-
+  // Trạng thái đang chỉnh sửa hoặc đã sửa
+  const [state_Editting, set_Editting] = React.useState('fas fa-edit')
+  // nguyen
   function getSearchInputValue(event) {
     setInputValue(event.target.value);
     setFeedback("");
@@ -137,43 +139,39 @@ function TodoListComponent() {
   // -- Edit công việc cần làm - todo
   function editTodo(todoId) {
     console.log('Edit công việc cần làm id: ', todoId )
+    // Lọc ra công việc cần sửa
     let editTodoNeed = stateTodoList.filter( (todo) => todo.id === todoId )
-    // Truyền giá trị nội dung của object vào state ô edit
-    console.log('editTodoNeed : ', editTodoNeed[0].content )
+    console.log('editTodoNeed : ', editTodoNeed)
+    // Cập nhập state Input-Edit của mảng đã lọc có 1 object
     setEditInputValue( editTodoNeed[0].content )
-    // Lưu id của todo đó riêng
+    // Lưu id của todo cần sửa đó in state riêng
     setIdEditItem(todoId)
-    
-
+    // Chuyển icon Bút sửa - thành V đã xong
+    // set_Editting( 'fas fa-check' ) 
+    // nguyen
   }
-    // -- Edit công việc đã xong - work done
+  // -- Edit công việc đã xong - work done
   function editWorkDone(workDoneId) {
     console.log('Edit công việc đã làm id: ', workDoneId )
   }
-  // Tiến hành Sửa - Ấn nút Edits ko có tham số
   function getEdit() {
-    console.log('Sửa nội dung công việc')
-    // if (stateEditInputValue) { 
-      // AUTO_ID ++;
+    console.log('Sửa nội dung công việc stateIdEditItem', stateIdEditItem )
+    if (stateEditInputValue) {    
+      let updateTodo = stateTodoList.map( (edit) => {
+        if (edit.id === stateIdEditItem) {
+          edit.content = stateEditInputValue;
+        }
+        return edit;
+      });
+      console.log('updateTodo', updateTodo)
+    // for (let i = 0; i < stateTodoList.length; i++ )
+
+    setTodoList(updateTodo)
+    setFeedback(<p className="edit-popup">Đã chỉnh sửa job {stateIdEditItem} thành công 😁</p>);
      
-      let EditInputTodoValue = stateEditInputValue;
-      console.log('Dữ liệu ô input edit:', EditInputTodoValue)
-      // Tạo object ghi đè mới theo id lấy đc, nội dung ở ô nhập edit
-      const newObject = { id : stateIdEditItem, content : stateEditInputValue }  
-      // Lấy object của 1 job chỉ định sửa
-      const editedDone = [...stateTodoList];
-      editedDone.filter( (todo) => todo.id === stateIdEditItem );
-
-      console.log('editedDone', editedDone)
-
-      // newTodoList.slice(stateIdEditItem, stateIdEditItem + 1)
-      // Gán lại state của job đó ...
-      // setTodoList(newTodoList)
-
-      // setTodoList(stateEditInputValue)
-    // } else {
-    //   setFeedback(<p className="edit-popup">Chưa có nội dung thay đổi công việc 😁</p>);
-    // }
+    } else {
+      setFeedback(<p className="edit-popup">Chưa có nội dung thay đổi công việc 😁</p>);
+    }
   }
 
   // Lấy giá trị ô nhập khi chỉnh sửa
@@ -182,42 +180,41 @@ function TodoListComponent() {
   }
 
  // -- Xong việc Tích todo list chuyển sang done list
-  function markDone(todoId) {
-    console.log('Chuyển done => TODO id= ', todoId )
-     // Cắt lấy todo có trạng thái dấu tích(dc bỏ) khác
+  function markToDone(event, todoId) { console.log('Chuyển done => TODO id= ', todoId )
     let newTodoList = stateTodoList.filter((todo) => todo.id !== todoId);
-    
-    // Chuyển sang state work done
     let newDoneList = stateTodoList.filter((todo) => todo.id === todoId);
     setTodoList(newTodoList);
-    setWorkDone(stateWorkDone.concat( newDoneList) );
+    setWorkDone(stateWorkDone.concat(newDoneList) );
     setFeedback("");
   }
 
   // --  Bỏ Tích done list chuyển sang - việc cần làm 
-  function markTodo(workDoneId) {
-    console.log('Chuyển todo => DONE id= ', workDoneId )
+  function markToTodo(event, workDoneId) {console.log('Chuyển todo => DONE id= ', workDoneId )
     let newDoneList = stateWorkDone.filter((todo) => todo.id !== workDoneId);
- 
     let newTodoList = stateWorkDone.filter((todo) => todo.id === workDoneId);
     setWorkDone(newDoneList);
     setTodoList(stateTodoList.concat(newTodoList));
     setFeedback("");
   }
-
+  function removeDoneToTodoList() {
+    console.log('Xoá các check todo-list')
+  }
+  function removeDoneToTodoList() {
+    console.log('Xoá các check todo-list')
+  }
   const todoListElement = stateTodoList.map((todo) => (
     // <Todo key = {index} todo={todo}> {todo} </Todo>
     <div key={todo.id} className=" todo ">
 
       <span>
-        <input onClick={() => markTodo(todo.id)} type="checkbox" />
+        <input onClick={(event) => markToDone(event ,todo.id)} type="checkbox" />
 
         <label>{todo.content}</label><br />
       </span>
       
       <span>
         <div onClick = { () => editTodo ( todo.id ) } className=" edit-todo ">
-          <i className="fas fa-edit" />
+            {/* Sửa */} <i className="fas fa-edit" />
         </div>   <span />
     
         <div onClick = { () => deleteTodo( todo.id ) } className=" delete-todo ">
@@ -233,7 +230,7 @@ function TodoListComponent() {
     <div key={workDone.id}  className=" work-done ">
       <span>
 
-        <input onClick={() => markDone( workDone.id )}
+        <input onClick={(event) => markToTodo(event, workDone.id )}
           defaultChecked type="checkbox" id="work-done" />
 
         <label htmlFor="work-done">{workDone.content}</label> <br />    
@@ -242,7 +239,8 @@ function TodoListComponent() {
 
       <span>
         <div onClick = {() => editWorkDone ( workDone.id ) } className=" edit-work-done ">
-          <i className="fas fa-edit" />
+          {/* Sửa */} {/* <i className="fas fa-edit" /> */}
+          <i className= { state_Editting } />
         </div> <span />
     
         <div onClick={() => deleteWorkDone(workDone.id)} className=" delete-work-done ">
@@ -328,10 +326,7 @@ function TodoListComponent() {
             </div>
 
             {/* Nút xóa các checked */}
-            <div
-              className=" del-all-checked "
-              onClick={() => removeDoneToTodoList(index)}
-            >
+            <div className=" del-all-checked " >
               <span>Remove todo list</span>
             </div>
           </div>

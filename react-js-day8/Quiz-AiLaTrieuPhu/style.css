@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.quiz-container {
+  /* border: 0.1px solid red; */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0px;
+  padding: 20px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 8px;
+}
+.quiz-title-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+.process {
+  background-color: rgba(38, 38, 38, 1);
+  color: white;
+  padding: 4px 4px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.actual-progress {
+  background-color: rgb(238, 163, 65);
+  width: 10%;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 4px 0px;
+  text-align: center;
+}
+/* Thanh thông tin chung quiz */
+.infor-btn-points-gift {
+  background-color: rgba(38, 38, 38, 1);
+  padding: 4px 4px;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.infor-btn-points-gift span {
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.number-of-question,
+.skip-question,
+.money-bonus,
+.helps {
+  background-color: rgb(255, 255, 255);
+  color: rgb(81, 29, 133);
+  padding: 6px 12px;
+}
+
+.skip-question {
+  cursor: pointer;
+}
+.skip-question:hover {
+  background-color: rgb(81, 29, 133);
+  color: rgb(255, 255, 255);
+}
+/* Tiền thưởng nhận được */
+.money-bonus:hover {
+  color: rgba(239, 201, 72, 1);
+}
+/* Các sự trợ giúp */
+.helps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 12px;
+  cursor: pointer;
+}
+.helps span {
+    width: auto!important;
+}
+.helps span:hover {
+  color: rgba(228, 35, 19, 1);
+  transform: scale(1.1);
+}
+
+/* Phần câu hỏi và câu trả lời */
+.quiz-form {
+  /* border: 0.1px solid violet; */
+  border-radius: 6px;
+  background-color: rgba(70, 26, 66, 1);
+  width: 100%;
+  padding: 8px 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+}
+/* Nút bắt đầu chơi */
+.start-play-quiz {
+  background-color: rgba(38, 38, 38, 1);
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.start-play-quiz:hover {
+  color: white;
+  background-color: rgba(123, 122, 122, 0.5);
+}
+/* Câu hỏi */
+.questions {
+  /* border: 1px solid rgb(184, 21, 192); */
+  width: 100%;
+  padding: 40px 0px 100px 0px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Các đáp án */
+.answers {
+  /* border: 1px solid red; */
+  width: 100%;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 8px;
+}
+.answer {
+  border: 1px solid inherit;
+  width: 100%;
+  /* Fixed cứng */
+  height: 300px;
+
+  padding: 12px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 6px;
+  opacity: 1;
+  cursor: pointer;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  transition: all 0.15s;
+}
+.answer:hover {
+  opacity: 0.8;
+}
+.answer:active {
+  opacity: 1;
+}
+
+/* Nút số chọn đáp án */
+.numerical-order {
+  border-radius: inherit;
+  background-color: inherit;
+  font-size: 15px;
+
+  padding: 2px 10px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  text-align: center;
+}
+#option-1 {
+  background-color: rgba(47, 109, 174, 0.9);
+}
+#option-2 {
+  background-color: rgba(44, 156, 166, 0.9);
+}
+#option-3 {
+  background-color: rgba(236, 168, 44, 0.9);
+}
+#option-4 {
+  background-color: rgba(212, 84, 106, 0.9);
+}
+
+/* Start Responsive by @Media same bootstrap */
+
+/* X-Small */
+@media (max-width: 576px) {
+  .actual-progress {
+    font-size: 8px;
+  }
+  .infor-btn-points-gift {
+    flex-direction: column;
+    grid-gap: 8px;
+  }
+  .infor-btn-points-gift span {
+    width: 100%;
+  }
+  .number-of-question,
+  .skip-question,
+  .money-bonus,
+  .helps {
+   width: 49%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+  }
+  .helps {
+      font-size: 14px;
+      justify-content: space-evenly!important;
+  }
+
+  .questions {
+    font-size: 20px;
+    padding: 80px 0px;
+  }
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    font-size: 18px;
+    padding: 30px 8px;
+  }
+}
+
+/* Small */
+@media (min-width: 576px) {
+  .actual-progress {
+    font-size: 12px;
+  }
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    padding: 30px 8px;
+  }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+  .actual-progress {
+    font-size: 14px;
+  }
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    padding: 30px 8px;
+  }
+}
+
+/* Large */
+@media (min-width: 992px) {
+  .actual-progress {
+    font-size: 16px;
+  }
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    padding: 60px 8px;
+  }
+}
+
+/* Extra large */
+@media (min-width: 1200px) {
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    padding: 90px 8px;
+  }
+}
+
+/* Extra extra large */
+@media (min-width: 1400px) {
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .answer {
+    height: 100%;
+    padding: 100px 8px;
+  }
+}
+/* End Responsive by @Media same  bootstrap*/

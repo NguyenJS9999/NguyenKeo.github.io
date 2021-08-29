@@ -243,6 +243,7 @@ function App() {
             doneList.map((done, index) => (
               <li className="done-item list-item" key={done.id}>
                 <div className="todo-item">
+                 
                   <input
                     className="checked-input"
                     type="checkbox"
@@ -250,7 +251,9 @@ function App() {
                     defaultChecked
                     onClick={() => markTodo(done.id)}
                   />
+
                   {isEditing && editId === done.id ? (
+                    
                     <input
                       type="text"
                       className="edit-input"
@@ -269,6 +272,7 @@ function App() {
                   ) : (
                     <span className="todo-content">{done.content}</span>
                   )}
+
                 </div>
                 <div className="btn-group">
                   {isEditing && editId === done.id ? (

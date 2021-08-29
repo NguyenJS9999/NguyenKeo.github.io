@@ -1,0 +1,246 @@
+/* font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/* font Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+/* ::selection {
+  color: rgb(195, 0, 255);
+} */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.container-fluid {
+  padding: 0px;
+}
+/* style cho ô INPUT dùng chung  */
+input {
+  border: 1px solid rgba(228,35,19, 0.5);
+  border-radius: 2px;
+  padding: 8px 6px;
+  transition: all 0.2s;
+}
+input:hover {
+  box-shadow: 0px 0px 4px 0px rgba(208, 208, 208, 1);
+}
+input:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 2px 0px rgba(208, 208, 208, 1);
+}
+input::placeholder {
+  color: rgba(228,35,19, 0.42);
+  font-size: 14px;
+}
+
+.bmi-container {
+  /* border: 1px solid red; */
+  background: rgba(246, 246, 246, 1);
+  height: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.bmi-form {
+  border: 4px solid rgba(226,65,65, 1);
+  border-radius: 8px;
+  background: rgba(228, 35, 19, 0.2);
+  margin-top: 10%;
+  width: 100%;
+
+  padding: 4%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.cal-input-val {
+  /* border: 1px solid red; */
+  width: 65%;
+  height: 100%;
+  padding: 0px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 24px;
+
+}
+.cal-input-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(226,65,65, 1);
+}
+.cal-inputs {
+  border-radius: 1px solid red;
+  width: 100%;
+
+}
+.cal-inputs {
+  border-radius: 1px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 12px;
+}
+.cal-inputs input {
+  width: 100%;
+  color: rgba(228,35,19, 0.8);
+}
+/* Nút tính toán */
+.calculate-buttons {
+  /* border: 1px solid red; */
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+}
+.calculate-buttons span {
+  /* border: 1px solid rgba(228,35,19, 0.8); */
+  background: rgba(228,35,19, 0.8);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.calculate-buttons span:hover {
+  color: rgba(228,35,19, 0.8);
+  background: white;
+  box-shadow: 0px 0px 2px 0px rgba(228,35,19, 0.8);
+}
+/* Khối kết quả */
+.result-information {
+  /* border: 1px solid violet;  */
+  width: 100%;
+  height: 100%;
+  color: rgba(228,35,19, 1);
+  padding: 0px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 80px;
+}
+.serult {
+  /* border: 1px solid violet;  */
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 20px;
+}
+p {margin-bottom: 0;}
+.serult b {
+  color: rgb(20, 23, 196);
+  font-size: 28px;
+}
+.advice span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Start Responsive by @Media same bootstrap */
+
+/* X-Small */
+@media (max-width: 576px) {
+  .bmi-form {
+    width: 100!important;
+    flex-direction: column;
+    grid-gap: 28px;
+  }
+  .cal-input-val {
+    width: 100%;
+  }
+  .result-information {
+    grid-gap: 8px;
+  }
+}
+
+/* Small */
+@media (min-width: 576px) {
+  .bmi-form {
+    width: 100%;
+    flex-direction: column;
+    grid-gap: 28px;
+  }
+  .cal-input-val {
+    width: 100%;
+  }
+  .result-information {
+    grid-gap: 16px;
+  }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+  .bmi-form {
+    flex-direction: column;
+    grid-gap: 28px;
+  }
+  .cal-input-val {
+    width: 100%;
+  }
+  .result-information {
+    grid-gap: 20px;
+  }
+}
+
+/* Large */
+@media (min-width: 992px) {
+  .bmi-form {
+    flex-direction: column;
+    grid-gap: 28px;
+  }
+  .cal-input-val {
+    width: 100%;
+  }
+  .result-information {
+    grid-gap: 24px;
+  }
+}
+
+/* Extra large */
+@media (min-width: 1200px) {
+  .bmi-form {
+    flex-direction: row;
+    grid-gap: 0px;
+  }
+  .cal-input-val {
+    width: 65%;
+  }
+  .result-information {
+    grid-gap: 20px;
+  }
+}
+
+
+/* Extra extra large */
+@media (min-width: 1400px) {
+}
+/* End Responsive by @Media same  bootstrap*/
+
+/* Start */
+/* End */
