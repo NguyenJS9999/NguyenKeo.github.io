@@ -4,122 +4,169 @@ function ProductList() {
     { id : 1,
       question: "Câu 1: Từ nào còn thiếu trong câu thành ngữ: 'Mật ngọt chết ...?'",   
       answer: "B: Ruồi",
-      choices: ["A: Ong", 'B: Ruồi', "C: Muỗi", 'D Kiến' ],
+      choices: ["A: Ong", 'B: Ruồi', "C: Muỗi", 'D: Kiến' ],
     },{ id : 2,
-      question: "Loại bột nào sau đây không được dùng để chế biến thức ăn?",
+      question: "Câu 2: Loại bột nào sau đây không được dùng để chế biến thức ăn?",
       answer: " B: Bột giặt ",
       choices: [ ' A: Bột mì ', ' B: Bột gạo ', ' C: Bột giặt ', ' D: Bột năng ' ],
     },
-    // { id : 3,
-    //   question: " Từ nào sau đây viết đúng chính tả tiếng Việt? ",
-    //   answer: " D: Chậm chạp ",
-    //   choices: [ ' A: Trậm chạp ', ' B: Chậm Trạp ', ' C: Trậm trạp ', ' D: Chậm chạp ' ],
-    // },{ id : 4,
-    //   question: " Loài vật nào thường được nuôi để lấy ngọc ",
-    //   answer: " C: Trai ",
-    //   choices: [ 'A: Cua ', ' B: Mực ', ' C: Trai ', ' D: Sứa ' ], 
-    // },{ id : 5,
-    //   question: " Trên mặt một đồng hồ cơ có số chỉ giờ, đối diện với số 9 là số mấy? ",
-    //   answer: " A: Số 3 ",
-    //   choices: [ ' A: Số 3', ' B: Số 6 ', ' C: Số 1  ', ' D: Số 12 ' ], 
-    // },{ id : 6,
-    //   question: " Hiện nay, vùng an toàn  được nhiều khu dân cư, ngõ xóm thiết lập nhằm chống lây nhiễm COVID-19 vào khu đó thường được gọi là gì? ",
-    //   answer: " D: Vùng xanh ",
-    //   choices: [ ' A: Vùng nâu ', ' B: Vùng nâu ', ' C: Vùng xám ', ' D: Vùng xanh ' ], 
-    // },{ id : 7,
-    //   question: " Bàn thắng đầu tiên tại  VCK UEFA Euro 2020 có điểm gì đặc biệt? ",
-    //   answer: " C: Là bàn phản lưới nhà ",
-    //   choices: [ ' A: Ghi bàn từ giữa sân', ' B: Do thủ môn ghi bàn ', ' C: Là bàn phản lưới nhà ', ' D: Đá phạt góc thành bàn ' ], 
-    // },{ id : 8,
-    //   question: " Ngôn ngữ nào trên thế giới còn được gọi là 'Ngôn ngữ Molière'? ",
-    //   answer: " A: Tiếng Pháp ",
-    //   choices: [ ' A: Tiếng Pháp', ' B: Tiếng Anh ', ' C: Tiếng Đức ', ' D: Tiếng Ý ' ], 
-    // },{ id : 9,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 10,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 11,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 12,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 13,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 14,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // },{ id : 15,
-    //   question: "  ",
-    //   answer: "  ",
-    //   choices: [ ' ', '  ', '  ', '  ' ], 
-    // }
+    { id : 3,
+      question: "Câu 3: Từ nào sau đây viết đúng chính tả tiếng Việt? ",
+      answer: " D: Chậm chạp ",
+      choices: [ ' A: Trậm chạp ', ' B: Chậm Trạp ', ' C: Trậm trạp ', ' D: Chậm chạp ' ],
+    },{ id : 4,
+      question: "Câu 4: Loài vật nào thường được nuôi để lấy ngọc ",
+      answer: " C: Trai ",
+      choices: [ 'A: Cua ', ' B: Mực ', ' C: Trai ', ' D: Sứa ' ], 
+    },{ id : 5,
+      question: "Câu 5: Trên mặt một đồng hồ cơ có số chỉ giờ, đối diện với số 9 là số mấy? ",
+      answer: " A: Số 3 ",
+      choices: [ ' A: Số 3', ' B: Số 6 ', ' C: Số 1  ', ' D: Số 12 ' ], 
+    },{ id : 6,
+      question: "Câu 6: Hiện nay, vùng an toàn  được nhiều khu dân cư, ngõ xóm thiết lập nhằm chống lây nhiễm COVID-19 vào khu đó thường được gọi là gì? ",
+      answer: " D: Vùng xanh ",
+      choices: [ ' A: Vùng nâu ', ' B: Vùng nâu ', ' C: Vùng xám ', ' D: Vùng xanh ' ], 
+    },{ id : 7,
+      question: "Câu 7: Bàn thắng đầu tiên tại  VCK UEFA Euro 2020 có điểm gì đặc biệt? ",
+      answer: " C: Là bàn phản lưới nhà ",
+      choices: [ ' A: Ghi bàn từ giữa sân', ' B: Do thủ môn ghi bàn ', ' C: Là bàn phản lưới nhà ', ' D: Đá phạt góc thành bàn ' ], 
+    },{ id : 8,
+      question: "Câu 8: Ngôn ngữ nào trên thế giới còn được gọi là 'Ngôn ngữ Molière'? ",
+      answer: " A: Tiếng Pháp ",
+      choices: [ ' A: Tiếng Pháp', ' B: Tiếng Anh ', ' C: Tiếng Đức ', ' D: Tiếng Ý ' ], 
+    },{ id : 9,
+      question: " Câu 9: ",
+      answer: " A: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 10,
+      question: " Câu 10: ",
+      answer: " A: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 11,
+      question: " Câu 11: ",
+      answer: " B: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 12,
+      question: " Câu 12: ",
+      answer: " C: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 13,
+      question: " Câu 13: ",
+      answer: " D: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 14,
+      question: " Câu 14: ",
+      answer: " A: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    },{ id : 15,
+      question: " Câu 15: ",
+      answer: " B: ",
+      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+    }
   ]; // QUESTIONS_DATA
 
   
   const [ stateGreetingTitle, setGreetingTitle ] = React.useState('Chào mừng bạn đến với chương trình "Ai là triệu phú", hãy nhấn nút Bắt đầu để tham gia phần thi');
   //  State Question - Hiện từng câu hỏi một
   const [ stateQuestions, setQuestions ] = React.useState( [] );
-
-  // Số câu hỏi hiện tại / trên tổng số 15 câu
-  const [ stateCurrentQuestionNumber , setCurrentQuestionNumber ] = React.useState( 0 );
-
-
-
+  // Số câu hỏi hiện tại / trên tổng số 15 câu, skip tăng dần số lên
+  const [ stateCurrentQuestionNumber , setCurrentQuestionNumber ] = React.useState( 1 );
+  // Thay text nút bắt đầu
+  const [ stateTextStart , setTextStart ] = React.useState( 'Bắt đầu' );
+  // Thay text nút Bỏ qua
+  const [ stateSkip , setSkip ] = React.useState( 'Bỏ qua' );
 
   // Shuffle thứ tự các lựa chọn trong mảng choices
-  for ( let i = 0; i <  QUESTIONS_DATA.length; i++ ) {
-    QUESTIONS_DATA[i].choices.sort( () => Math.random() -0.5 );
-  }
+  // for ( let i = 0; i <  QUESTIONS_DATA.length; i++ ) {
+  //   QUESTIONS_DATA[i].choices.sort( () => Math.random() -0.5 );
+  // }
   // Shuffle thứ tự các lựa chọn trong mảng data
-  QUESTIONS_DATA.sort( () => Math.random() - 0.5 );
+  // QUESTIONS_DATA.sort( () => Math.random() - 0.5 );
   // Câu hỏi hiện tại (current question)
-  let curQuestion = 0;
-  // -- Function render ra từng câu hỏ
-  function renderQuestion( count ) {
-    console.log('Bắt đầu game - in ra câu hỏi')
+  
+  // -- Function render ra từng câu hỏi
+  function renderQuestion( ) { console.log('Bắt đầu game - in ra câu hỏi')
+    // Nhấn nút start in ra cầu số 1
+    setTextStart( 'Chơi lại' )
 
-    let currentQuestion = QUESTIONS_DATA.filter( (question) => question.id == 1 )
-    console.log('currentQuestion', currentQuestion)
-    setQuestions( currentQuestion )
-    setGreetingTitle('')
+    
+    
+    let IdQuestionRestart
+    if ( stateTextStart === 'Bắt đầu' ) {
+      let currentQuestion = QUESTIONS_DATA.filter( (question) => question.id == stateCurrentQuestionNumber )
+      console.log('currentQuestion', currentQuestion)
+      setQuestions( currentQuestion )
+      setGreetingTitle('')
+    }
 
-    // Lấy ra câu hỏi hiện tại
-    let question = QUESTIONS_DATA[count]
-    // Cập nhật title, nội dung câu hỏi
-    let currentQuestionNumber = count + 1;
-    setCurrentQuestionNumber( currentQuestionNumber );
-    // Cập nhật thanh tiến trình
-    function actualProgress(params) {
-      return  <span style='width: 10%' className=" actual-progress ">6.66%</span>
+    if ( stateTextStart === 'Chơi lại' ) { 
+      IdQuestionRestart = 1;
+      console.log('IdQuestionRestart: ', IdQuestionRestart)
+      setCurrentQuestionNumber( IdQuestionRestart )
+      
+      let currentQuestion = QUESTIONS_DATA.filter( (question) => question.id == stateCurrentQuestionNumber )
+      setQuestions( currentQuestion )
+      setSkip( 'Bỏ qua' )
+    }
+    
+  } 
+  // stateCurrentQuestionNumber
+ 
+  // Bỏ qua 1 câu hỏi - câu kế tiếp
+  let IdQuestion
+  function skipQuestion() {
+    IdQuestion = stateCurrentQuestionNumber + 1; 
+    console.log('IdQuestion: ', IdQuestion)
+    let currentQuestion = [...QUESTIONS_DATA].filter( (question) => question.id == IdQuestion )
+    setQuestions( currentQuestion );
+    setCurrentQuestionNumber( IdQuestion )
+
+    if ( IdQuestion > 15 ) {
+      setSkip( 'Hoàn thành' )
     }
   }
+  // Lấy giá trị nội dụng của mỗi thẻ đáp án
+  let valueElement
+  function getAnswerValue(event) {
+    valueElement = event.target.value
+    console.log('valueElement', valueElement)
+  }
+  // Kiểm tra câu trả lời đúng/sai
+  function answerResult(params_answer) {
+    console.log('Đáp án được chọn - kiểm tra: ', params_answer)
+
+  }
 
 
-  // Hàm hiện ngẫu nhiên 1 câu hỏi
-  // function actuallyQuestion() {
-  //   let presentQuestion;
-  //   presentQuestion = [...QUESTIONS_DATA].filter( ( question ) => question.id == 1 ); console.log('presentQuestion', presentQuestion)
-  //   setQuestions(presentQuestion)
-  // }
-  // Biến kiểm tra nếu người dùng trả lời mới cho next, và không cho phép chọn lại đáp án (mặc định flag = false là chưa cho next và cho chọn đáp án)
-  // let allowNext = false;
-
-  // Lặp ra 1 câu hỏi theo id truyền vào
+  // In ra mỗi câu hỏi
   let questionElement = [...stateQuestions].map( (question) => (
     <span key={question.id} >  
       {question.question} <br/>
     </span>
-
+  ) ); 
+  // Đáp án số 1
+  let answerElement1 = [...stateQuestions].map( (question) => (
+    <span key={question.id} onClick = { () => answerResult ( question.choices[0] ) }  >  
+      {question.choices[0]} <br/>
+    </span>
+  ) ); 
+  // Đáp án số 2
+  let answerElement2 = [...stateQuestions].map( (question) => (
+    <span key={question.id} onClick = { () => answerResult ( question.choices[1] ) }>  
+      {question.choices[1]} <br/>
+    </span>
+  ) ); 
+  // Đáp án số 3
+  let answerElement3= [...stateQuestions].map( (question) => (
+    <span key={question.id} onClick = { () => answerResult ( question.choices[2] ) }>  
+      {question.choices[2]} <br/>
+    </span>
+  ) ); 
+  // Đáp án số 4
+  let answerElement4 = [...stateQuestions].map( (question) => (
+    <span key={question.id} onClick = { () => answerResult ( question.choices[3] ) }>  
+      {question.choices[3]} <br/>
+    </span>
   ) ); 
 
 
@@ -138,7 +185,7 @@ function ProductList() {
 
           <span>
             <div className=" number-of-question "> Câu hỏi <b>1</b>/15 </div>&nbsp;
-            <div className=" skip-question ">Bỏ qua</div>
+            <div onClick={ skipQuestion } className=" skip-question "> { stateSkip } </div>
           </span>
 
           <span>
@@ -162,7 +209,7 @@ function ProductList() {
         {/* Phần thông tin câu hỏi và các đáp án */}
         <div className=" quiz-form    container ">
           {/* Câu hỏi */}
-          <span  onClick= {renderQuestion} className='start-play-quiz' >Bắt đầu</span>
+          <span  onClick= {renderQuestion} className='start-play-quiz' >{stateTextStart}</span>
           
           <div className=" questions ">           
               { stateGreetingTitle }
@@ -171,25 +218,30 @@ function ProductList() {
 
           {/* Các đáp án */}
           <div className=" answers  choices-box" id="content">
+
             {/* 1 */}
-            <div className=" answer " id="option-1">
+            <div 
+               className=" answer " id="option-1">
               <span className="numerical-order ">1</span>
-              <div>Dùng text-align: center cho thẻ p chứa ảnh</div>
+              {answerElement1}
             </div>
             {/* 2 */}
-            <div className=" answer " id="option-2">
+            <div
+              className=" answer " id="option-2">
               <span className="numerical-order ">2</span>
-              <div>Dùng text-align: center cho ảnh</div>
+              {answerElement2}
             </div>
             {/* 3 */}
-            <div className=" answer " id="option-3">
+            <div
+               className=" answer " id="option-3">
               <span className="numerical-order ">3</span>
-              <div>Dùng margin: auto cho thẻ p chứa ảnh</div>
+              {answerElement3}
             </div>
             {/* 4 */}
-            <div className=" answer " id="option-4">
+            <div
+               className=" answer " id="option-4">
               <span className="numerical-order ">4</span>
-              <div>Dùng margin: auto cho ảnh</div>
+              {answerElement4}
             </div>
 
           </div>
