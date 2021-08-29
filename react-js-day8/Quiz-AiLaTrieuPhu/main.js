@@ -35,13 +35,13 @@ function ProductList() {
       answer: " A: Tiếng Pháp ",
       choices: [ ' A: Tiếng Pháp', ' B: Tiếng Anh ', ' C: Tiếng Đức ', ' D: Tiếng Ý ' ], 
     },{ id : 9,
-      question: " Câu 9: ",
-      answer: " A: ",
-      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+      question: " Câu 9: Thành Tây Đô (nay ở Thanh Hóa)  được xây dựng vào triều đại nào trong lịch sử nước ta",
+      answer: " B: Nhà Trần ",
+      choices: [ ' A: Nhà Lý', ' B: Nhà Trần', ' C: Nhà Hồ', ' D: Nhà Hậu Lê' ], 
     },{ id : 10,
-      question: " Câu 10: ",
-      answer: " A: ",
-      choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
+      question: " Câu 10: Vào ngày 2/9/2020, hình ảnh quốc kỳ Việt Nam được chiếu lên toàn bộ bề mặt tòa nhà nổi tiếng thế giới nào?",
+      answer: " C: Tháp Burj Khalifa ",
+      choices: [ ' A: Tháp đôi Petronas', ' B: Tháp Đài Bắc 101 (Taipei 101)', ' C: Tháp Burj Khalifa', ' D: Tháp Eiffel' ], 
     },{ id : 11,
       question: " Câu 11: ",
       answer: " B: ",
@@ -64,6 +64,8 @@ function ProductList() {
       choices: [ ' A: ', ' B: ', ' C: ', ' D: ' ], 
     }
   ]; // QUESTIONS_DATA
+  const MONEY_BONUS = ['200000','400000','600000','1000000','2000000','3000000','6000000','10000000','14000000','22000000','30000000','40000000','60000000','85000000','150000000',
+]
 
   
   const [ stateGreetingTitle, setGreetingTitle ] = React.useState('Chào mừng bạn đến với chương trình "Ai là triệu phú", hãy nhấn nút Bắt đầu để tham gia phần thi');
@@ -75,6 +77,8 @@ function ProductList() {
   const [ stateTextStart , setTextStart ] = React.useState( 'Bắt đầu' );
   // Thay text nút Bỏ qua
   const [ stateSkip , setSkip ] = React.useState( 'Bỏ qua' );
+  //  Số tiền thưởng - liên tiếp tương ứng với MỨC câu hỏi
+  const [ stateMoneyBonus , setMoneyBonus ] = React.useState( 0 );
 
   // Shuffle thứ tự các lựa chọn trong mảng choices
   // for ( let i = 0; i <  QUESTIONS_DATA.length; i++ ) {
@@ -115,11 +119,16 @@ function ProductList() {
   // Bỏ qua 1 câu hỏi - câu kế tiếp
   let IdQuestion
   function skipQuestion() {
+    // Thay text câu giới thiệu
+    setGreetingTitle('')
     IdQuestion = stateCurrentQuestionNumber + 1; 
     console.log('IdQuestion: ', IdQuestion)
     let currentQuestion = [...QUESTIONS_DATA].filter( (question) => question.id == IdQuestion )
     setQuestions( currentQuestion );
     setCurrentQuestionNumber( IdQuestion )
+
+    
+    
 
     if ( IdQuestion > 15 ) {
       setSkip( 'Hoàn thành' )
@@ -133,8 +142,24 @@ function ProductList() {
   }
   // Kiểm tra câu trả lời đúng/sai
   function answerResult(params_answer) {
-    console.log('Đáp án được chọn - kiểm tra: ', params_answer)
+    console.log('Đáp án được chọn - kiểm tra, Nôi dung người chơi trả về', params_answer)
 
+    // Trả về 1 object khi click 1 trong 4 đáp án
+    let currentSentence = [...QUESTIONS_DATA].filter( (question) => question.id == stateCurrentQuestionNumber )
+    console.log('currentSentence: ', currentSentence)
+    // Nội dung đáp án đúng
+    let currentAnswer = currentSentence[0].answer; console.log('currentAnswer: ', currentAnswer)
+
+    // let playersChoice = currentSentence[0].choices; console.log('playersChoice: ', playersChoice)
+   
+    if ( params_answer == currentAnswer ) {
+      console.log('Câu trả lời chính xác')
+      setMoneyBonus ()
+
+    }
+    let moneyBonus = MONEY_BONUS[stateCurrentQuestionNumber]
+    // Tăng tiền thưởng, nếu đúng 1 câu tăng 1 điểm/phải đúng liên tiếp thưởng theo index
+    setMoneyBonus( moneyBonus )
   }
 
 
@@ -184,12 +209,17 @@ function ProductList() {
         <div className=" infor-btn-points-gift container ">
 
           <span>
-            <div className=" number-of-question "> Câu hỏi <b>1</b>/15 </div>&nbsp;
+            <div className=" number-of-question "> Câu hỏi 
+              <b> {stateCurrentQuestionNumber} </b>/15 
+            </div>&nbsp;
+
             <div onClick={ skipQuestion } className=" skip-question "> { stateSkip } </div>
           </span>
 
           <span>
-            <div className=" money-bonus ">200.000 vnđ</div>&nbsp;
+            {/* Tiền thưởng khi tl đúng */}
+            <div className=" money-bonus "> { stateMoneyBonus } vnđ</div>&nbsp;
+
             {/* Các sự trợ giúp */}
             <div className=" helps ">
               {/* Bỏ đi ngẫu nhiên 2 đáp án sai */}
@@ -208,9 +238,10 @@ function ProductList() {
 
         {/* Phần thông tin câu hỏi và các đáp án */}
         <div className=" quiz-form    container ">
-          {/* Câu hỏi */}
+          {/* Nút bắt đầu */}
           <span  onClick= {renderQuestion} className='start-play-quiz' >{stateTextStart}</span>
-          
+
+          {/* Câu hỏi */}
           <div className=" questions ">           
               { stateGreetingTitle }
               { questionElement } 
@@ -248,9 +279,11 @@ function ProductList() {
         </div>
       </div>
 
-
     </>
+
+
   );
+
 }
 
 ReactDOM.render(<ProductList />, document.getElementById("root"));
